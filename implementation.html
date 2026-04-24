@@ -157,35 +157,47 @@
           <div class="link-button-list">
             <a href="#" class="quick-link">Live Web App</a>
             <a href="#" class="quick-link">GitHub Repository</a>
-            <a href="#" class="quick-link">Demo Video</a>
-            <a href="#" class="quick-link">Figma Prototype</a>
+            <a href="assets/videos/hifi-demo.mp4" class="quick-link">Final Demo Video</a>
+            <a href="assets/images/hifi-ui.png" class="quick-link">High-Fi Prototype / Flow</a>
           </div>
 
-          <div class="screenshot-grid">
-            <figure class="screenshot-card">
-              <div class="media-placeholder">Final screenshot placeholder</div>
-              <figcaption><strong>Landing / Home.</strong> The user can start scan quickly. Supports scan-first access and matters because the primary task is visible immediately.</figcaption>
+          <div class="implementation-showcase">
+            <figure class="asset-figure implementation-flow">
+              <img src="assets/images/hifi-ui.png" alt="Final HoldLight Hi-Fi user flow from entry and scanning to route correction, guidance, settings, and fallback support." class="asset-image">
+              <figcaption>
+                <strong>Final Hi-Fi User Flow.</strong>
+                <span>This flow shows the final scan-first interaction structure, from entry and scanning to route correction, guidance, and fallback support.</span>
+              </figcaption>
             </figure>
-            <figure class="screenshot-card">
-              <div class="media-placeholder">Final screenshot placeholder</div>
-              <figcaption><strong>Dashboard / Scan entry.</strong> The user can choose scan, settings, or recent activity. Supports route access and repeat use.</figcaption>
+
+            <figure class="asset-figure implementation-video">
+              <video controls preload="metadata" class="prototype-video prototype-video-large" aria-label="Final HoldLight system demo video">
+                <source src="assets/videos/hifi-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>
+                <strong>Final System Demo.</strong>
+                <span>This video demonstrates the final Hi-Fi prototype and the core user journey of HoldLight.</span>
+              </figcaption>
             </figure>
-            <figure class="screenshot-card">
-              <div class="media-placeholder">Final screenshot placeholder</div>
-              <figcaption><strong>Camera Scan.</strong> The user or assistant frames the wall. Supports route confirmation and reduces setup uncertainty.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="media-placeholder">Final screenshot placeholder</div>
-              <figcaption><strong>Route Preview / Confirmation.</strong> The user checks route direction before climbing. Supports confidence-building preview.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="media-placeholder">Final screenshot placeholder</div>
-              <figcaption><strong>Audio Guidance.</strong> The user receives a short cue and can repeat or pause. Supports low-overload climbing guidance.</figcaption>
-            </figure>
-            <figure class="screenshot-card">
-              <div class="media-placeholder">Final screenshot placeholder</div>
-              <figcaption><strong>Accessibility Settings.</strong> The user adjusts text, contrast, and speech. Supports readable, personalised access.</figcaption>
-            </figure>
+          </div>
+
+          <div class="info-grid three-col section-gap">
+            <article class="info-card accent-cyan">
+              <span class="card-label">User Can Do</span>
+              <h3>Start from scanning</h3>
+              <p class="body-font">The main journey begins with route scanning rather than a dense dashboard, making the core task easier to find.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Requirement Supported</span>
+              <h3>Preview + short guidance</h3>
+              <p class="body-font">The flow supports route preview, route correction, short guidance, and recovery controls.</p>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">Accessibility Value</span>
+              <h3>Lower cognitive load</h3>
+              <p class="body-font">The final prototype reduces feature density and focuses on the moments that matter for blind and low-vision beginner climbers.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -225,18 +237,15 @@
       <section id="architecture" class="portfolio-section" aria-labelledby="architecture-title">
         <h2 id="architecture-title" class="section-title">System Architecture <span class="text-stroke">and Data Flow</span></h2>
         <div class="stage-board">
-          <div class="architecture-diagram" role="img" aria-label="System architecture placeholder showing frontend, API, database, vision engine, and speech synthesis">
-            <div class="arch-node">Browser Frontend</div>
-            <div class="arch-node">Browser Local Capabilities<br><span>camera, speech, accessibility settings</span></div>
-            <div class="arch-node">Static Hosting / Reverse Proxy</div>
-            <div class="arch-node">Node / Express API</div>
-            <div class="arch-node">MongoDB</div>
-            <div class="arch-node">Python Vision Engine</div>
-            <div class="arch-node">Web Speech API / Speech Synthesis</div>
+          <div class="intro-panel architecture-intro">
+            <p>HoldLight is structured as a mobile-first web application that combines browser-side interaction with backend vision processing. The React + Vite frontend manages authentication, onboarding, dashboard, accessibility, speech, camera access, and the Climb Assist flow. Local browser capabilities such as getUserMedia, MediaPipe Pose, speech synthesis, audio, and haptics support real-time interaction on the user's device. Requests are routed through static hosting and an API proxy to a Node + Express backend, which handles users, notifications, climb scans, climb sessions, guidance logs, and vision requests. A Python vision runtime performs wall detection, hold grouping, color analysis, and planar calibration, while MongoDB stores user, scan, session, and guidance data. The system supports two main pipelines: wall scanning and live guidance.</p>
           </div>
-          <div class="intro-panel">
-            <p>The intended data flow starts in the browser: the user opens the mobile web app, starts the scan feature, and the camera frame is processed for route recognition. The frontend communicates with a Node / Express API when persistent data or server-side coordination is needed. MongoDB stores structured app data such as user preferences or session records. The Python vision engine supports route and hold recognition, while the browser handles local camera access, accessibility settings, and Web Speech API output for short audio guidance.</p>
-          </div>
+          <figure class="architecture-diagram">
+            <div class="architecture-image-frame">
+              <img src="assets/images/holdlight-architecture.png" alt="HoldLight system architecture diagram showing users, React and Vite browser frontend, browser local capabilities, reverse proxy and static hosting, Node Express API, MongoDB, Python vision runtime, and two data pipelines for wall scan and live guidance." class="architecture-image">
+            </div>
+            <figcaption>System architecture of HoldLight, showing the frontend, browser local capabilities, static hosting, Node/Express backend, MongoDB storage, Python vision runtime, and the wall scan / live guidance pipelines.</figcaption>
+          </figure>
         </div>
       </section>
 

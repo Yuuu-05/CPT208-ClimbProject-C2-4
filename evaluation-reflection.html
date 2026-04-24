@@ -39,47 +39,101 @@
       <section id="testing-setup" class="portfolio-section" aria-labelledby="testing-title">
         <h2 id="testing-title" class="section-title">Usability Testing <span class="text-stroke">Setup</span></h2>
         <div class="stage-board testing-board">
-          <section class="snapshot-block" aria-labelledby="snapshot-title">
-            <h3 id="snapshot-title" class="board-label">Testing Snapshot</h3>
-            <div class="snapshot-grid">
-              <article class="snapshot-item"><span class="snapshot-label">Prototype</span><p class="snapshot-value body-font">HoldLight Alpha version</p></article>
-              <article class="snapshot-item"><span class="snapshot-label">Participants</span><p class="snapshot-value body-font">3 real participants</p></article>
-              <article class="snapshot-item"><span class="snapshot-label">Test Context</span><p class="snapshot-value body-font">Indoor climbing scenario, mobile web prototype flow</p></article>
-              <article class="snapshot-item"><span class="snapshot-label">Data Collected</span><p class="snapshot-value body-font">Task completion notes, spoken feedback, interaction observations, and refinement decisions</p></article>
-            </div>
-          </section>
+          <div class="testing-setup-hero">
+            <section class="testing-setup-copy" aria-labelledby="setup-copy-title">
+              <h3 id="setup-copy-title" class="board-label">Usability Testing Setup</h3>
+              <p class="body-font">We evaluated HoldLight through a combination of early communication, interview-based feedback, internal prototype testing, and onsite climbing trials. Our testing setup gradually moved from discussion and preparation to a more realistic climbing environment involving the tester, guide, tripod-mounted phone, and belayer support.</p>
+              <div class="setup-tags" aria-label="Testing setup tags">
+                <span>Onsite trial</span>
+                <span>Top-rope safety context</span>
+                <span>Full testing setup</span>
+              </div>
+            </section>
 
-          <section aria-labelledby="participant-table-title">
-            <h3 id="participant-table-title" class="board-label board-label-red">Participants</h3>
-            <div class="table-wrap">
-              <table class="process-table">
-                <thead>
-                  <tr>
-                    <th>Participant</th>
-                    <th>Background</th>
-                    <th>Test Focus</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>P1</td>
-                    <td>Accessibility-informed participant / low-vision proxy</td>
-                    <td>Route preview clarity, contrast, and audio cue comprehension.</td>
-                  </tr>
-                  <tr>
-                    <td>P2</td>
-                    <td>Beginner climber</td>
-                    <td>Scan entry, route preview flow, and cognitive load during instructions.</td>
-                  </tr>
-                  <tr>
-                    <td>P3</td>
-                    <td>Assistant role participant</td>
-                    <td>Setup support, fallback handoff, and assistant-side efficiency.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+            <figure class="testing-featured-figure">
+              <div class="featured-image-frame">
+                <img src="assets/images/testing-evidence/testing-final-onsite-setup.jpg" alt="Final onsite usability testing setup for HoldLight, showing the participant on the climbing wall, a tripod-mounted phone, and the surrounding climbing support context." decoding="async">
+              </div>
+              <figcaption>Final onsite testing setup with tester, guide, tripod-mounted phone, and belayer support in a top-rope climbing environment.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="testing-evidence" class="portfolio-section" aria-labelledby="evidence-title">
+        <h2 id="evidence-title" class="section-title">Testing <span class="text-stroke">Evidence</span></h2>
+        <div class="stage-board testing-evidence-board">
+          <div class="testing-evidence-intro">
+            <h3 class="board-label board-label-red">Process Evidence</h3>
+            <p class="body-font">The evidence below follows the testing process from recruitment and preparation to internal checking and onsite climbing trials. Communication screenshots are treated as anonymized recruitment and follow-up evidence, so they are kept as supporting material rather than used as the main visual focus.</p>
+          </div>
+
+          <div class="testing-evidence-grid">
+            <article class="testing-evidence-card evidence-communication">
+              <span class="evidence-step">Step 1</span>
+              <figure class="evidence-figure evidence-figure-chat">
+                <div class="evidence-image-shell">
+                  <img src="assets/images/testing-evidence/testing-contact-chat.jpg" alt="Chat-based early communication about climbing support needs for blind and low-vision users." loading="lazy" decoding="async">
+                </div>
+                <figcaption>Early communication helped us clarify core issues such as communication style, route guidance consistency, and the importance of safety and trust.</figcaption>
+              </figure>
+              <h3>Early communication with visually impaired climbing contacts</h3>
+              <p class="body-font">We began by reaching out to visually impaired climbing-related contacts to understand initial concerns, practical needs, and whether a guided climbing support system would be meaningful in real use.</p>
+              <p class="evidence-insight body-font"><strong>Design insight:</strong> This stage highlighted the need for clear, familiar, and consistent guidance language.</p>
+            </article>
+
+            <article class="testing-evidence-card evidence-communication">
+              <span class="evidence-step">Step 2</span>
+              <figure class="evidence-figure evidence-figure-chat evidence-figure-phone">
+                <div class="evidence-image-shell">
+                  <img src="assets/images/testing-evidence/testing-interview-chat.png" alt="Interview-related communication and follow-up discussion with a visually impaired participant." loading="lazy" decoding="async">
+                </div>
+                <figcaption>This follow-up exchange supported recruitment and helped move from informal contact to a more structured interview and testing plan.</figcaption>
+              </figure>
+              <h3>Interview scheduling and follow-up discussion</h3>
+              <p class="body-font">We then arranged and carried out a follow-up conversation with a visually impaired participant to better understand expectations, practical constraints, and suitable ways of communicating during testing.</p>
+              <p class="evidence-insight body-font"><strong>Design insight:</strong> This step helped us refine how to approach testing and communication in a respectful and practical way.</p>
+            </article>
+
+            <article class="testing-evidence-card evidence-interface">
+              <span class="evidence-step">Step 3</span>
+              <figure class="evidence-figure evidence-figure-phone">
+                <div class="evidence-image-shell">
+                  <img src="assets/images/testing-evidence/testing-internal-prototype.png" alt="Internal prototype testing of HoldLight on a mobile device." loading="lazy" decoding="async">
+                </div>
+                <figcaption>Internal testing allowed the team to quickly verify the clarity of instructions, screen layout, and the feasibility of scan-based interaction.</figcaption>
+              </figure>
+              <h3>Internal prototype testing</h3>
+              <p class="body-font">Before testing with external participants, we used internal trials to check whether the interface, guidance panel, and route-related interaction could be understood and operated on mobile.</p>
+              <p class="evidence-insight body-font"><strong>Design insight:</strong> This stage helped us identify interaction issues before moving into more realistic climbing scenarios.</p>
+            </article>
+
+            <article class="testing-evidence-card evidence-climb">
+              <span class="evidence-step">Step 4</span>
+              <figure class="evidence-figure">
+                <div class="evidence-image-shell">
+                  <img src="assets/images/testing-evidence/testing-participant-climb.jpg" alt="Participant climbing trial used to observe real climbing movement and route interaction." loading="lazy" decoding="async">
+                </div>
+                <figcaption>This trial helped us connect interface design with the realities of movement, balance, and hold selection on the wall.</figcaption>
+              </figure>
+              <h3>Participant climbing trial</h3>
+              <p class="body-font">We observed a participant trying the climbing task in practice in order to understand body movement, hold reachability, and how route guidance should align with actual climbing behaviour.</p>
+              <p class="evidence-insight body-font"><strong>Design insight:</strong> Testing in motion revealed the importance of short, well-timed guidance and a realistic understanding of physical climbing constraints.</p>
+            </article>
+
+            <article class="testing-evidence-card evidence-final">
+              <span class="evidence-step">Step 5</span>
+              <figure class="evidence-figure">
+                <div class="evidence-image-shell">
+                  <img src="assets/images/testing-evidence/testing-final-onsite-setup.jpg" alt="Full onsite testing setup showing participant, tripod-mounted phone, guide, and belayer support." loading="lazy" decoding="async">
+                </div>
+                <figcaption>This was the most complete testing setup and gave us the clearest view of how HoldLight could operate in a real climbing session.</figcaption>
+              </figure>
+              <h3>Final full-context onsite test</h3>
+              <p class="body-font">Our final testing setup brought together the key roles and equipment needed in a realistic climbing context: the participant, guide, tripod-mounted phone, and belayer support in a top-rope environment.</p>
+              <p class="evidence-insight body-font"><strong>Design insight:</strong> This final setup provided the strongest evidence for evaluating route guidance in a realistic environment.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -87,11 +141,11 @@
         <h2 id="tasks-title" class="section-title">Testing <span class="text-stroke">Tasks</span></h2>
         <div class="stage-board">
           <ol class="task-list">
-            <li>Find and start the scan feature.</li>
-            <li>Complete route preview / confirmation.</li>
-            <li>Understand one audio cue.</li>
-            <li>Use repeat / pause / fallback.</li>
-            <li>Adjust accessibility setting.</li>
+            <li>Understand the route guidance flow from scan entry to route preview.</li>
+            <li>Try the scan-based interaction on a mobile device.</li>
+            <li>Follow spoken or guided route cues during preparation and movement.</li>
+            <li>Evaluate whether the interface supports climbing in context.</li>
+            <li>Reflect on clarity, timing, and confidence during route following.</li>
           </ol>
         </div>
       </section>
@@ -102,43 +156,43 @@
           <div class="findings-grid findings-grid-wide">
             <article class="finding-card">
               <span class="finding-kicker">Finding 1</span>
-              <h4>Users needed a more obvious scan entry.</h4>
+              <h4>Users needed a clearer scan-first flow.</h4>
               <div class="finding-divider"></div>
-              <p class="body-font">The scan function had to appear as the dominant task rather than one option hidden among many dashboard features.</p>
-              <div class="implication" style="--accent: var(--hold-cyan)"><h5>Design Implication</h5><p class="body-font">Make route scanning the first visible action.</p></div>
+              <p class="body-font">The internal prototype check showed that scanning had to be the first visible action, not one option among many dashboard features.</p>
+              <div class="implication" style="--accent: var(--hold-cyan)"><h5>Design Implication</h5><p class="body-font">Make route scanning the central entry point before any detailed guidance appears.</p></div>
             </article>
 
             <article class="finding-card">
               <span class="finding-kicker">Finding 2</span>
               <h4>Long instructions increased cognitive load.</h4>
               <div class="finding-divider"></div>
-              <p class="body-font">Participants found longer guidance harder to process during movement and preferred short cue phrases.</p>
+              <p class="body-font">Interview feedback and climbing observation both suggested that longer guidance becomes harder to process when the climber is preparing, balancing, or moving.</p>
               <aside class="pull-quote"><span>Evidence Quote</span><blockquote>"Detailed instructions broke the rhythm while moving."</blockquote></aside>
               <div class="implication" style="--accent: var(--p5-red)"><h5>Design Implication</h5><p class="body-font">Shift support toward pre-climb preview and brief in-climb cues.</p></div>
             </article>
 
             <article class="finding-card">
               <span class="finding-kicker">Finding 3</span>
-              <h4>Users wanted clearer feedback when recognition was uncertain.</h4>
+              <h4>Real climbing context made timing more important.</h4>
               <div class="finding-divider"></div>
-              <p class="body-font">Silent failure or vague confidence feedback made users unsure whether to continue, repeat, or ask for help.</p>
-              <div class="implication" style="--accent: var(--hold-yellow)"><h5>Design Implication</h5><p class="body-font">Make fallback states human-readable and action-oriented.</p></div>
+              <p class="body-font">The participant climbing trial connected interface decisions with body movement, reachability, balance, and the short moments when guidance can be useful.</p>
+              <div class="implication" style="--accent: var(--hold-yellow)"><h5>Design Implication</h5><p class="body-font">Keep cues short, well-timed, and connected to physical climbing constraints.</p></div>
             </article>
 
             <article class="finding-card">
               <span class="finding-kicker">Finding 4</span>
-              <h4>Some UI text / background contrast was not readable enough.</h4>
+              <h4>Guidance depends on real support conditions.</h4>
               <div class="finding-divider"></div>
-              <p class="body-font">Highly expressive styling needed calmer body text zones and stronger focus states for accessibility.</p>
-              <div class="implication" style="--accent: var(--helper-teal)"><h5>Design Implication</h5><p class="body-font">Reduce visual noise around key reading and decision areas.</p></div>
+              <p class="body-font">The final onsite setup showed that HoldLight has to work alongside guide coordination, tripod placement, and belayer support rather than pretending the app works in isolation.</p>
+              <div class="implication" style="--accent: var(--helper-teal)"><h5>Design Implication</h5><p class="body-font">Design route guidance as part of a supported climbing setup.</p></div>
             </article>
 
             <article class="finding-card">
               <span class="finding-kicker">Finding 5</span>
-              <h4>Mobile camera frame needed better alignment.</h4>
+              <h4>Simpler interaction supported blind and low-vision use.</h4>
               <div class="finding-divider"></div>
-              <p class="body-font">The scan screen needed clearer framing guidance so the wall and holds could be captured reliably.</p>
-              <div class="implication" style="--accent: var(--hold-cyan)"><h5>Design Implication</h5><p class="body-font">Add camera frame guidance and assistant confirmation.</p></div>
+              <p class="body-font">Across communication, interview, and prototype evidence, feature-heavy layouts felt less useful than a direct flow focused on scanning, preview, repeat, and clear fallback.</p>
+              <div class="implication" style="--accent: var(--hold-cyan)"><h5>Design Implication</h5><p class="body-font">Reduce optional controls and protect the core guidance flow.</p></div>
             </article>
           </div>
         </div>
