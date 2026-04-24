@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 Evaluation &amp; Reflection - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="module-page integrated-page process-page testing-iteration-page final-reflection-page evaluation-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="index.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link">Why</a>
+          <a href="user-requirements.html" class="page-link">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link active">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <div class="page-id">05 Evaluation &amp; Reflection</div>
+          <h1 id="page-title">Evaluation &amp; Reflection</h1>
+          <p class="page-description body-font">Usability testing setup, tasks, key findings, iterative refinements, final reflection, AI disclosure, and references.</p>
+        </section>
+
+        <div class="hero-collage" aria-label="Evaluation section markers">
+          <span class="title-shard title-shard-black">Testing</span>
+          <span class="title-shard title-shard-red">Refinement</span>
+          <span class="title-shard title-shard-white">Reflecting on inclusion, uncertainty, and responsible AI use in HoldLight</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="testing-setup" class="portfolio-section" aria-labelledby="testing-title">
+        <h2 id="testing-title" class="section-title">Usability Testing <span class="text-stroke">Setup</span></h2>
+        <div class="stage-board testing-board">
+          <section class="snapshot-block" aria-labelledby="snapshot-title">
+            <h3 id="snapshot-title" class="board-label">Testing Snapshot</h3>
+            <div class="snapshot-grid">
+              <article class="snapshot-item"><span class="snapshot-label">Prototype</span><p class="snapshot-value body-font">HoldLight Alpha version</p></article>
+              <article class="snapshot-item"><span class="snapshot-label">Participants</span><p class="snapshot-value body-font">3 real participants</p></article>
+              <article class="snapshot-item"><span class="snapshot-label">Test Context</span><p class="snapshot-value body-font">Indoor climbing scenario, mobile web prototype flow</p></article>
+              <article class="snapshot-item"><span class="snapshot-label">Data Collected</span><p class="snapshot-value body-font">Task completion notes, spoken feedback, interaction observations, and refinement decisions</p></article>
+            </div>
+          </section>
+
+          <section aria-labelledby="participant-table-title">
+            <h3 id="participant-table-title" class="board-label board-label-red">Participants</h3>
+            <div class="table-wrap">
+              <table class="process-table">
+                <thead>
+                  <tr>
+                    <th>Participant</th>
+                    <th>Background</th>
+                    <th>Test Focus</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>P1</td>
+                    <td>Accessibility-informed participant / low-vision proxy</td>
+                    <td>Route preview clarity, contrast, and audio cue comprehension.</td>
+                  </tr>
+                  <tr>
+                    <td>P2</td>
+                    <td>Beginner climber</td>
+                    <td>Scan entry, route preview flow, and cognitive load during instructions.</td>
+                  </tr>
+                  <tr>
+                    <td>P3</td>
+                    <td>Assistant role participant</td>
+                    <td>Setup support, fallback handoff, and assistant-side efficiency.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="testing-tasks" class="portfolio-section" aria-labelledby="tasks-title">
+        <h2 id="tasks-title" class="section-title">Testing <span class="text-stroke">Tasks</span></h2>
+        <div class="stage-board">
+          <ol class="task-list">
+            <li>Find and start the scan feature.</li>
+            <li>Complete route preview / confirmation.</li>
+            <li>Understand one audio cue.</li>
+            <li>Use repeat / pause / fallback.</li>
+            <li>Adjust accessibility setting.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="key-findings" class="portfolio-section" aria-labelledby="findings-title">
+        <h2 id="findings-title" class="section-title">Key <span class="text-stroke">Findings</span></h2>
+        <div class="stage-board">
+          <div class="findings-grid findings-grid-wide">
+            <article class="finding-card">
+              <span class="finding-kicker">Finding 1</span>
+              <h4>Users needed a more obvious scan entry.</h4>
+              <div class="finding-divider"></div>
+              <p class="body-font">The scan function had to appear as the dominant task rather than one option hidden among many dashboard features.</p>
+              <div class="implication" style="--accent: var(--hold-cyan)"><h5>Design Implication</h5><p class="body-font">Make route scanning the first visible action.</p></div>
+            </article>
+
+            <article class="finding-card">
+              <span class="finding-kicker">Finding 2</span>
+              <h4>Long instructions increased cognitive load.</h4>
+              <div class="finding-divider"></div>
+              <p class="body-font">Participants found longer guidance harder to process during movement and preferred short cue phrases.</p>
+              <aside class="pull-quote"><span>Evidence Quote</span><blockquote>"Detailed instructions broke the rhythm while moving."</blockquote></aside>
+              <div class="implication" style="--accent: var(--p5-red)"><h5>Design Implication</h5><p class="body-font">Shift support toward pre-climb preview and brief in-climb cues.</p></div>
+            </article>
+
+            <article class="finding-card">
+              <span class="finding-kicker">Finding 3</span>
+              <h4>Users wanted clearer feedback when recognition was uncertain.</h4>
+              <div class="finding-divider"></div>
+              <p class="body-font">Silent failure or vague confidence feedback made users unsure whether to continue, repeat, or ask for help.</p>
+              <div class="implication" style="--accent: var(--hold-yellow)"><h5>Design Implication</h5><p class="body-font">Make fallback states human-readable and action-oriented.</p></div>
+            </article>
+
+            <article class="finding-card">
+              <span class="finding-kicker">Finding 4</span>
+              <h4>Some UI text / background contrast was not readable enough.</h4>
+              <div class="finding-divider"></div>
+              <p class="body-font">Highly expressive styling needed calmer body text zones and stronger focus states for accessibility.</p>
+              <div class="implication" style="--accent: var(--helper-teal)"><h5>Design Implication</h5><p class="body-font">Reduce visual noise around key reading and decision areas.</p></div>
+            </article>
+
+            <article class="finding-card">
+              <span class="finding-kicker">Finding 5</span>
+              <h4>Mobile camera frame needed better alignment.</h4>
+              <div class="finding-divider"></div>
+              <p class="body-font">The scan screen needed clearer framing guidance so the wall and holds could be captured reliably.</p>
+              <div class="implication" style="--accent: var(--hold-cyan)"><h5>Design Implication</h5><p class="body-font">Add camera frame guidance and assistant confirmation.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="refinement" class="portfolio-section" aria-labelledby="refinement-title">
+        <h2 id="refinement-title" class="section-title">Iterative Refinement / <span class="text-stroke">Before &amp; After</span></h2>
+        <div class="stage-board">
+          <article class="refinement-module" aria-labelledby="refinement-1-title">
+            <div class="module-head">
+              <h3 id="refinement-1-title" class="module-title">Scan screen alignment</h3>
+              <aside class="trigger-card"><h4>Feedback</h4><p class="body-font">Users needed clearer camera framing and a more obvious scan start point.</p></aside>
+            </div>
+            <div class="before-after-grid">
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>Before</h4></div><div class="screenshot-frame" style="--accent: var(--p5-red)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Scan entry and camera frame were not prominent enough.</figcaption></figure>
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>After</h4></div><div class="screenshot-frame" style="--accent: var(--hold-cyan)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Scan became the primary action with clearer framing guidance.</figcaption></figure>
+            </div>
+            <div class="module-copy-grid">
+              <section class="copy-card" style="--accent: var(--hold-cyan)"><h4>Change made</h4><p class="body-font">Raised scan priority and added clearer framing guidance.</p></section>
+              <section class="copy-card" style="--accent: var(--hold-yellow)"><h4>Impact</h4><p class="body-font">Users could understand where to begin more quickly.</p></section>
+              <aside class="callout"><h4>Requirement</h4><p class="body-font">Confidence-building route preview.</p></aside>
+            </div>
+          </article>
+
+          <article class="refinement-module" aria-labelledby="refinement-2-title">
+            <div class="module-head">
+              <h3 id="refinement-2-title" class="module-title">Settings simplification</h3>
+              <aside class="trigger-card"><h4>Feedback</h4><p class="body-font">Settings were useful, but too many choices before climbing slowed preparation.</p></aside>
+            </div>
+            <div class="before-after-grid">
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>Before</h4></div><div class="screenshot-frame" style="--accent: var(--p5-red)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Many settings competed with the main climbing task.</figcaption></figure>
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>After</h4></div><div class="screenshot-frame" style="--accent: var(--helper-teal)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Core settings were grouped into simple text, contrast, and audio controls.</figcaption></figure>
+            </div>
+            <div class="module-copy-grid">
+              <section class="copy-card" style="--accent: var(--hold-cyan)"><h4>Change made</h4><p class="body-font">Reduced settings into fewer, clearer categories.</p></section>
+              <section class="copy-card" style="--accent: var(--hold-yellow)"><h4>Impact</h4><p class="body-font">Preparation became faster and less distracting.</p></section>
+              <aside class="callout"><h4>Requirement</h4><p class="body-font">Accessibility requirements.</p></aside>
+            </div>
+          </article>
+
+          <article class="refinement-module" aria-labelledby="refinement-3-title">
+            <div class="module-head">
+              <h3 id="refinement-3-title" class="module-title">Text contrast / readability</h3>
+              <aside class="trigger-card"><h4>Feedback</h4><p class="body-font">Some strong poster styling reduced readability in longer body sections.</p></aside>
+            </div>
+            <div class="before-after-grid">
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>Before</h4></div><div class="screenshot-frame" style="--accent: var(--p5-red)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Dense decoration made some content feel harder to scan.</figcaption></figure>
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>After</h4></div><div class="screenshot-frame" style="--accent: var(--hold-yellow)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Important explanation areas use calmer cards, normal case, and stronger contrast.</figcaption></figure>
+            </div>
+            <div class="module-copy-grid">
+              <section class="copy-card" style="--accent: var(--hold-cyan)"><h4>Change made</h4><p class="body-font">Reduced all-caps body text and separated reading sections from decorative elements.</p></section>
+              <section class="copy-card" style="--accent: var(--hold-yellow)"><h4>Impact</h4><p class="body-font">The portfolio and prototype became easier to read without losing the visual identity.</p></section>
+              <aside class="callout"><h4>Requirement</h4><p class="body-font">Readable, accessible interface.</p></aside>
+            </div>
+          </article>
+
+          <article class="refinement-module" aria-labelledby="refinement-4-title">
+            <div class="module-head">
+              <h3 id="refinement-4-title" class="module-title">Guidance phrasing</h3>
+              <aside class="trigger-card"><h4>Feedback</h4><p class="body-font">Detailed in-climb instructions interrupted movement and increased cognitive load.</p></aside>
+            </div>
+            <div class="before-after-grid">
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>Before</h4></div><div class="screenshot-frame" style="--accent: var(--p5-red)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Guidance was too explanatory during the climb.</figcaption></figure>
+              <figure class="screenshot-figure"><div class="screenshot-label"><h4>After</h4></div><div class="screenshot-frame" style="--accent: var(--hold-cyan)" aria-hidden="true"><div class="frame-ui"><span></span><span></span><span></span><span></span></div></div><figcaption>Guidance became short, direction-first, and repeatable.</figcaption></figure>
+            </div>
+            <div class="module-copy-grid">
+              <section class="copy-card" style="--accent: var(--hold-cyan)"><h4>Change made</h4><p class="body-font">Shifted support toward pre-climb preview and shortened live audio cues.</p></section>
+              <section class="copy-card" style="--accent: var(--hold-yellow)"><h4>Impact</h4><p class="body-font">The interaction model better preserved climbing rhythm.</p></section>
+              <aside class="callout"><h4>Requirement</h4><p class="body-font">Low-overload audio guidance.</p></aside>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="final-reflection" class="portfolio-section" aria-labelledby="reflection-title">
+        <h2 id="reflection-title" class="section-title">Final <span class="text-stroke">Reflection</span></h2>
+        <div class="stage-board reflection-board-standalone">
+          <article class="reflection-card social">
+            <h3>Human-Centric Impact</h3>
+            <p class="body-font">HoldLight began from a simple recognition: indoor climbing is still organised around visual certainty. Route preview, hold identification, and movement planning are usually assumed to be seen before they are acted on. For blind and low-vision climbers, this creates an informational barrier as much as a physical one, limiting access to confidence, independence, and belonging within the activity.</p>
+          </article>
+
+          <article class="reflection-card social">
+            <h3>Social / Ethical Implications</h3>
+            <p class="body-font">Ethically, the question was not how to deliver the most guidance, but how to support the climber without displacing agency or overstating what the system could reliably know. In a climbing context, guidance that is too dense, too continuous, or too certain can interrupt rhythm, increase cognitive load, and imply a level of safety assurance that technology alone cannot guarantee.</p>
+          </article>
+
+          <div class="reflection-lower-grid">
+            <article class="reflection-card ai">
+              <h3>Project Limitations</h3>
+              <p class="body-font">The current prototype remains an early implementation. Route recognition requires further real-gym validation, camera framing still depends partly on assistant support, and audio cue comprehension may vary in noisy climbing environments. The project should not be treated as a complete safety system.</p>
+            </article>
+            <article class="reflection-card takeaway">
+              <h3>Future Work</h3>
+              <p class="body-font">Future development should include testing with blind and low-vision climbers where ethically and practically possible, stronger uncertainty handling, more robust vision evaluation, haptic feedback exploration, and deeper integration with climbing gym workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-reflection" class="portfolio-section" aria-labelledby="ai-title">
+        <h2 id="ai-title" class="section-title">AI Technical <span class="text-stroke">Reflection</span></h2>
+        <div class="stage-board">
+          <div class="info-grid two-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Used For</span>
+              <h3>Assistant support</h3>
+              <p class="body-font">AI was used as an assistant for code scaffolding, debugging, wording refinement, and layout suggestions. It helped speed up implementation and improve clarity, but outputs were reviewed before use.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Not Used For</span>
+              <h3>Core judgement</h3>
+              <p class="body-font">Core design decisions, user research interpretation, and human-centric justification were made by the group. AI did not determine the project motivation, research findings, or ethical position.</p>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">Prompt Categories</span>
+              <h3>Examples</h3>
+              <ul class="body-font compact-list">
+                <li>HTML/CSS layout restructuring.</li>
+                <li>Responsive and accessibility checks.</li>
+                <li>Bug diagnosis and code explanation.</li>
+                <li>Short wording refinement for portfolio sections.</li>
+              </ul>
+            </article>
+            <article class="info-card accent-red">
+              <span class="card-label">Verification + Ethics</span>
+              <h3>Review process</h3>
+              <p class="body-font">Code was checked through manual navigation, responsive layout review, link checks, and accessibility-focused reading. Ethical use required verifying AI-generated suggestions, avoiding fabricated user evidence, and keeping accountability with the team.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="references" class="portfolio-section" aria-labelledby="references-title">
+        <h2 id="references-title" class="section-title">References &amp; <span class="text-stroke">AI Disclosure</span></h2>
+        <div class="stage-board">
+          <div class="info-grid two-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Academic Papers</span>
+              <ul class="body-font compact-list">
+                <li>Braun et al. (2025) - Needs Assessment for an Assistance System for the Visually Impaired and Blind in Climbing and Bouldering.</li>
+                <li>Ramsay &amp; Chang (2020) - Body Pose Sonification for a View-Independent Auditory Aid to Blind Rock Climbers.</li>
+                <li>Richardson et al. (2022) - Climb-o-Vision: A Computer Vision Driven Sensory Substitution Device for Rock Climbing.</li>
+                <li>Simone &amp; Galatolo (2020) - Climbing as a Pair: Instructions and Instructed Body Movements in Indoor Climbing with Visually Impaired Athletes.</li>
+              </ul>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Commercial Products</span>
+              <ul class="body-font compact-list">
+                <li>KAYA.</li>
+                <li>Vertical-Life.</li>
+                <li>TopLogger.</li>
+                <li>RouteIt Indoor Bouldering.</li>
+              </ul>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">AI Tools Used</span>
+              <p class="body-font">AI coding assistant tools were used for code scaffolding, debugging, wording refinement, and layout suggestions. AI outputs were treated as provisional and reviewed by the group.</p>
+            </article>
+            <article class="info-card accent-red">
+              <span class="card-label">Image / Generation Disclosure</span>
+              <p class="body-font">Current portfolio images use local project assets and placeholders. If image generation tools are used later, generated assets and prompts should be documented in the references or AI logs.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 Iteration &amp; Alternatives - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="module-page integrated-page process-page progression-page iteration-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="index.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link">Why</a>
+          <a href="user-requirements.html" class="page-link">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link active">Iteration</a>
+          <a href="implementation.html" class="page-link">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <div class="page-id">03 Iteration &amp; Alternatives</div>
+          <h1 id="page-title">Iteration &amp; Alternatives</h1>
+          <p class="page-description body-font">How the concept moved from broad sketches to a focused mobile-first route preview and audio guidance workflow.</p>
+        </section>
+
+        <div class="hero-collage" aria-label="Iteration section markers">
+          <span class="title-shard title-shard-black">Crazy Eights</span>
+          <span class="title-shard title-shard-red">Alternatives</span>
+          <span class="title-shard title-shard-white">Choosing the least overloaded support model</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="design-challenge" class="portfolio-section" aria-labelledby="challenge-title">
+        <h2 id="challenge-title" class="section-title">Design <span class="text-stroke">Challenge</span></h2>
+        <div class="stage-board">
+          <div class="intro-panel">
+            <p>Based on our research and user requirements, the key design challenge was to make indoor climbing route guidance accessible without increasing cognitive load or reducing safety.</p>
+          </div>
+          <div class="info-grid three-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Question 01</span>
+              <h3>How should users access the route before climbing?</h3>
+              <p class="body-font">The app needed to turn visual route information into a clear preview before the climber starts moving.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Question 02</span>
+              <h3>How should guidance be delivered during climbing?</h3>
+              <p class="body-font">The design had to avoid constant narration and preserve the user's rhythm and attention.</p>
+            </article>
+            <article class="info-card accent-red">
+              <span class="card-label">Question 03</span>
+              <h3>How should the system recover when uncertain?</h3>
+              <p class="body-font">The app needed to be transparent when recognition was unclear and support human fallback.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="crazy-eights" class="portfolio-section" aria-labelledby="crazy-title">
+        <h2 id="crazy-title" class="section-title">Crazy <span class="text-stroke">Eights</span></h2>
+        <div class="stage-board">
+          <div class="crazy-grid">
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Scan-first homepage</h3><span class="status kept">Kept</span><p class="body-font">The entry point should make route access immediately visible.</p></article>
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Route preview map</h3><span class="status kept">Kept</span><p class="body-font">A simplified pre-climb map helps users form a mental model.</p></article>
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Audio-only mode</h3><span class="status revised">Revised</span><p class="body-font">Audio is useful, but it needs visual confirmation and fallback controls.</p></article>
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Assistant confirmation mode</h3><span class="status kept">Kept</span><p class="body-font">Human confirmation remains important for setup and safety.</p></article>
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Simplified dashboard</h3><span class="status revised">Revised</span><p class="body-font">A dashboard can help, but scan must stay the primary action.</p></article>
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Tutorial-first flow</h3><span class="status discarded">Discarded</span><p class="body-font">Starting with a tutorial delayed the user's route task too much.</p></article>
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Fallback / repeat interface</h3><span class="status kept">Kept</span><p class="body-font">Recovery controls are central to trust and safety.</p></article>
+            <article class="sketch-card"><div class="media-placeholder">Sketch placeholder</div><h3>Progress / reflection page</h3><span class="status revised">Revised</span><p class="body-font">Useful after climbing, but secondary to route access and guidance.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="alternatives" class="portfolio-section" aria-labelledby="alternatives-title">
+        <h2 id="alternatives-title" class="section-title">Design <span class="text-stroke">Alternatives</span></h2>
+        <div class="stage-board alt-board">
+          <article class="alternative-set">
+            <h3>Alternative Set 1: Pre-climb Route Access</h3>
+            <div class="option-grid">
+              <section class="option-card"><span class="card-label">Option A</span><h4>Text-only explanation</h4><p class="body-font">Accessible to screen readers, but too abstract for spatial route planning.</p></section>
+              <section class="option-card"><span class="card-label">Option B</span><h4>Visual-only route map</h4><p class="body-font">Useful for sighted users, but not sufficient for blind and low-vision climbers.</p></section>
+              <section class="option-card final-choice"><span class="card-label">Final Choice C</span><h4>Camera scan + simplified preview</h4><p class="body-font">Combines route capture, confirmation, and a simplified overview that can be read visually or through audio.</p></section>
+            </div>
+          </article>
+
+          <article class="alternative-set">
+            <h3>Alternative Set 2: During-climb Guidance</h3>
+            <div class="option-grid">
+              <section class="option-card"><span class="card-label">Option A</span><h4>Continuous narration</h4><p class="body-font">Too much information during physical movement.</p></section>
+              <section class="option-card"><span class="card-label">Option B</span><h4>Screen-based prompts</h4><p class="body-font">Hard to use while climbing and not reliable for low-vision users.</p></section>
+              <section class="option-card final-choice"><span class="card-label">Final Choice C</span><h4>Short audio cues</h4><p class="body-font">Keeps guidance low-overload, repeatable, and action-focused.</p></section>
+            </div>
+          </article>
+
+          <article class="alternative-set">
+            <h3>Alternative Set 3: Error Recovery / Fallback</h3>
+            <div class="option-grid">
+              <section class="option-card"><span class="card-label">Option A</span><h4>Hide uncertainty</h4><p class="body-font">Would make the system feel falsely confident in a safety-critical context.</p></section>
+              <section class="option-card"><span class="card-label">Option B</span><h4>Show technical confidence score</h4><p class="body-font">Technically precise, but hard to interpret while climbing.</p></section>
+              <section class="option-card final-choice"><span class="card-label">Final Choice C</span><h4>Human-readable fallback</h4><p class="body-font">Tells the user what to do next: repeat, pause, simplify, or request help.</p></section>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="low-fi" class="portfolio-section" aria-labelledby="lowfi-title">
+        <h2 id="lowfi-title" class="section-title">Low-Fi <span class="text-stroke">Prototype</span></h2>
+        <div class="stage-board">
+          <div class="link-button-list">
+            <a href="#" class="quick-link">Figma Prototype</a>
+          </div>
+          <div class="flow-strip" aria-label="Low fidelity flow">
+            <span>Home</span>
+            <span>Scan</span>
+            <span>Route Preview</span>
+            <span>Guidance</span>
+            <span>Fallback</span>
+          </div>
+          <div class="screenshot-grid">
+            <figure class="screenshot-card"><div class="media-placeholder">Low-fi screenshot</div><figcaption>Home: scan entry and accessibility settings.</figcaption></figure>
+            <figure class="screenshot-card"><div class="media-placeholder">Low-fi screenshot</div><figcaption>Scan: camera frame and assistant confirmation.</figcaption></figure>
+            <figure class="screenshot-card"><div class="media-placeholder">Low-fi screenshot</div><figcaption>Route Preview: simplified route structure before ascent.</figcaption></figure>
+            <figure class="screenshot-card"><div class="media-placeholder">Low-fi screenshot</div><figcaption>Guidance: short cue, repeat, and pause controls.</figcaption></figure>
+            <figure class="screenshot-card"><div class="media-placeholder">Low-fi screenshot</div><figcaption>Fallback: honest uncertainty and request-help action.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="final-direction" class="portfolio-section" aria-labelledby="direction-title">
+        <h2 id="direction-title" class="section-title">Final Design <span class="text-stroke">Direction</span></h2>
+        <div class="stage-board">
+          <div class="info-grid three-col">
+            <article class="info-card accent-cyan"><h3>Mobile-first web app</h3><p class="body-font">Built for phones in the climbing gym, with accessible controls and speech support.</p></article>
+            <article class="info-card accent-yellow"><h3>Camera-based route access</h3><p class="body-font">Route capture begins from a clear scan action and supports assistant confirmation.</p></article>
+            <article class="info-card accent-red"><h3>Simplified pre-climb preview</h3><p class="body-font">The main support happens before climbing, when cognitive load is lower.</p></article>
+            <article class="info-card accent-green"><h3>Short audio guidance</h3><p class="body-font">During climbing, cues are concise, repeatable, and direction-first.</p></article>
+            <article class="info-card accent-cyan"><h3>Accessibility settings</h3><p class="body-font">Text size, contrast, audio, and guidance preferences are easy to reach.</p></article>
+            <article class="info-card accent-yellow"><h3>Fallback and repeat support</h3><p class="body-font">Uncertainty is made explicit through repeat, pause, simplify, and request-help actions.</p></article>
+          </div>
+
+          <div class="roadmap-zone" aria-labelledby="roadmap-title">
+            <div class="roadmap-kicker">Iteration Route</div>
+            <h3 id="roadmap-title" class="roadmap-heading">From <span class="text-stroke">Alternatives</span> to Direction</h3>
+            <p class="roadmap-copy body-font">The project moved from broad assistive ideas toward a focused route-preview-first interaction model.</p>
+            <div class="roadmap-stage">
+              <img src="CPT208-images/road.png" class="roadmap-road" alt="" aria-hidden="true">
+              <article class="roadmap-node node-01 node-right"><span class="roadmap-pin" aria-hidden="true"></span><div class="roadmap-label"><div class="roadmap-version">v0.1</div><h4>Problem framing</h4><p class="body-font">Defined route understanding and cognitive load as the core challenges.</p></div></article>
+              <article class="roadmap-node node-02 node-left"><span class="roadmap-pin" aria-hidden="true"></span><div class="roadmap-label"><div class="roadmap-version">v0.2</div><h4>Crazy Eights</h4><p class="body-font">Generated route access, guidance, settings, and fallback concepts.</p></div></article>
+              <article class="roadmap-node node-03 node-right"><span class="roadmap-pin" aria-hidden="true"></span><div class="roadmap-label"><div class="roadmap-version">v0.3</div><h4>Alternative comparison</h4><p class="body-font">Compared text, visual, camera, audio, and fallback models.</p></div></article>
+              <article class="roadmap-node node-04 node-left"><span class="roadmap-pin" aria-hidden="true"></span><div class="roadmap-label"><div class="roadmap-version">v0.4</div><h4>Low-fi flow</h4><p class="body-font">Mapped Home to Scan to Preview to Guidance to Fallback.</p></div></article>
+              <article class="roadmap-node node-05 node-right"><span class="roadmap-pin" aria-hidden="true"></span><div class="roadmap-label"><div class="roadmap-version">v0.5</div><h4>Reduced overload</h4><p class="body-font">Shifted more support before climbing and shortened live cues.</p></div></article>
+              <article class="roadmap-node node-06 node-left"><span class="roadmap-pin" aria-hidden="true"></span><div class="roadmap-label"><div class="roadmap-version">v1.0</div><h4>Final direction</h4><p class="body-font">Committed to mobile route preview, short audio, settings, and fallback.</p></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

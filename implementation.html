@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 Implementation - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="module-page integrated-page process-page implementation-page squad-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="index.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link">Why</a>
+          <a href="user-requirements.html" class="page-link">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link active">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <div class="page-id">04 Implementation</div>
+          <h1 id="page-title">Implementation</h1>
+          <p class="page-description body-font">Team contributions, high-fi prototype evidence, core feature set, system architecture, and technical notes.</p>
+        </section>
+
+        <div class="hero-collage" aria-label="Implementation section markers">
+          <span class="title-shard title-shard-black">Squad</span>
+          <span class="title-shard title-shard-red">Prototype</span>
+          <span class="title-shard title-shard-white">How HoldLight became a working mobile web app direction</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="squad" class="portfolio-section squad-section" aria-labelledby="squad-title">
+        <h2 id="squad-title" class="section-title">Squad / Individual <span class="text-stroke">Contributions</span></h2>
+        <div class="squad-stage" aria-label="Animated squad contribution cards">
+          <div id="epicenter">
+            <div class="p5-star-wrapper epicenter-p5-star">
+              <div class="p5-star-layer p5-star-l1"></div>
+              <div class="p5-star-layer p5-star-l2"></div>
+              <div class="p5-star-layer p5-star-l3"></div>
+              <div class="p5-star-layer p5-star-l4"></div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-1">
+              <div class="member-block">
+                <img src="CPT208-images/ChenYu.png" class="shard-photo" alt="Chenyu Du">
+                <div class="shard-info">
+                  <h3 class="shard-name">Chenyu <span class="p5-surname-initial">D</span>u</h3>
+                  <div class="shard-role">Research &amp; Structure</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-2">
+              <div class="member-block">
+                <img src="CPT208-images/JunYan.png" class="shard-photo" alt="Junyan He">
+                <div class="shard-info">
+                  <h3 class="shard-name">Junyan <span class="p5-surname-initial">H</span>e</h3>
+                  <div class="shard-role">Persona &amp; UI/UX</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-3">
+              <div class="member-block">
+                <img src="CPT208-images/JiaFei.png" class="shard-photo" alt="Jiafei Sun">
+                <div class="shard-info">
+                  <h3 class="shard-name">Jiafei <span class="p5-surname-initial">S</span>un</h3>
+                  <div class="shard-role">Front-end &amp; Code</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-4">
+              <div class="member-block">
+                <img src="CPT208-images/YouMing.png" class="shard-photo" alt="Youming Yang">
+                <div class="shard-info">
+                  <h3 class="shard-name">Youming <span class="p5-surname-initial">Y</span>ang</h3>
+                  <div class="shard-role">Inclusive Design</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="counter-burst-wrapper cb-1"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-2"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-3"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-4"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-5"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-6"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-7"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-8"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-9"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-10"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-11"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-12"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-13"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-14"><div class="deco-shard"></div></div>
+          </div>
+
+          <div class="p5-star-wrapper p5-star-side-1"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+          <div class="p5-star-wrapper p5-star-side-2"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+          <div class="p5-star-wrapper p5-star-side-3"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+          <div class="p5-star-wrapper p5-star-side-4"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+        </div>
+
+        <div class="stage-board contribution-board">
+          <div class="table-wrap">
+            <table class="process-table">
+              <thead>
+                <tr>
+                  <th>Member</th>
+                  <th>Role</th>
+                  <th>Main Contributions</th>
+                  <th>Evidence / Related Section</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chenyu Du</td>
+                  <td>Research &amp; Structure</td>
+                  <td>Research framing, academic / product gap synthesis, process portfolio structure.</td>
+                  <td>Why &amp; Gap; Evaluation references.</td>
+                </tr>
+                <tr>
+                  <td>Junyan He</td>
+                  <td>Persona &amp; UI/UX</td>
+                  <td>Persona development, user journey framing, interaction flow, visual portfolio refinement.</td>
+                  <td>User Requirements; Iteration &amp; Alternatives.</td>
+                </tr>
+                <tr>
+                  <td>Jiafei Sun</td>
+                  <td>Front-end &amp; Code</td>
+                  <td>Prototype implementation, frontend integration, responsive behaviour, verification support.</td>
+                  <td>Implementation; Technical Notes / AI Logs.</td>
+                </tr>
+                <tr>
+                  <td>Youming Yang</td>
+                  <td>Inclusive Design</td>
+                  <td>Accessibility review, low-overload guidance decisions, ethical reflection, fallback logic.</td>
+                  <td>User Requirements; Evaluation &amp; Reflection.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="high-fi" class="portfolio-section" aria-labelledby="highfi-title">
+        <h2 id="highfi-title" class="section-title">High-Fi <span class="text-stroke">Prototype</span></h2>
+        <div class="stage-board">
+          <div class="link-button-list">
+            <a href="#" class="quick-link">Live Web App</a>
+            <a href="#" class="quick-link">GitHub Repository</a>
+            <a href="#" class="quick-link">Demo Video</a>
+            <a href="#" class="quick-link">Figma Prototype</a>
+          </div>
+
+          <div class="screenshot-grid">
+            <figure class="screenshot-card">
+              <div class="media-placeholder">Final screenshot placeholder</div>
+              <figcaption><strong>Landing / Home.</strong> The user can start scan quickly. Supports scan-first access and matters because the primary task is visible immediately.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="media-placeholder">Final screenshot placeholder</div>
+              <figcaption><strong>Dashboard / Scan entry.</strong> The user can choose scan, settings, or recent activity. Supports route access and repeat use.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="media-placeholder">Final screenshot placeholder</div>
+              <figcaption><strong>Camera Scan.</strong> The user or assistant frames the wall. Supports route confirmation and reduces setup uncertainty.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="media-placeholder">Final screenshot placeholder</div>
+              <figcaption><strong>Route Preview / Confirmation.</strong> The user checks route direction before climbing. Supports confidence-building preview.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="media-placeholder">Final screenshot placeholder</div>
+              <figcaption><strong>Audio Guidance.</strong> The user receives a short cue and can repeat or pause. Supports low-overload climbing guidance.</figcaption>
+            </figure>
+            <figure class="screenshot-card">
+              <div class="media-placeholder">Final screenshot placeholder</div>
+              <figcaption><strong>Accessibility Settings.</strong> The user adjusts text, contrast, and speech. Supports readable, personalised access.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="core-features" class="portfolio-section" aria-labelledby="features-title">
+        <h2 id="features-title" class="section-title">Core Feature <span class="text-stroke">Set</span></h2>
+        <div class="stage-board">
+          <div class="info-grid three-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Feature 01</span>
+              <h3>Scan &amp; Route Preview</h3>
+              <p class="body-font"><strong>User problem:</strong> route shape is hard to access visually.</p>
+              <p class="body-font"><strong>Implemented feature:</strong> camera scan, route confirmation, and simplified preview.</p>
+              <p class="body-font"><strong>Requirement supported:</strong> confidence-building route preview.</p>
+              <p class="body-font"><strong>Current limitation:</strong> recognition still needs confirmation in real gym conditions.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Feature 02</span>
+              <h3>Short Audio Guidance</h3>
+              <p class="body-font"><strong>User problem:</strong> screen prompts are not practical while climbing.</p>
+              <p class="body-font"><strong>Implemented feature:</strong> concise Web Speech API cue output with repeat and pause.</p>
+              <p class="body-font"><strong>Requirement supported:</strong> low-overload audio guidance.</p>
+              <p class="body-font"><strong>Current limitation:</strong> noisy gym environments may still reduce comprehension.</p>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">Feature 03</span>
+              <h3>Accessibility &amp; Fallback Controls</h3>
+              <p class="body-font"><strong>User problem:</strong> uncertainty can become unsafe or confusing.</p>
+              <p class="body-font"><strong>Implemented feature:</strong> text size, contrast, repeat, pause, and request-help controls.</p>
+              <p class="body-font"><strong>Requirement supported:</strong> safe fallback and recovery.</p>
+              <p class="body-font"><strong>Current limitation:</strong> human support is still required for safety-critical decisions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="portfolio-section" aria-labelledby="architecture-title">
+        <h2 id="architecture-title" class="section-title">System Architecture <span class="text-stroke">and Data Flow</span></h2>
+        <div class="stage-board">
+          <div class="architecture-diagram" role="img" aria-label="System architecture placeholder showing frontend, API, database, vision engine, and speech synthesis">
+            <div class="arch-node">Browser Frontend</div>
+            <div class="arch-node">Browser Local Capabilities<br><span>camera, speech, accessibility settings</span></div>
+            <div class="arch-node">Static Hosting / Reverse Proxy</div>
+            <div class="arch-node">Node / Express API</div>
+            <div class="arch-node">MongoDB</div>
+            <div class="arch-node">Python Vision Engine</div>
+            <div class="arch-node">Web Speech API / Speech Synthesis</div>
+          </div>
+          <div class="intro-panel">
+            <p>The intended data flow starts in the browser: the user opens the mobile web app, starts the scan feature, and the camera frame is processed for route recognition. The frontend communicates with a Node / Express API when persistent data or server-side coordination is needed. MongoDB stores structured app data such as user preferences or session records. The Python vision engine supports route and hold recognition, while the browser handles local camera access, accessibility settings, and Web Speech API output for short audio guidance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="technical-notes" class="portfolio-section" aria-labelledby="technical-title">
+        <h2 id="technical-title" class="section-title">Technical Notes / <span class="text-stroke">AI Logs</span></h2>
+        <div class="stage-board">
+          <div class="info-grid two-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Tech Stack</span>
+              <h3>Mobile web prototype</h3>
+              <ul class="body-font compact-list">
+                <li>Browser frontend for mobile interaction and accessibility controls.</li>
+                <li>Node / Express API for backend coordination.</li>
+                <li>MongoDB for persistent app data.</li>
+                <li>Python vision engine for camera-based recognition experiments.</li>
+                <li>Web Speech API / speech synthesis for audio cues.</li>
+              </ul>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Verification + AI Logs</span>
+              <h3>Setup and evidence trail</h3>
+              <ul class="body-font compact-list">
+                <li>README / setup instructions should document how to run the app locally.</li>
+                <li><code>/ai-logs</code> is reserved for AI-assisted coding prompts and summaries.</li>
+                <li>Verification methods include manual user-flow checks, responsive layout checks, and accessibility review.</li>
+                <li>AI-assisted code suggestions should be reviewed before adoption.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("mousemove", function(event) {
+      const xAxis = (window.innerWidth / 2 - event.clientX) * 0.04;
+      const yAxis = (window.innerHeight / 2 - event.clientY) * 0.04;
+      document.documentElement.style.setProperty("--mx", `${xAxis}px`);
+      document.documentElement.style.setProperty("--my", `${yAxis}px`);
+    });
+  </script>
+</body>
+</html>

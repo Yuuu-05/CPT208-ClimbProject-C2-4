@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 User Requirements - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="module-page integrated-page process-page user-requirements-page beta-map-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="index.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link">Why</a>
+          <a href="user-requirements.html" class="page-link active">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <div class="page-id">02 User Requirements</div>
+          <h1 id="page-title">User Requirements</h1>
+          <p class="page-description body-font">Target users, personas, evidence of life, current journey map, requirements list, and traceability.</p>
+        </section>
+
+        <div class="hero-collage" aria-label="User requirements section markers">
+          <span class="title-shard title-shard-black">Users</span>
+          <span class="title-shard title-shard-red">Evidence</span>
+          <span class="title-shard title-shard-white">From observed pain points to HoldLight features</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="target-users" class="portfolio-section" aria-labelledby="target-title">
+        <h2 id="target-title" class="section-title">Target <span class="text-stroke">Users</span></h2>
+        <div class="stage-board">
+          <div class="info-grid three-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Primary User</span>
+              <h3>Blind or low-vision beginner climber</h3>
+              <p class="body-font">Needs a clear route preview, accessible guidance, confidence-building feedback, and a way to recover when cues are missed.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Secondary User</span>
+              <h3>Sighted assistant / coach / peer supporter</h3>
+              <p class="body-font">Supports setup, safety awareness, route confirmation, and human fallback without taking over the whole experience.</p>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">Use Context</span>
+              <h3>Indoor climbing gym</h3>
+              <p class="body-font">Mobile onsite use in a noisy, visually dense, safety-critical environment where support must be fast and low-overload.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="personas" class="portfolio-section" aria-labelledby="persona-title">
+        <h2 id="persona-title" class="section-title">Service <span class="text-stroke">Personas</span></h2>
+        <div id="persona-groups" class="persona-groups"></div>
+      </section>
+
+      <section id="evidence" class="portfolio-section" aria-labelledby="evidence-title">
+        <h2 id="evidence-title" class="section-title">Evidence <span class="text-stroke">of Life</span></h2>
+        <div class="stage-board">
+          <div class="evidence-grid">
+            <article class="evidence-card">
+              <div class="media-placeholder" role="img" aria-label="Placeholder for route observation photo">Image / video placeholder</div>
+              <span class="card-label">Date / Context</span>
+              <h3>Indoor gym route browsing</h3>
+              <p class="body-font"><strong>What we observed:</strong> route choice depends heavily on visual colour and wall layout.</p>
+              <p class="body-font"><strong>Design insight:</strong> the app needs a simplified route preview before climbing.</p>
+            </article>
+            <article class="evidence-card">
+              <div class="media-placeholder" role="img" aria-label="Placeholder for assistant setup photo">Image / video placeholder</div>
+              <span class="card-label">Date / Context</span>
+              <h3>Assistant setup support</h3>
+              <p class="body-font"><strong>What we observed:</strong> phone positioning and wall framing are hard to judge without sighted support.</p>
+              <p class="body-font"><strong>Design insight:</strong> confirmation and fallback must include the assistant role.</p>
+            </article>
+            <article class="evidence-card">
+              <div class="media-placeholder" role="img" aria-label="Placeholder for audio cue testing video">Image / video placeholder</div>
+              <span class="card-label">Date / Context</span>
+              <h3>Audio cue comprehension</h3>
+              <p class="body-font"><strong>What we observed:</strong> long instructions become difficult to process during movement.</p>
+              <p class="body-font"><strong>Design insight:</strong> use short, direction-first speech cues.</p>
+            </article>
+            <article class="evidence-card">
+              <div class="media-placeholder" role="img" aria-label="Placeholder for accessibility settings test">Image / video placeholder</div>
+              <span class="card-label">Date / Context</span>
+              <h3>Accessibility setting check</h3>
+              <p class="body-font"><strong>What we observed:</strong> text size, contrast, and sound control need to be easy to reach.</p>
+              <p class="body-font"><strong>Design insight:</strong> keep settings visible and simple.</p>
+            </article>
+            <article class="evidence-card">
+              <div class="media-placeholder" role="img" aria-label="Placeholder for fallback flow test">Image / video placeholder</div>
+              <span class="card-label">Date / Context</span>
+              <h3>Fallback moment</h3>
+              <p class="body-font"><strong>What we observed:</strong> uncertainty creates hesitation if the system does not clearly explain what to do next.</p>
+              <p class="body-font"><strong>Design insight:</strong> provide repeat, pause, and request-help options.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey-map" class="portfolio-section journey-map-stage" aria-labelledby="journey-title">
+        <h2 id="journey-title" class="section-title">Current User <span class="text-stroke">Journey Map</span></h2>
+        <div class="beta-map-container">
+          <div class="journey-title-collage" aria-label="Journey map title">
+            <span class="title-shard title-shard-black">Current</span>
+            <span class="title-shard title-shard-red">Journey</span>
+            <span class="title-shard title-shard-white">Li Wen moves from route choice to guidance and recovery with assistant support when needed</span>
+          </div>
+
+          <div class="journey-grid-board">
+            <div class="journey-row journey-row--stages">
+              <div class="journey-row-label">Stages</div>
+              <div class="journey-cell stage-col-1"><article class="journey-stage-card"><span class="stage-index">01</span><h3 class="stage-name">Arriving / Choosing a route</h3></article></div>
+              <div class="journey-cell stage-col-2"><article class="journey-stage-card"><span class="stage-index">02</span><h3 class="stage-name">Understanding the route</h3></article></div>
+              <div class="journey-cell stage-col-3"><article class="journey-stage-card"><span class="stage-index">03</span><h3 class="stage-name">Preparing to climb</h3></article></div>
+              <div class="journey-cell stage-col-4"><article class="journey-stage-card"><span class="stage-index">04</span><h3 class="stage-name">Receiving guidance</h3></article></div>
+              <div class="journey-cell stage-col-5"><article class="journey-stage-card"><span class="stage-index">05</span><h3 class="stage-name">Recovering and reflecting</h3></article></div>
+            </div>
+
+            <div class="journey-row journey-row--steps">
+              <div class="journey-row-label">User action</div>
+              <div class="journey-cell stage-col-1"><article class="journey-hold"><p>Arrives at the gym and chooses a beginner route with support.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="journey-hold"><p>Tries to understand hold order, direction, and key transitions.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="journey-hold"><p>Sets preferences, confirms phone position, and prepares to start.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="journey-hold"><p>Climbs while listening for brief cues and repeating them when needed.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="journey-hold"><p>Pauses, asks for clarification, reviews the climb, and plans the next attempt.</p></article></div>
+            </div>
+
+            <div class="journey-row journey-row--pain">
+              <div class="journey-row-label">Pain point</div>
+              <div class="journey-cell stage-col-1"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Route choice depends on visual information that may not be accessible.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Verbal route explanation is hard to remember once climbing begins.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Setup decisions can become stressful before the user feels ready.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Long or unclear guidance can interrupt rhythm and increase cognitive load.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>When guidance fails, the user needs a clear next action rather than silent uncertainty.</p></article></div>
+            </div>
+
+            <div class="journey-row journey-row--emotions">
+              <div class="journey-row-label">Emotion</div>
+              <div class="journey-cell stage-col-1"><article class="emotion-bubble"><div class="emotion-copy"><strong>Curious but unsure</strong><p>Will this route be understandable?</p></div></article></div>
+              <div class="journey-cell stage-col-2"><article class="emotion-bubble"><div class="emotion-copy"><strong>Focused</strong><p>I need enough information to solve it myself.</p></div></article></div>
+              <div class="journey-cell stage-col-3"><article class="emotion-bubble"><div class="emotion-copy"><strong>Slightly anxious</strong><p>Setup needs to feel quick and trustworthy.</p></div></article></div>
+              <div class="journey-cell stage-col-4"><article class="emotion-bubble"><div class="emotion-copy"><strong>Tense but active</strong><p>The cue must be short enough to act on.</p></div></article></div>
+              <div class="journey-cell stage-col-5"><article class="emotion-bubble"><div class="emotion-copy"><strong>Relieved or frustrated</strong><p>I need to recover safely and understand what happened.</p></div></article></div>
+            </div>
+
+            <div class="journey-row journey-row--opportunities">
+              <div class="journey-row-label">Opportunity</div>
+              <div class="journey-cell stage-col-1"><article class="breakthrough-card"><p>Make route access obvious from the first screen.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="breakthrough-card"><p>Give a layered preview from overview to key holds.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="breakthrough-card"><p>Save accessibility preferences and support assistant confirmation.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="breakthrough-card"><p>Use short audio cues and repeat controls.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="breakthrough-card"><p>Show fallback options and post-climb reflection.</p></article></div>
+            </div>
+
+            <div class="journey-row journey-row--support">
+              <div class="journey-row-label">Design response</div>
+              <div class="journey-cell stage-col-1"><article class="support-card"><p>Scan-first entry and beginner route context.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="support-card"><p>Camera scan plus route confirmation and simplified preview.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="support-card"><p>Accessibility settings, assistant check, and start confirmation.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="support-card"><p>Audio-first guidance with repeat, pause, and low-overload phrasing.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="support-card"><p>Explicit fallback, recovery support, and reflection summary.</p></article></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="requirements-list" class="portfolio-section" aria-labelledby="requirements-title">
+        <h2 id="requirements-title" class="section-title">Requirements <span class="text-stroke">List</span></h2>
+        <div class="stage-board">
+          <div class="requirement-summary-grid">
+            <article class="requirement-summary-card">
+              <img src="CPT208-images/requirement1.png" alt="Poster for route preview requirement">
+              <div>
+                <span class="card-label">Must-Have 01</span>
+                <h3>Confidence-building route preview</h3>
+                <p class="body-font">The system must provide an overview-to-detail route preview before climbing.</p>
+              </div>
+            </article>
+            <article class="requirement-summary-card">
+              <img src="CPT208-images/requirement2.png" alt="Poster for short audio guidance requirement">
+              <div>
+                <span class="card-label">Must-Have 02</span>
+                <h3>Low-overload audio guidance</h3>
+                <p class="body-font">The system must provide short, direction-first cues only when needed.</p>
+              </div>
+            </article>
+            <article class="requirement-summary-card">
+              <img src="CPT208-images/requirement3.png" alt="Poster for fallback and recovery requirement">
+              <div>
+                <span class="card-label">Must-Have 03</span>
+                <h3>Safe fallback and recovery</h3>
+                <p class="body-font">The system must allow users to repeat, pause, request detail, or escalate to human help.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="info-grid two-col section-gap">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Functional Requirements</span>
+              <h3>Core product behaviour</h3>
+              <ul class="body-font compact-list">
+                <li>Start camera scan from a clear primary action.</li>
+                <li>Confirm the detected route before guidance begins.</li>
+                <li>Provide repeat, pause, and fallback controls.</li>
+                <li>Record a basic session summary for reflection.</li>
+              </ul>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Accessibility Requirements</span>
+              <h3>Readable and audio-first support</h3>
+              <ul class="body-font compact-list">
+                <li>High contrast and large readable controls.</li>
+                <li>Screen-reader-friendly headings and labels.</li>
+                <li>Short speech cues with repeat support.</li>
+                <li>Visible focus states and non-colour-only status cues.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="traceability" class="portfolio-section" aria-labelledby="trace-title">
+        <h2 id="trace-title" class="section-title">Requirement <span class="text-stroke">Traceability</span></h2>
+        <div class="stage-board">
+          <div class="table-wrap">
+            <table class="process-table">
+              <thead>
+                <tr>
+                  <th>User Pain Point</th>
+                  <th>Requirement</th>
+                  <th>Feature</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cannot distinguish route clearly.</td>
+                  <td>Route preview.</td>
+                  <td>Camera scan + route confirmation.</td>
+                </tr>
+                <tr>
+                  <td>Cannot read screen while climbing.</td>
+                  <td>Audio-first guidance.</td>
+                  <td>Short speech cues.</td>
+                </tr>
+                <tr>
+                  <td>Gets confused when system fails.</td>
+                  <td>Recovery support.</td>
+                  <td>Repeat / pause / fallback.</td>
+                </tr>
+                <tr>
+                  <td>Assistant support can become constant and tiring.</td>
+                  <td>Bounded human handoff.</td>
+                  <td>Assistant confirmation and request-help states.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const personas = [
+      {
+        id: "li-wen",
+        group: "low-vision",
+        name: "Li Wen",
+        role: "Low-Vision Beginner Climber",
+        image: "CPT208-images/LiWen.png",
+        accent: "var(--hold-cyan)",
+        secondary: "var(--punk-red)",
+        panel: "var(--hold-yellow)",
+        border: "var(--pure-white)",
+        actionLabel: "Analyze",
+        actionAlert: "Opening Li Wen persona file.",
+        quote: "I want enough information to solve the route myself, not constant instructions.",
+        tags: ["Accessible Mode", "Audio Cues"],
+        panels: [
+          { title: "Background", type: "text", content: "Li Wen is a blind or low-vision indoor climber with prior climbing experience. She usually relies on a coach or sighted guide for route explanations before climbing and occasional prompts during the climb. However, she does not want to be directed move by move throughout the entire route. She wants enough support to understand the climb, make her own decisions on the wall, and maintain her rhythm. For Li Wen, a good climbing experience is not only about safety, but also about independence, confidence, and equal access to meaningful participation." },
+          { title: "Goals", type: "list", content: ["Gain a usable understanding of the route before starting.", "Make independent movement decisions while preserving climbing rhythm.", "Recover quickly when uncertain about the next hold.", "Feel confident, in control, and actively engaged."] },
+          { title: "Frustrations", type: "list", content: ["Route explanations are fragmented and difficult to remember.", "Long instructions create cognitive overload under physical effort.", "Poorly timed prompts interrupt movement and reduce confidence.", "Repeatedly asking others for help can feel socially burdensome."] },
+          { title: "Needs", type: "list", content: ["A layered, on-demand route preview before climbing.", "Short and actionable next-hold cues during climbing.", "Clear fallback options such as repeat, simplify, pause, or request human help."] },
+          { title: "What this persona means for our design", type: "list", content: ["Route preview must come before live guidance.", "Audio cues must be short enough to act on while moving.", "Fallback controls must preserve autonomy rather than forcing constant assistant intervention."] }
+        ]
+      },
+      {
+        id: "lance",
+        group: "assistant",
+        name: "Lance",
+        role: "Sighted Assistant / Coach / Peer Supporter",
+        image: "CPT208-images/Lance.jpg",
+        avatarPosition: "center 18%",
+        accent: "var(--helper-teal)",
+        secondary: "var(--helper-orange)",
+        panel: "var(--hold-yellow)",
+        border: "var(--helper-teal)",
+        actionLabel: "Calibrate",
+        actionAlert: "Opening Lance assistant setup flow.",
+        quote: "I want to support when needed, not become the entire guidance system.",
+        tags: ["Setup Support", "Safety Backup"],
+        panels: [
+          { title: "Background", type: "text", content: "Lance is an experienced supporter who helps blind and low-vision climbers with route explanations, in-climb prompts, and safety oversight. In practice, he often needs to translate route structure and spatial information into short verbal cues while also monitoring the climber's pace, uncertainty, and physical safety. He wants to support the climber when needed, but does not want to become the entire guidance system. For Lance, good support means helping the climber stay safe and successful without taking away their autonomy or enjoyment." },
+          { title: "Goals", type: "list", content: ["Maintain safety oversight without dominating the climbing experience.", "Reduce constant manual prompting throughout the climb.", "Know when to step in, clarify, or let the climber continue independently."] },
+          { title: "Frustrations", type: "list", content: ["Complex route information is hard to translate into brief real-time cues.", "Continuous prompting is mentally tiring and distracts from safety monitoring.", "It is often unclear when to repeat, simplify, pause, or take over."] },
+          { title: "Needs", type: "list", content: ["A bounded workflow for routine route-information support.", "Clear handoff points between system guidance and human intervention.", "Fast, understandable feedback during uncertain moments."] },
+          { title: "What this persona means for our design", type: "list", content: ["Assistant confirmation should be built into setup.", "The system needs explicit uncertainty and request-help states.", "Support tools must reduce repetitive assistant work, not add more burden."] }
+        ]
+      }
+    ];
+
+    const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#39;"
+    }[char]));
+
+    const panelTones = ["accent", "secondary", "white", "panel", "accent"];
+    const personaGroups = [
+      { id: "low-vision", title: "Blind or Low-Vision Climber", kicker: "Primary User File", accent: "var(--hold-cyan)", secondary: "var(--punk-red)" },
+      { id: "assistant", title: "Assistant Support", kicker: "Setup + Safety Backup File", accent: "var(--helper-teal)", secondary: "var(--helper-orange)" }
+    ];
+
+    const renderPanelContent = (panel) => {
+      if (panel.type === "list") {
+        return `<ul class="stats-list persona-list">${panel.content.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul>`;
+      }
+      return `<div class="bio-text">${escapeHTML(panel.content)}</div>`;
+    };
+
+    const renderPanel = (panel, index) => `
+      <div class="stat-block stat-block--${panelTones[index % panelTones.length]}">
+        <h4>${escapeHTML(panel.title)}</h4>
+        ${renderPanelContent(panel)}
+      </div>
+    `;
+
+    const renderPersonaAvatar = (persona) => `
+      <button class="persona-avatar-card" type="button" data-persona-id="${escapeHTML(persona.id)}" aria-pressed="false" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border}; --persona-avatar-position: ${escapeHTML(persona.avatarPosition || "center center")};">
+        <span class="persona-avatar-frame">
+          <img src="${escapeHTML(persona.image)}" alt="${escapeHTML(persona.name)} portrait">
+        </span>
+        <span class="persona-avatar-copy">
+          <span class="persona-avatar-name">${escapeHTML(persona.name)}</span>
+          <span class="persona-avatar-role">${escapeHTML(persona.role)}</span>
+        </span>
+        <span class="persona-avatar-cta">Open File</span>
+      </button>
+    `;
+
+    const renderPersonaGroup = (group) => {
+      const groupPersonas = personas.filter((persona) => persona.group === group.id);
+      return `
+        <section class="persona-group-section" style="--group-accent: ${group.accent}; --group-secondary: ${group.secondary};">
+          <div class="persona-group-header">
+            <span class="persona-group-kicker">${escapeHTML(group.kicker)}</span>
+            <h3>${escapeHTML(group.title)}</h3>
+          </div>
+          <div class="persona-avatar-grid">${groupPersonas.map(renderPersonaAvatar).join("")}</div>
+          <div class="persona-cards persona-detail" data-persona-detail="${escapeHTML(group.id)}" aria-live="polite"></div>
+        </section>
+      `;
+    };
+
+    const renderPersonaCard = (persona) => `
+      <article class="persona-card" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border};">
+        <div class="persona-hold-decor" aria-hidden="true">
+          <span class="persona-hold persona-hold--v0" data-grade="V0"></span>
+          <span class="persona-hold persona-hold--v1" data-grade="V1"></span>
+          <span class="persona-hold persona-hold--v2" data-grade="V2"></span>
+          <span class="persona-hold persona-hold--v3" data-grade="V3"></span>
+        </div>
+
+        <div class="persona-header">
+          <div class="persona-title">
+            <div class="persona-title-line">
+              <h3>${escapeHTML(persona.name)}</h3>
+              <div class="tag-row tag-row--inline">${persona.tags.map((tag) => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}</div>
+            </div>
+            <div class="persona-subtitle">${escapeHTML(persona.role)}</div>
+          </div>
+          <button class="action-btn" type="button" data-persona-alert="${escapeHTML(persona.actionAlert)}" aria-label="${escapeHTML(persona.actionLabel)} ${escapeHTML(persona.name)} persona file">${escapeHTML(persona.actionLabel)}</button>
+        </div>
+
+        <div class="persona-layout">
+          <div class="persona-left">
+            <img class="persona-photo" src="${escapeHTML(persona.image)}" alt="${escapeHTML(persona.name)}">
+            <div class="quote-box">"${escapeHTML(persona.quote)}"</div>
+          </div>
+          <div class="persona-right">${persona.panels.map(renderPanel).join("")}</div>
+        </div>
+      </article>
+    `;
+
+    const personaGroupMount = document.getElementById("persona-groups");
+    personaGroupMount.innerHTML = personaGroups.map(renderPersonaGroup).join("");
+
+    const bindPersonaActions = () => {
+      document.querySelectorAll("[data-persona-alert]").forEach((button) => {
+        button.addEventListener("click", () => alert(button.dataset.personaAlert));
+      });
+    };
+
+    const showPersona = (personaId) => {
+      const persona = personas.find((item) => item.id === personaId);
+      if (!persona) return;
+
+      const activeButton = document.querySelector(`[data-persona-id="${personaId}"]`);
+      const isAlreadyOpen = activeButton && activeButton.classList.contains("is-active");
+
+      if (isAlreadyOpen) {
+        const currentDetail = document.querySelector(`[data-persona-detail="${persona.group}"]`);
+        if (currentDetail) currentDetail.innerHTML = "";
+        activeButton.classList.remove("is-active");
+        activeButton.setAttribute("aria-pressed", "false");
+        return;
+      }
+
+      document.querySelectorAll("[data-persona-detail]").forEach((detail) => {
+        detail.innerHTML = detail.dataset.personaDetail === persona.group ? renderPersonaCard(persona) : "";
+      });
+
+      document.querySelectorAll("[data-persona-id]").forEach((button) => {
+        const isActive = button.dataset.personaId === personaId;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      bindPersonaActions();
+
+      const activeDetail = document.querySelector(`[data-persona-detail="${persona.group}"]`);
+      if (activeDetail) activeDetail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    };
+
+    document.querySelectorAll("[data-persona-id]").forEach((button) => {
+      button.addEventListener("click", () => showPersona(button.dataset.personaId));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 Why &amp; Gap - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="module-page integrated-page process-page why-gap-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="index.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link active">Why</a>
+          <a href="user-requirements.html" class="page-link">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <div class="page-id">01 Why &amp; Gap</div>
+          <h1 id="page-title">Why &amp; Gap</h1>
+          <p class="page-description body-font">Motivation, problem framing, research gap, commercial product gap, and stakeholder context for HoldLight.</p>
+        </section>
+
+        <div class="hero-collage" aria-label="Why and gap section markers">
+          <span class="title-shard title-shard-black">Motivation</span>
+          <span class="title-shard title-shard-red">Research</span>
+          <span class="title-shard title-shard-white">Accessible Climbing Assistance for Blind and Low-Vision Climbers</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="motivation" class="portfolio-section" aria-labelledby="motivation-title">
+        <h2 id="motivation-title" class="section-title">Why We Chose <span class="text-stroke">This Track</span></h2>
+
+        <div class="stage-board">
+          <div class="why-board">
+            <article class="statement-panel">
+              <h3>Active Lifestyles + Climbing</h3>
+              <div class="statement-columns">
+                <p>We chose the Active track because accessibility in physical activity is often discussed in terms of access, but far less often in terms of independent participation within the activity itself. For our group, indoor climbing made this gap especially visible. Climbing relies heavily on route preview, advance movement planning, and real-time action, which means visual access is not secondary but fundamental to the experience. For blind and low-vision climbers, this creates a clear participation barrier: existing work shows difficulties in independent route understanding, usable guidance during climbing, and confident, self-directed involvement. At the same time, assistive research in this area remains promising but early-stage, while mainstream climbing products continue to prioritise route browsing, logging, beta sharing, and community over BLV accessibility.</p>
+                <p>This made the Active track the strongest fit for our project. It gave us the opportunity to design not only for usability, but also for agency, flow, confidence, and enjoyment in a physically demanding setting. We wanted to support active participation rather than passive accommodation: enabling blind and low-vision climbers to understand routes before climbing, receive lightweight support during movement, and stay in control while preserving human fallback where safety is critical. A mobile web app was chosen because it can run on devices climbers and supporters already bring to the gym, while giving us access to camera input, speech output, and adjustable accessibility settings.</p>
+              </div>
+            </article>
+
+            <aside class="side-note">
+              <h3>Design Priorities</h3>
+              <ol class="priority-list">
+                <li>Clear route understanding before the climb starts.</li>
+                <li>Short support that preserves climbing rhythm and reduces cognitive load.</li>
+                <li>Independence with explicit fallback when guidance becomes uncertain.</li>
+              </ol>
+              <div class="route-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem-space" class="portfolio-section" aria-labelledby="problem-title">
+        <h2 id="problem-title" class="section-title">Problem <span class="text-stroke">Space</span></h2>
+        <div class="stage-board">
+          <div class="intro-panel">
+            <p>HoldLight is an accessibility-oriented mobile web app for indoor climbing. The system combines route and hold recognition, simplified route preview, short audio guidance, and assistant-supported fallback to reduce uncertainty before and during climbing.</p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Problem 01</span>
+              <h3>Route visibility problem</h3>
+              <p class="body-font">Indoor routes are visually encoded through hold colour, position, and route shape. Blind and low-vision climbers often need another person to translate that structure before they can plan movement.</p>
+              <p class="body-font"><strong>Design implication:</strong> provide a confidence-building route preview before climbing.</p>
+            </article>
+
+            <article class="info-card accent-yellow">
+              <span class="card-label">Problem 02</span>
+              <h3>Cognitive load problem</h3>
+              <p class="body-font">Long explanations are hard to retain once the climber is physically engaged on the wall. Guidance needs to be brief, timed carefully, and easy to repeat.</p>
+              <p class="body-font"><strong>Design implication:</strong> keep in-climb support short, audio-first, and low-overload.</p>
+            </article>
+
+            <article class="info-card accent-red">
+              <span class="card-label">Problem 03</span>
+              <h3>Safety and trust problem</h3>
+              <p class="body-font">A climbing support system cannot pretend to be perfectly certain. Users need to know when recognition is uncertain and how to pause, repeat, or ask for human help.</p>
+              <p class="body-font"><strong>Design implication:</strong> make fallback and recovery states explicit.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="academic-gap" class="portfolio-section" aria-labelledby="academic-title">
+        <h2 id="academic-title" class="section-title">Academic Research <span class="text-stroke">Gap</span></h2>
+        <div class="stage-board">
+          <div class="research-grid">
+            <article class="research-card">
+              <span class="card-label">Paper 01</span>
+              <h3>Braun et al. (2025)</h3>
+              <p class="body-font"><strong>What it did well:</strong> identified needs for an assistance system for visually impaired and blind climbers and boulderers.</p>
+              <p class="body-font"><strong>What it missed:</strong> stayed closer to needs assessment than a complete gym-ready interaction workflow.</p>
+              <p class="body-font"><strong>Relevance to HoldLight:</strong> confirms that route understanding, support timing, and safe assistance are core needs.</p>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Paper 02</span>
+              <h3>Ramsay &amp; Chang (2020)</h3>
+              <p class="body-font"><strong>What it did well:</strong> explored body pose sonification as an auditory aid for blind rock climbers.</p>
+              <p class="body-font"><strong>What it missed:</strong> focused on auditory substitution rather than the whole pre-climb to recovery journey.</p>
+              <p class="body-font"><strong>Relevance to HoldLight:</strong> supports the value of audio, but reminds us to keep cues short and cognitively light.</p>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Paper 03</span>
+              <h3>Richardson et al. (2022)</h3>
+              <p class="body-font"><strong>What it did well:</strong> demonstrated computer vision as a possible sensory substitution approach for climbing.</p>
+              <p class="body-font"><strong>What it missed:</strong> did not fully resolve practical uncertainty, fallback, and mobile onsite use.</p>
+              <p class="body-font"><strong>Relevance to HoldLight:</strong> influenced camera-based route access, while pushing us to design honest recovery states.</p>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Paper 04</span>
+              <h3>Simone &amp; Galatolo (2020)</h3>
+              <p class="body-font"><strong>What it did well:</strong> studied paired climbing, instructions, and instructed body movement with visually impaired athletes.</p>
+              <p class="body-font"><strong>What it missed:</strong> centred human instruction more than a hybrid system that shares work between app and assistant.</p>
+              <p class="body-font"><strong>Relevance to HoldLight:</strong> shaped our secondary-user model and the need for assistant-supported fallback.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="commercial-gap" class="portfolio-section" aria-labelledby="commercial-title">
+        <h2 id="commercial-title" class="section-title">Commercial Product <span class="text-stroke">Gap</span></h2>
+        <div class="stage-board">
+          <div class="research-grid product-grid">
+            <article class="research-card">
+              <span class="card-label">Product 01</span>
+              <h3>KAYA</h3>
+              <p class="body-font"><strong>What it supports:</strong> route discovery, logging, grades, gym community, and training progress.</p>
+              <p class="body-font"><strong>What it misses:</strong> accessible route preview and audio-first support for blind and low-vision beginners.</p>
+              <p class="body-font"><strong>What HoldLight learns:</strong> climbing tools should feel motivating, but accessibility cannot be an afterthought.</p>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Product 02</span>
+              <h3>Vertical-Life</h3>
+              <p class="body-font"><strong>What it supports:</strong> digital topos, route browsing, guidebook-style information, and climbing community use.</p>
+              <p class="body-font"><strong>What it misses:</strong> accessible interpretation of route shape during onsite indoor climbing.</p>
+              <p class="body-font"><strong>What HoldLight learns:</strong> route information needs to become actionable through simplified preview and speech.</p>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Product 03</span>
+              <h3>TopLogger</h3>
+              <p class="body-font"><strong>What it supports:</strong> gym route tracking, personal logs, competition-style ranking, and activity history.</p>
+              <p class="body-font"><strong>What it misses:</strong> in-the-moment support for users who cannot rely on visual route reading.</p>
+              <p class="body-font"><strong>What HoldLight learns:</strong> progress features are useful only after the route access barrier is addressed.</p>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Product 04</span>
+              <h3>RouteIt Indoor Bouldering</h3>
+              <p class="body-font"><strong>What it supports:</strong> route setting, route browsing, and indoor bouldering route information.</p>
+              <p class="body-font"><strong>What it misses:</strong> BLV-specific support for confirmation, uncertainty, and fallback.</p>
+              <p class="body-font"><strong>What HoldLight learns:</strong> gym-ready tools need clear handoff between digital guidance and human support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stakeholders" class="portfolio-section" aria-labelledby="stakeholder-title">
+        <h2 id="stakeholder-title" class="section-title">Stakeholder <span class="text-stroke">Overview</span></h2>
+        <div class="stage-board">
+          <div class="info-grid three-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Primary User</span>
+              <h3>Blind / low-vision beginner climber</h3>
+              <p class="body-font">Needs route understanding, short cues, accessible controls, confidence, and safe recovery when guidance is unclear.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Secondary User</span>
+              <h3>Sighted assistant / coach / peer supporter</h3>
+              <p class="body-font">Helps with setup, safety monitoring, camera positioning, and human fallback without becoming the entire guidance system.</p>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">Context</span>
+              <h3>Indoor climbing gym, mobile onsite use</h3>
+              <p class="body-font">Noisy, visually dense, time-sensitive, and safety-critical; support must be fast, readable, audible, and honest about uncertainty.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
