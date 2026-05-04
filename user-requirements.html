@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 User Requirements - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body class="module-page integrated-page process-page user-requirements-page beta-map-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="modules.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link">Why</a>
+          <a href="user-requirements.html" class="page-link active">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <span class="page-title-backdrop page-title-backdrop-cyan" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-black" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-dots" aria-hidden="true"></span>
+          <div class="page-id">02. DEFINE</div>
+          <h1 id="page-title">User Requirements</h1>
+        </section>
+
+        <div class="hero-collage" aria-label="User requirements section markers">
+          <span class="title-shard title-shard-black">From Pain</span>
+          <span class="title-shard title-shard-red">To Playfulness</span>
+          <span class="title-shard title-shard-white">Mapping the current journey and defining the must-haves for a playful climbing experience.</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="journey-map" class="portfolio-section journey-map-stage" aria-labelledby="journey-title">
+        <h2 id="journey-title" class="section-title">Current User <span class="text-stroke">Journey Map</span></h2>
+        <div class="beta-map-container">
+          <div class="journey-grid-board">
+            <div class="journey-row journey-row--stages">
+              <div class="journey-row-label">Stages</div>
+              <div class="journey-cell stage-col-1"><article class="journey-stage-card"><span class="stage-index">01</span><h3 class="stage-name">Arriving / Choosing a route</h3></article></div>
+              <div class="journey-cell stage-col-2"><article class="journey-stage-card"><span class="stage-index">02</span><h3 class="stage-name">Understanding the route</h3></article></div>
+              <div class="journey-cell stage-col-3"><article class="journey-stage-card"><span class="stage-index">03</span><h3 class="stage-name">Preparing to climb</h3></article></div>
+              <div class="journey-cell stage-col-4"><article class="journey-stage-card"><span class="stage-index">04</span><h3 class="stage-name">Receiving guidance</h3></article></div>
+              <div class="journey-cell stage-col-5"><article class="journey-stage-card"><span class="stage-index">05</span><h3 class="stage-name">Recovering and reflecting</h3></article></div>
+            </div>
+
+            <div class="journey-row journey-row--steps">
+              <div class="journey-row-label">User action</div>
+              <div class="journey-cell stage-col-1"><article class="journey-hold"><p>Arrives at the gym and chooses a beginner route with support.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="journey-hold"><p>Tries to understand hold order, direction, and key transitions.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="journey-hold"><p>Sets preferences, confirms phone position, and prepares to start.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="journey-hold"><p>Climbs while listening for brief cues and repeating them when needed.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="journey-hold"><p>Pauses, asks for clarification, reviews the climb, and plans the next attempt.</p></article></div>
+            </div>
+
+            <div class="journey-row journey-row--pain">
+              <div class="journey-row-label">Pain point</div>
+              <div class="journey-cell stage-col-1"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Route choice depends on visual information that may not be accessible.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Verbal route explanation is hard to remember once climbing begins.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Setup decisions can become stressful before the user feels ready.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>Long or unclear guidance can interrupt rhythm and increase cognitive load.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="warning-seal"><span class="warning-kicker">Pain Point</span><p>When guidance fails, the user needs a clear next action rather than silent uncertainty.</p></article></div>
+            </div>
+
+            <div class="journey-row journey-row--emotions">
+              <div class="journey-row-label">Emotion</div>
+              <div class="journey-cell stage-col-1"><article class="emotion-bubble"><div class="emotion-copy"><strong>Curious but unsure</strong><p>Will this route be understandable?</p></div></article></div>
+              <div class="journey-cell stage-col-2"><article class="emotion-bubble"><div class="emotion-copy"><strong>Focused</strong><p>I need enough information to solve it myself.</p></div></article></div>
+              <div class="journey-cell stage-col-3"><article class="emotion-bubble"><div class="emotion-copy"><strong>Slightly anxious</strong><p>Setup needs to feel quick and trustworthy.</p></div></article></div>
+              <div class="journey-cell stage-col-4"><article class="emotion-bubble"><div class="emotion-copy"><strong>Tense but active</strong><p>The cue must be short enough to act on.</p></div></article></div>
+              <div class="journey-cell stage-col-5"><article class="emotion-bubble"><div class="emotion-copy"><strong>Relieved or frustrated</strong><p>I need to recover safely and understand what happened.</p></div></article></div>
+            </div>
+
+            <div class="journey-row journey-row--opportunities">
+              <div class="journey-row-label">Opportunity</div>
+              <div class="journey-cell stage-col-1"><article class="breakthrough-card"><p>Make route access obvious from the first screen.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="breakthrough-card"><p>Give a layered preview from overview to key holds.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="breakthrough-card"><p>Save accessibility preferences and support assistant confirmation.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="breakthrough-card"><p>Use short audio cues and repeat controls.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="breakthrough-card"><p>Show fallback options and post-climb reflection.</p></article></div>
+            </div>
+
+            <div class="journey-row journey-row--support">
+              <div class="journey-row-label">Design response</div>
+              <div class="journey-cell stage-col-1"><article class="support-card"><p>Scan-first entry and beginner route context.</p></article></div>
+              <div class="journey-cell stage-col-2"><article class="support-card"><p>Camera scan plus route confirmation and simplified preview.</p></article></div>
+              <div class="journey-cell stage-col-3"><article class="support-card"><p>Accessibility settings, assistant check, and start confirmation.</p></article></div>
+              <div class="journey-cell stage-col-4"><article class="support-card"><p>Audio-first guidance with repeat, pause, and low-overload phrasing.</p></article></div>
+              <div class="journey-cell stage-col-5"><article class="support-card"><p>Explicit fallback, recovery support, and reflection summary.</p></article></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="evidence" class="portfolio-section" aria-labelledby="evidence-title">
+        <h2 id="evidence-title" class="section-title">Evidence <span class="text-stroke">of Life</span></h2>
+        <div class="stage-board evidence-carousel-board">
+          <div class="evidence-carousel" data-evidence-carousel aria-label="Evidence of Life carousel">
+            <button class="evidence-carousel-arrow evidence-carousel-arrow--prev" type="button" aria-label="Show previous evidence">&#8592;</button>
+            <div class="evidence-carousel-track" data-evidence-track role="list" aria-label="Ten evidence cards">
+              <article class="evidence-card evidence-carousel-card is-neighbor" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-1-title" aria-describedby="evidence-card-1-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/pilottest.jpg" alt="Early pilot testing session used to gather initial feedback for blind and low-vision climbing support." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Pilot Test</span>
+                  <h3 id="evidence-card-1-title">Early pilot testing</h3>
+                  <p id="evidence-card-1-desc" class="body-font">Initial testing with relevant participants helped us check whether the support concept matched real climbing needs before deeper prototyping.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-active" tabindex="0" role="listitem" data-evidence-card aria-current="true" aria-labelledby="evidence-card-2-title" aria-describedby="evidence-card-2-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/pilottest2.jpg" alt="Pilot testing evidence showing early feedback collection for HoldLight's accessibility workflow." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Pilot Test</span>
+                  <h3 id="evidence-card-2-title">Feedback collection</h3>
+                  <p id="evidence-card-2-desc" class="body-font">Early feedback exposed where route explanation, phone handling, and audio-first guidance needed clearer structure for accessible use.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-neighbor" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-3-title" aria-describedby="evidence-card-3-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/pilottest3.jpg" alt="Pilot testing evidence showing participant discussion and early validation of HoldLight's climbing support concept." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Pilot Test</span>
+                  <h3 id="evidence-card-3-title">Concept validation</h3>
+                  <p id="evidence-card-3-desc" class="body-font">The pilot sessions grounded the project in real accessibility concerns instead of assuming that visual route information could simply be translated.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-distant" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-4-title" aria-describedby="evidence-card-4-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/teamtest1.jpg" alt="Team member testing HoldLight internally to validate the prototype flow and interaction logic." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Team Test</span>
+                  <h3 id="evidence-card-4-title">Internal flow check</h3>
+                  <p id="evidence-card-4-desc" class="body-font">Team testing let us quickly verify the scan-first flow, screen sequence, and interaction logic before asking participants to try it.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-distant" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-5-title" aria-describedby="evidence-card-5-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/teamtest2.jpg" alt="Team member testing HoldLight internally to review interface clarity and guidance behavior." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Team Test</span>
+                  <h3 id="evidence-card-5-title">Prototype rehearsal</h3>
+                  <p id="evidence-card-5-desc" class="body-font">Internal rehearsals helped us refine what users should hear, tap, and confirm during route preparation and guidance.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-distant" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-6-title" aria-describedby="evidence-card-6-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/testing-contact-chat.jpg" alt="Chat evidence showing early contact and recruitment communication for HoldLight user testing." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Recruitment</span>
+                  <h3 id="evidence-card-6-title">Participant contact</h3>
+                  <p id="evidence-card-6-desc" class="body-font">Recruitment and preparation messages show how we arranged testing around participant availability, context, and accessibility needs.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-distant" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-7-title" aria-describedby="evidence-card-7-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/testing-interview-chat.png" alt="Interview communication evidence used to collect needs, expectations, and accessibility feedback." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Interview</span>
+                  <h3 id="evidence-card-7-title">Needs discussion</h3>
+                  <p id="evidence-card-7-desc" class="body-font">Interview communication helped translate participant expectations into requirements for clearer route preview, controls, and fallback support.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-distant" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-8-title" aria-describedby="evidence-card-8-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/testing-internal-prototype.png" alt="Mobile prototype testing evidence showing HoldLight's route guidance and control screens." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Prototype</span>
+                  <h3 id="evidence-card-8-title">Prototype validation</h3>
+                  <p id="evidence-card-8-desc" class="body-font">Internal prototype checks verified whether route scanning, cue controls, and accessibility settings were visible and understandable in sequence.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-distant" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-9-title" aria-describedby="evidence-card-9-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/testing-participant-climb.jpg" alt="Participant climbing trial used to observe route following, uncertainty, and recovery needs on the wall." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Onsite Test</span>
+                  <h3 id="evidence-card-9-title">Climbing trial</h3>
+                  <p id="evidence-card-9-desc" class="body-font">The climbing trial showed how guidance must stay short, timely, and recoverable while the participant is already moving on the wall.</p>
+                </div>
+              </article>
+              <article class="evidence-card evidence-carousel-card is-distant" tabindex="0" role="listitem" data-evidence-card aria-labelledby="evidence-card-10-title" aria-describedby="evidence-card-10-desc">
+                <div class="evidence-card-media">
+                  <img src="assets/images/testing-evidence/testing-final-onsite-setup.jpg" alt="Final onsite testing setup showing the climber, guide, tripod-mounted phone, belayer support, and climbing wall context." loading="lazy" decoding="async">
+                </div>
+                <div class="evidence-card-content">
+                  <span class="evidence-card-tag">Onsite Setup</span>
+                  <h3 id="evidence-card-10-title">Full test setup</h3>
+                  <p id="evidence-card-10-desc" class="body-font">The final onsite setup captured the complete testing context: phone framing, guide support, climber movement, belayer safety, and real wall constraints.</p>
+                </div>
+              </article>
+            </div>
+            <button class="evidence-carousel-arrow evidence-carousel-arrow--next" type="button" aria-label="Show next evidence">&#8594;</button>
+            <div class="evidence-carousel-dots" aria-label="Evidence carousel position">
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 1: Early pilot testing">1</button>
+              <button class="evidence-carousel-dot is-active" type="button" data-evidence-dot aria-current="true" aria-label="Show evidence 2: Feedback collection">2</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 3: Concept validation">3</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 4: Internal flow check">4</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 5: Prototype rehearsal">5</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 6: Participant contact">6</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 7: Needs discussion">7</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 8: Prototype validation">8</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 9: Climbing trial">9</button>
+              <button class="evidence-carousel-dot" type="button" data-evidence-dot aria-label="Show evidence 10: Full test setup">10</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="requirements-list" class="portfolio-section" aria-labelledby="requirements-title">
+        <h2 id="requirements-title" class="section-title">Must-Have <span class="text-stroke">Requirements</span></h2>
+        <div class="stage-board">
+          <article class="requirements-playful-intro" aria-labelledby="requirements-playful-title">
+            <span class="card-label">Playful Experience</span>
+            <h3 id="requirements-playful-title">Why These Requirements Make HoldLight Playful</h3>
+            <p class="body-font">For HoldLight, &ldquo;playful&rdquo; does not mean adding points, badges, or competitive rewards. Indoor climbing is already a playful problem-solving activity: climbers read the route, make decisions, test movements, and adjust their plan on the wall. Our requirements aim to preserve this self-directed puzzle experience for blind and low-vision climbers by reducing unnecessary barriers without removing challenge, rhythm, or personal agency.</p>
+          </article>
+
+          <div class="requirements-glass-container" aria-label="Interactive requirement cards">
+            <article
+              class="requirement-glass-card"
+              data-text="Must-have 1"
+              data-desc="Layered Route Preview: Users must be able to understand the route before climbing through overview, segment, and optional detail."
+              style="--r:-15;"
+              tabindex="0"
+              aria-label="Must-have 1: Layered Route Preview. Users must be able to understand the route before climbing through overview, segment, and optional detail."
+            >
+              <img
+                class="requirement-card-visual"
+                src="CPT208-images/requirement-card-visuals/requirement-card-1.png"
+                alt="Layered route preview visual with climbing wall route path and transition panels"
+              >
+              <div class="requirement-playful-value">
+                <span>Playful Value</span>
+                <p>This keeps route reading as an active puzzle. Instead of giving one long explanation, the climber can explore the route from overview to segment to detail, building their own mental model before starting.</p>
+              </div>
+              <p class="requirement-projection" aria-hidden="true"></p>
+            </article>
+
+            <article
+              class="requirement-glass-card"
+              data-text="Must-have 2"
+              data-desc="Brief Direction-First Audio Guidance: Users must receive short, actionable cues during climbing without breaking rhythm or overloading attention."
+              style="--r:5;"
+              tabindex="0"
+              aria-label="Must-have 2: Brief Direction-First Audio Guidance. Users must receive short, actionable cues during climbing without breaking rhythm or overloading attention."
+            >
+              <img
+                class="requirement-card-visual"
+                src="CPT208-images/requirement-card-visuals/requirement-card-2.png"
+                alt="In-climb guidance visual with climber and short direction-first audio cue callouts"
+              >
+              <div class="requirement-playful-value">
+                <span>Playful Value</span>
+                <p>This protects the rhythm of climbing. Short cues support action without over-instructing, allowing the climber to keep moving, thinking, and solving the route themselves.</p>
+              </div>
+              <p class="requirement-projection" aria-hidden="true"></p>
+            </article>
+
+            <article
+              class="requirement-glass-card"
+              data-text="Must-have 3"
+              data-desc="Recoverable Fallback and Human Help: Users must be able to repeat, pause, request more detail, or ask for human support when cues are missed or uncertain."
+              style="--r:25;"
+              tabindex="0"
+              aria-label="Must-have 3: Recoverable Fallback and Human Help. Users must be able to repeat, pause, request more detail, or ask for human support when cues are missed or uncertain."
+            >
+              <img
+                class="requirement-card-visual"
+                src="CPT208-images/requirement-card-visuals/requirement-card-3.png"
+                alt="Recovery support visual with repeat, pause, more detail, and human help controls"
+              >
+              <div class="requirement-playful-value">
+                <span>Playful Value</span>
+                <p>This makes uncertainty recoverable instead of frustrating. Repeat, more detail, pause, and help options let the climber stay in control when something is missed or unclear.</p>
+              </div>
+              <p class="requirement-projection" aria-hidden="true"></p>
+            </article>
+          </div>
+
+          <p class="requirements-playful-summary body-font">Together, these requirements support a playful accessible climbing experience by preserving challenge, autonomy, rhythm, and enjoyment while making route information more accessible.</p>
+
+          <div class="info-grid two-col section-gap">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Functional Requirements</span>
+              <h3>Core product behaviour</h3>
+              <ul class="body-font compact-list">
+                <li>Start camera scan from a clear primary action.</li>
+                <li>Confirm the detected route before guidance begins.</li>
+                <li>Provide repeat, pause, and fallback controls.</li>
+                <li>Record a basic session summary for reflection.</li>
+              </ul>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Accessibility Requirements</span>
+              <h3>Readable and audio-first support</h3>
+              <ul class="body-font compact-list">
+                <li>High contrast and large readable controls.</li>
+                <li>Screen-reader-friendly headings and labels.</li>
+                <li>Short speech cues with repeat support.</li>
+                <li>Visible focus states and non-colour-only status cues.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="traceability" class="portfolio-section" aria-labelledby="trace-title">
+        <h2 id="trace-title" class="section-title">Requirement <span class="text-stroke">Traceability</span></h2>
+        <div class="stage-board">
+          <div class="table-wrap">
+            <table class="process-table">
+              <thead>
+                <tr>
+                  <th>User Pain Point</th>
+                  <th>Requirement</th>
+                  <th>Feature</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cannot distinguish route clearly.</td>
+                  <td>Route preview.</td>
+                  <td>Camera scan + route confirmation.</td>
+                </tr>
+                <tr>
+                  <td>Cannot read screen while climbing.</td>
+                  <td>Audio-first guidance.</td>
+                  <td>Short speech cues.</td>
+                </tr>
+                <tr>
+                  <td>Gets confused when system fails.</td>
+                  <td>Recovery support.</td>
+                  <td>Repeat / pause / fallback.</td>
+                </tr>
+                <tr>
+                  <td>Assistant support can become constant and tiring.</td>
+                  <td>Bounded human handoff.</td>
+                  <td>Assistant confirmation and request-help states.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const requirementGlassContainer = document.querySelector(".requirements-glass-container");
+
+    if (requirementGlassContainer) {
+      const requirementCards = Array.from(requirementGlassContainer.querySelectorAll(".requirement-glass-card"));
+      let typingTimers = [];
+
+      const clearRequirementTyping = () => {
+        typingTimers.forEach((timer) => window.clearTimeout(timer));
+        typingTimers = [];
+        requirementCards.forEach((card) => {
+          const projection = card.querySelector(".requirement-projection");
+          if (projection) projection.textContent = "";
+        });
+      };
+
+      const typeRequirementText = (projection, text, cardDelay) => {
+        let index = 0;
+
+        const typeNextCharacter = () => {
+          projection.textContent = text.slice(0, index);
+          index += 1;
+
+          if (index <= text.length) {
+            typingTimers.push(window.setTimeout(typeNextCharacter, 24));
+          }
+        };
+
+        typingTimers.push(window.setTimeout(typeNextCharacter, cardDelay));
+      };
+
+      const startRequirementTyping = () => {
+        clearRequirementTyping();
+
+        requirementCards.forEach((card, cardIndex) => {
+          const projection = card.querySelector(".requirement-projection");
+          if (!projection) return;
+
+          typeRequirementText(projection, card.dataset.desc || "", 180 + cardIndex * 260);
+        });
+      };
+
+      const stopRequirementTyping = () => {
+        window.setTimeout(() => {
+          if (!requirementGlassContainer.matches(":hover, :focus-within")) {
+            clearRequirementTyping();
+          }
+        }, 80);
+      };
+
+      requirementGlassContainer.addEventListener("mouseenter", startRequirementTyping);
+      requirementGlassContainer.addEventListener("focusin", startRequirementTyping);
+      requirementGlassContainer.addEventListener("mouseleave", stopRequirementTyping);
+      requirementGlassContainer.addEventListener("focusout", stopRequirementTyping);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05 Evaluation &amp; Reflection - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body class="module-page integrated-page process-page testing-iteration-page final-reflection-page evaluation-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="modules.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link">Why</a>
+          <a href="user-requirements.html" class="page-link">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link active">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <span class="page-title-backdrop page-title-backdrop-cyan" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-black" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-dots" aria-hidden="true"></span>
+          <div class="page-id">05. EVALUATION</div>
+          <h1 id="page-title">Evaluation &amp; Reflection</h1>
+        </section>
+
+        <div class="hero-collage" aria-label="Evaluation section markers">
+          <span class="title-shard title-shard-black">Testing</span>
+          <span class="title-shard title-shard-red">Refining</span>
+          <span class="title-shard title-shard-white">Alpha testing insights, UI iterations, and final reflections on ethics and AI usage.</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="testing-overview" class="portfolio-section" aria-labelledby="testing-overview-title">
+        <h2 id="testing-overview-title" class="section-title">Testing <span class="text-stroke">Overview</span></h2>
+        <div class="stage-board testing-board evaluation-overview-board">
+          <div class="evaluation-overview-grid">
+            <section class="testing-setup-copy evaluation-overview-copy" aria-labelledby="overview-copy-title">
+              <h3 id="overview-copy-title" class="board-label">Staged Evaluation</h3>
+              <p class="body-font">We evaluated HoldLight through a staged human-centered testing process. Phase A focused on understanding the needs of blind and low-vision climbers and supporting stakeholders. Phase B used pilot testing to refine the most fragile parts of the interaction: preview density, cue wording and timing, and fallback behavior. Phase C compared HoldLight with a standardized current-practice human-support baseline in controlled indoor climbing tasks.</p>
+              <p class="body-font">The goal of testing was not only to check whether the system could recognize holds, but to evaluate whether the workflow helped users understand routes, receive low-overload guidance, recover from uncertainty, and remain in control while human safety support stayed available.</p>
+            </section>
+
+            <div class="phase-card-grid" aria-label="Evaluation phases">
+              <article class="phase-card">
+                <span class="phase-label">Phase A</span>
+                <h3>Formative Inquiry</h3>
+                <p class="body-font">Needs research with BLV climbers and support stakeholders.</p>
+              </article>
+              <article class="phase-card">
+                <span class="phase-label">Phase B</span>
+                <h3>Pilot Refinement</h3>
+                <p class="body-font">Small-scale testing to tune preview density, cue timing, and fallback behavior.</p>
+              </article>
+              <article class="phase-card">
+                <span class="phase-label">Phase C</span>
+                <h3>Controlled Initial Evaluation</h3>
+                <p class="body-font">Within-subjects comparison between HoldLight and a standardized human-support baseline.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <section class="stage-board alpha-usability-summary" aria-labelledby="alpha-usability-title">
+          <header class="alpha-usability-hero">
+            <span class="alpha-usability-kicker">Coursework Evidence</span>
+            <h3 id="alpha-usability-title">Alpha Usability Testing Summary</h3>
+            <p class="body-font">To meet the coursework requirement for alpha usability testing, we tested the early HoldLight prototype with three participants: two blind or low-vision climbers and one sighted assistant as a secondary stakeholder. The goal was to identify usability issues in the prototype flow before final refinement, not to claim final effectiveness.</p>
+          </header>
+
+          <section class="alpha-usability-block" aria-labelledby="alpha-snapshot-title">
+            <h4 id="alpha-snapshot-title" class="board-label">Testing Snapshot</h4>
+            <div class="alpha-snapshot-grid">
+              <article class="alpha-snapshot-card">
+                <span>Participants</span>
+                <p class="body-font">3 alpha testers: P1 and P2 were BLV climbers, and P3 was a sighted assistant / secondary stakeholder who checked setup, correction, and fallback boundaries.</p>
+              </article>
+              <article class="alpha-snapshot-card">
+                <span>Prototype Stage</span>
+                <p class="body-font">Alpha web prototype with the main HoldLight workflow: route scan entry, layered preview, brief guidance concept, fallback controls, and route correction interaction.</p>
+              </article>
+              <article class="alpha-snapshot-card">
+                <span>Testing Method</span>
+                <p class="body-font">Task-based walkthrough, observation notes, short feedback questions, and comparison between intended requirements and actual user interaction.</p>
+              </article>
+              <article class="alpha-snapshot-card">
+                <span>Purpose</span>
+                <p class="body-font">To identify whether the prototype supported route understanding, reduced information overload, and made recovery actions clear enough before the final portfolio refinement.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="alpha-usability-block" aria-labelledby="alpha-tasks-title">
+            <h4 id="alpha-tasks-title" class="board-label board-label-red">Testing Tasks</h4>
+            <ol class="alpha-task-list">
+              <li>
+                <h5>Start the route support flow</h5>
+                <p class="body-font">Users were asked to find the scan or upload entry point and understand what to do first.</p>
+              </li>
+              <li>
+                <h5>Understand the layered route preview</h5>
+                <p class="body-font">Users reviewed the overview, segment-level information, and drill-down structure to check whether the route information felt easier to follow than a long explanation.</p>
+              </li>
+              <li>
+                <h5>Use brief next-hold guidance</h5>
+                <p class="body-font">Users reviewed example cue wording and checked whether direction-first cues felt clear, short, and action-oriented.</p>
+              </li>
+              <li>
+                <h5>Recover from uncertainty</h5>
+                <p class="body-font">Users checked whether repeat, more detail, pause, help, and route correction options were visible and understandable.</p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="alpha-usability-block" aria-labelledby="alpha-learned-title">
+            <h4 id="alpha-learned-title" class="board-label">What We Learned</h4>
+            <div class="alpha-finding-grid">
+              <article class="alpha-finding-card">
+                <span>Finding 1</span>
+                <h5>Entry flow needed clearer hierarchy</h5>
+                <p class="body-font">Early feedback showed that users could understand the idea of scanning the wall, but the entry point and first action needed to be more visually obvious. This led to simplifying the scan entry and making the start action clearer.</p>
+              </article>
+              <article class="alpha-finding-card">
+                <span>Finding 2</span>
+                <h5>Long route descriptions were hard to retain</h5>
+                <p class="body-font">Testing reinforced that one long pre-climb explanation was not suitable under climbing-related cognitive load. The preview was therefore organized into overview, segment, and drill-down layers.</p>
+              </article>
+              <article class="alpha-finding-card">
+                <span>Finding 3</span>
+                <h5>Cue wording needed to be shorter</h5>
+                <p class="body-font">Verbose instructions were easier to understand while standing still, but felt too heavy for in-climb use. This supported the direction-first cue format, such as hand, clock direction, and coarse distance.</p>
+              </article>
+              <article class="alpha-finding-card">
+                <span>Finding 4</span>
+                <h5>Recovery controls needed to be explicit</h5>
+                <p class="body-font">Users needed clear ways to recover when information was missed or unclear. Repeat, more detail, pause, help, and manual correction options were therefore treated as visible interaction controls rather than hidden backup behavior.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="alpha-usability-block" aria-labelledby="alpha-participant-findings-title">
+            <h4 id="alpha-participant-findings-title" class="board-label board-label-red">Alpha Usability Testing Participants and Findings</h4>
+            <p class="body-font alpha-table-intro">We conducted alpha usability testing with three participants: two blind or low-vision climbers and one sighted assistant as a secondary stakeholder. The purpose was not to claim final effectiveness, but to identify usability issues in the prototype flow, route preview, audio cueing, and fallback support before final refinement.</p>
+            <div class="evaluation-table-wrap alpha-refinement-table-wrap">
+              <table class="evaluation-table alpha-refinement-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Participant</th>
+                    <th scope="col">User Type</th>
+                    <th scope="col">Testing Focus</th>
+                    <th scope="col">Key Finding</th>
+                    <th scope="col">Resulting Refinement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" data-label="Participant">P1</th>
+                    <td data-label="User Type">BLV climber</td>
+                    <td data-label="Testing Focus">Pre-climb route understanding and route preview flow</td>
+                    <td data-label="Key Finding">A single long route explanation was difficult to retain before climbing. The participant needed a clearer overview first, followed by optional details.</td>
+                    <td data-label="Resulting Refinement">Refined the route preview into an Overview &rarr; Segment &rarr; Drill-down structure.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Participant">P2</th>
+                    <td data-label="User Type">BLV climber</td>
+                    <td data-label="Testing Focus">In-climb audio cueing, repeat action, and uncertainty recovery</td>
+                    <td data-label="Key Finding">Verbose or delayed cues interrupted climbing rhythm. Short direction-first prompts were easier to act on while moving.</td>
+                    <td data-label="Resulting Refinement">Simplified audio guidance into brief direction-first cues and made repeat / more detail actions more visible.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Participant">P3</th>
+                    <td data-label="User Type">Sighted assistant / secondary stakeholder</td>
+                    <td data-label="Testing Focus">Setup support, scan correction, and human fallback boundary</td>
+                    <td data-label="Key Finding">The assistant needed a faster way to correct detected holds and a clearer point where human help should re-enter the workflow.</td>
+                    <td data-label="Resulting Refinement">Improved manual hold correction, added batch-edit support, and clarified explicit fallback states such as pause and human help.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="body-font alpha-table-summary">These alpha findings directly informed the final refinement priorities: layered route preview for route memory, brief audio cueing for low cognitive load, and clearer fallback controls for moments when system guidance or user confidence was insufficient.</p>
+          </section>
+
+          <p class="alpha-usability-close body-font">This alpha testing stage connected our user requirements to concrete interface changes. Instead of treating testing as a final check, we used it to refine the prototype before final evaluation and portfolio submission.</p>
+        </section>
+      </section>
+
+      <section id="participants-study-phases" class="portfolio-section" aria-labelledby="participants-title">
+        <h2 id="participants-title" class="section-title">Participants &amp; <span class="text-stroke">Study Phases</span></h2>
+        <div class="stage-board phase-summary-board">
+          <div class="evaluation-table-wrap">
+            <table class="evaluation-table phase-summary-table">
+              <thead>
+                <tr>
+                  <th scope="col">Phase</th>
+                  <th scope="col">Purpose</th>
+                  <th scope="col">Participants</th>
+                  <th scope="col">What it informed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-label="Phase">Phase A: Formative Inquiry</th>
+                  <td data-label="Purpose">Understand barriers, preferences, and success criteria</td>
+                  <td data-label="Participants">11 BLV questionnaire respondents; 4 BLV interviewees; 5 secondary stakeholders including 3 sighted guides and 2 coaches</td>
+                  <td data-label="What it informed">User needs, design goals, current support practices, communication breakdowns, and the boundary between automated support and human help</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Phase">Phase B: Pilot Refinement</th>
+                  <td data-label="Purpose">Stress-test preview, cue wording, timing, and fallback</td>
+                  <td data-label="Participants">4 BLV climbers: 2 blind and 2 low-vision</td>
+                  <td data-label="What it informed">Layered preview, shorter cue format, silence during active movement, explicit fallback</td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Phase">Phase C: Controlled Initial Evaluation</th>
+                  <td data-label="Purpose">Compare HoldLight with standardized current-practice human support</td>
+                  <td data-label="Participants">12 BLV climbers: 6 blind and 6 low-vision</td>
+                  <td data-label="What it informed">Within-subjects comparison; each participant tested both Baseline and HoldLight. It measured route understanding, uncertainty recovery, human-help burden, perceived autonomy, cue usefulness, trust, safety, and acceptability.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="stage-board testing-evidence-board">
+          <div class="testing-evidence-intro">
+            <h3 class="board-label board-label-red">Process Evidence</h3>
+            <p class="body-font">The evidence below follows the testing process from recruitment and preparation to internal checking and onsite climbing trials. Communication screenshots are treated as anonymized recruitment and follow-up evidence, so they are kept as supporting material rather than used as the main visual focus.</p>
+          </div>
+
+          <div class="testing-evidence-gallery" data-testing-evidence-gallery role="region" aria-label="Testing evidence gallery" tabindex="0">
+            <div class="testing-evidence-gallery-stage">
+              <div class="testing-evidence-slider" aria-label="Five testing evidence images">
+                <div class="testing-evidence-wrapper" role="list">
+                  <figure class="testing-evidence-slide evidence-communication is-active" data-testing-evidence-slide role="listitem" aria-current="true">
+                    <div class="testing-evidence-photo-frame">
+                      <img src="assets/images/testing-evidence/testing-contact-chat.jpg" alt="Chat-based early communication about climbing support needs for blind and low-vision users." loading="lazy" decoding="async">
+                    </div>
+                  </figure>
+
+                  <figure class="testing-evidence-slide evidence-communication" data-testing-evidence-slide role="listitem">
+                    <div class="testing-evidence-photo-frame">
+                      <img src="assets/images/testing-evidence/testing-interview-chat.png" alt="Interview-related communication and follow-up discussion with a visually impaired participant." loading="lazy" decoding="async">
+                    </div>
+                  </figure>
+
+                  <figure class="testing-evidence-slide evidence-interface" data-testing-evidence-slide role="listitem">
+                    <div class="testing-evidence-photo-frame">
+                      <img src="assets/images/testing-evidence/testing-internal-prototype.png" alt="Internal prototype testing of HoldLight on a mobile device." loading="lazy" decoding="async">
+                    </div>
+                  </figure>
+
+                  <figure class="testing-evidence-slide evidence-climb" data-testing-evidence-slide role="listitem">
+                    <div class="testing-evidence-photo-frame">
+                      <img src="assets/images/testing-evidence/testing-participant-climb.jpg" alt="Participant climbing trial used to observe real climbing movement and route interaction." loading="lazy" decoding="async">
+                    </div>
+                  </figure>
+
+                  <figure class="testing-evidence-slide evidence-final" data-testing-evidence-slide role="listitem">
+                    <div class="testing-evidence-photo-frame">
+                      <img src="assets/images/testing-evidence/testing-final-onsite-setup.jpg" alt="Full onsite testing setup showing participant, tripod-mounted phone, guide, and belayer support." loading="lazy" decoding="async">
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="testing-evidence-copy-panel" data-testing-evidence-copy-panel aria-live="polite">
+              <article class="testing-evidence-card evidence-communication is-active" data-testing-evidence-panel aria-labelledby="testing-evidence-panel-1-title">
+                <span class="evidence-step">Step 1</span>
+                <h3 id="testing-evidence-panel-1-title">Early communication with visually impaired climbing contacts</h3>
+                <p class="body-font">We began by reaching out to visually impaired climbing-related contacts to understand initial concerns, practical needs, and whether a guided climbing support system would be meaningful in real use.</p>
+                <p class="evidence-caption body-font">Early communication helped us clarify core issues such as communication style, route guidance consistency, and the importance of safety and trust.</p>
+                <p class="evidence-insight body-font"><strong>Design insight:</strong> This stage highlighted the need for clear, familiar, and consistent guidance language.</p>
+              </article>
+
+              <article class="testing-evidence-card evidence-communication" data-testing-evidence-panel aria-labelledby="testing-evidence-panel-2-title">
+                <span class="evidence-step">Step 2</span>
+                <h3 id="testing-evidence-panel-2-title">Interview scheduling and follow-up discussion</h3>
+                <p class="body-font">We then arranged and carried out a follow-up conversation with a visually impaired participant to better understand expectations, practical constraints, and suitable ways of communicating during testing.</p>
+                <p class="evidence-caption body-font">This follow-up exchange supported recruitment and helped move from informal contact to a more structured interview and testing plan.</p>
+                <p class="evidence-insight body-font"><strong>Design insight:</strong> This step helped us refine how to approach testing and communication in a respectful and practical way.</p>
+              </article>
+
+              <article class="testing-evidence-card evidence-interface" data-testing-evidence-panel aria-labelledby="testing-evidence-panel-3-title">
+                <span class="evidence-step">Step 3</span>
+                <h3 id="testing-evidence-panel-3-title">Internal prototype testing</h3>
+                <p class="body-font">Before testing with external participants, we used internal trials to check whether the interface, guidance panel, and route-related interaction could be understood and operated on mobile.</p>
+                <p class="evidence-caption body-font">Internal testing allowed the team to quickly verify the clarity of instructions, screen layout, and the feasibility of scan-based interaction.</p>
+                <p class="evidence-insight body-font"><strong>Design insight:</strong> This stage helped us identify interaction issues before moving into more realistic climbing scenarios.</p>
+              </article>
+
+              <article class="testing-evidence-card evidence-climb" data-testing-evidence-panel aria-labelledby="testing-evidence-panel-4-title">
+                <span class="evidence-step">Step 4</span>
+                <h3 id="testing-evidence-panel-4-title">Participant climbing trial</h3>
+                <p class="body-font">We observed a participant trying the climbing task in practice in order to understand body movement, hold reachability, and how route guidance should align with actual climbing behaviour.</p>
+                <p class="evidence-caption body-font">This trial helped us connect interface design with the realities of movement, balance, and hold selection on the wall.</p>
+                <p class="evidence-insight body-font"><strong>Design insight:</strong> Testing in motion revealed the importance of short, well-timed guidance and a realistic understanding of physical climbing constraints.</p>
+              </article>
+
+              <article class="testing-evidence-card evidence-final" data-testing-evidence-panel aria-labelledby="testing-evidence-panel-5-title">
+                <span class="evidence-step">Step 5</span>
+                <h3 id="testing-evidence-panel-5-title">Final full-context onsite test</h3>
+                <p class="body-font">Our final testing setup brought together the key roles and equipment needed in a realistic climbing context: the participant, guide, tripod-mounted phone, and belayer support in a top-rope environment.</p>
+                <p class="evidence-caption body-font">This was the most complete testing setup and gave us the clearest view of how HoldLight could operate in a real climbing session.</p>
+                <p class="evidence-insight body-font"><strong>Design insight:</strong> This final setup provided the strongest evidence for evaluating route guidance in a realistic environment.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testing-tasks" class="portfolio-section" aria-labelledby="tasks-title">
+        <h2 id="tasks-title" class="section-title">Testing <span class="text-stroke">Tasks</span></h2>
+        <div class="stage-board task-card-board">
+          <div class="evaluation-task-grid">
+            <article class="evaluation-task-card">
+              <span class="task-number">Task 1</span>
+              <h3>Understand the Route Before Climbing</h3>
+              <p class="body-font">Participants received route information and then explained the route before climbing.</p>
+              <h4>Observed</h4>
+              <ul class="observed-list body-font">
+                <li>start area</li>
+                <li>finish area</li>
+                <li>overall route direction</li>
+                <li>key segment or difficult move</li>
+              </ul>
+            </article>
+
+            <article class="evaluation-task-card">
+              <span class="task-number">Task 2</span>
+              <h3>Use In-Climb Next-Hold Guidance</h3>
+              <p class="body-font">Participants climbed while receiving short audio cues such as "Right hand, two o'clock, far."</p>
+              <h4>Observed</h4>
+              <ul class="observed-list body-font">
+                <li>whether cues were clear</li>
+                <li>whether cues were short enough</li>
+                <li>whether cue timing interrupted climbing rhythm</li>
+                <li>whether users could act on the prompt</li>
+              </ul>
+            </article>
+
+            <article class="evaluation-task-card">
+              <span class="task-number">Task 3</span>
+              <h3>Recover from Uncertainty</h3>
+              <p class="body-font">Participants used fallback controls when they were uncertain, missed a cue, or needed clarification.</p>
+              <h4>Observed</h4>
+              <ul class="observed-list body-font">
+                <li>Repeat</li>
+                <li>More Detail</li>
+                <li>Pause</li>
+                <li>Human Help</li>
+                <li>whether users knew how to recover without losing control</li>
+              </ul>
+            </article>
+
+            <article class="evaluation-task-card">
+              <span class="task-number">Task 4</span>
+              <h3>Compare HoldLight with Current Human Support</h3>
+              <p class="body-font">In the controlled evaluation, participants experienced both a standardized current-practice human-support baseline and the HoldLight condition.</p>
+              <h4>Observed</h4>
+              <ul class="observed-list body-font">
+                <li>route understanding</li>
+                <li>uncertainty recovery</li>
+                <li>clarification interruptions</li>
+                <li>explicit human-help requests</li>
+                <li>perceived autonomy</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="portfolio-section" aria-labelledby="results-title">
+        <h2 id="results-title" class="section-title">Testing <span class="text-stroke">Results</span></h2>
+        <div class="stage-board results-board">
+          <section class="results-subsection" aria-labelledby="measured-title">
+            <h3 id="measured-title" class="board-label">What We Measured</h3>
+            <p class="results-intro body-font">We measured four main aspects of the HoldLight workflow:</p>
+            <div class="measurement-grid">
+              <article class="measurement-card">
+                <span>01</span>
+                <h4>Route Understanding</h4>
+                <p class="body-font">Whether users could identify the start, finish, overall route direction, and key segment before climbing.</p>
+              </article>
+              <article class="measurement-card">
+                <span>02</span>
+                <h4>Uncertainty Recovery</h4>
+                <p class="body-font">Uncertainty breakdown episodes, clarification-dependent interruptions, and repeat / more detail / pause / help actions.</p>
+              </article>
+              <article class="measurement-card">
+                <span>03</span>
+                <h4>Human Help Burden</h4>
+                <p class="body-font">Explicit human-help requests, extra information-support interventions, and system-to-human fallback events. This measures routine route-information support, not safety support.</p>
+              </article>
+              <article class="measurement-card">
+                <span>04</span>
+                <h4>Perceived Autonomy and Acceptability</h4>
+                <p class="body-font">Perceived autonomy, cue usefulness, uncertainty recovery, trust, safety, acceptability, and willingness to use the system again.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="results-subsection" aria-labelledby="findings-title">
+            <h3 id="findings-title" class="board-label board-label-red">Key Findings</h3>
+            <div class="evaluation-table-wrap">
+              <table class="evaluation-table results-comparison-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Measure</th>
+                    <th scope="col">Baseline</th>
+                    <th scope="col">HoldLight</th>
+                    <th scope="col">Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" data-label="Measure">Route understanding score</th>
+                    <td data-label="Baseline">2.0 / 4</td>
+                    <td data-label="HoldLight">3.5 / 4</td>
+                    <td data-label="Interpretation">Users built a clearer route model before climbing</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Measure">Uncertainty breakdown episodes</th>
+                    <td data-label="Baseline">4.0</td>
+                    <td data-label="HoldLight">2.0</td>
+                    <td data-label="Interpretation">Users got stuck less often</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Measure">Clarification-dependent interruptions</th>
+                    <td data-label="Baseline">3.0</td>
+                    <td data-label="HoldLight">1.0</td>
+                    <td data-label="Interpretation">Fewer stops for repeated explanation or clarification</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Measure">Explicit human-help requests</th>
+                    <td data-label="Baseline">3.5</td>
+                    <td data-label="HoldLight">1.0</td>
+                    <td data-label="Interpretation">Less routine dependence on human route prompts</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-label="Measure">Perceived autonomy</th>
+                    <td data-label="Baseline">3.0 / 5</td>
+                    <td data-label="HoldLight">5.0 / 5</td>
+                    <td data-label="Interpretation">Users felt more in control</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="results-summary-grid">
+              <article class="outcome-card results-summary-card">
+                <h3>Result Pattern</h3>
+                <p class="body-font">Compared with the standardized baseline, HoldLight improved route-understanding score from 2.0 to 3.5 out of 4, reduced uncertainty breakdown episodes from 4.0 to 2.0, reduced clarification-dependent interruptions from 3.0 to 1.0, and reduced explicit human-help requests from 3.5 to 1.0. Perceived autonomy increased from 3.0 to 5.0 out of 5.</p>
+                <p class="body-font">These results suggest that HoldLight did not mainly make users climb faster. Instead, it helped users build a clearer route model, recover from uncertainty more smoothly, and rely less on repeated human route prompts while keeping human safety support available.</p>
+              </article>
+
+              <aside class="boundary-card" aria-labelledby="boundary-title">
+                <h3 id="boundary-title">Boundary &amp; Safety Notes</h3>
+                <ul class="body-font">
+                  <li>Total task time did not show a clear improvement.</li>
+                  <li>Safety-only interventions did not show a meaningful difference, supporting the idea that HoldLight reduces routine information support but does not replace human safety support.</li>
+                  <li>In all 36 HoldLight trials, human guides re-entered the interaction for route-information support 14 times.</li>
+                  <li>Manual route revision was required in 7 of 36 initial mobile scans.</li>
+                  <li>Fallback was triggered 42 times across trials: 27 user-triggered and 15 system-triggered.</li>
+                  <li>Main boundary cases: dense same-color hold clusters and visually similar adjacent routes.</li>
+                </ul>
+                <p class="body-font">Testing also showed that HoldLight still has clear limitations. Dense same-color holds and visually similar adjacent routes could cause ambiguity, and manual correction or human fallback was still needed in some cases. Therefore, HoldLight is designed to reduce routine route-information support, not to replace human safety support.</p>
+              </aside>
+            </div>
+
+            <p class="results-transition body-font">These testing results directly informed the design refinements shown in the next section.</p>
+          </section>
+        </div>
+      </section>
+
+      <section id="refinement" class="portfolio-section" aria-labelledby="refinement-title">
+        <h2 id="refinement-title" class="section-title">Iterative Refinement: <span class="text-stroke">Before &amp; After</span></h2>
+        <div class="stage-board refinement-evidence-board">
+          <div class="refinement-intro">
+            <p class="body-font">These refinements show how HoldLight changed after alpha testing, BLV user feedback, and real use observations. Instead of treating evaluation as a final check, we used feedback to simplify the interface, reduce cognitive load during guidance, and make route correction more efficient. Each Before / After case connects a user-observed problem to a concrete design change in the final prototype.</p>
+          </div>
+
+          <aside class="refinement-testing-summary" aria-labelledby="refinement-testing-title">
+            <h3 id="refinement-testing-title">Testing Sources Behind the Refinements</h3>
+            <p class="body-font">Our refinements were informed by three types of testing evidence. First, team-based alpha testing with classmates helped us identify general usability problems, such as unclear system entry points and an overloaded scan flow. Second, feedback from blind and low-vision user testing helped us refine in-climb audio guidance so that information was easier to understand under physical load. Third, real user testing of the route correction workflow showed that editing detected holds one by one was too slow and inefficient, leading us to add batch editing controls.</p>
+          </aside>
+
+          <div class="refinement-case-stack">
+            <article class="refinement-case" aria-labelledby="refinement-1-title">
+              <header class="refinement-case-header">
+                <span class="refinement-number">Refinement 01</span>
+                <div>
+                  <h3 id="refinement-1-title">Interface Simplification and Clearer Scan Entry</h3>
+                  <span class="feedback-source-badge">Feedback Source: Team alpha testing with classmates</span>
+                </div>
+              </header>
+              <section class="refinement-observation">
+                <h4>User Feedback / Observation</h4>
+                <p class="refinement-context body-font">During team testing, classmates could understand the general idea of HoldLight, but they needed a clearer first action. The early interface contained too many competing entry points, and the scan function was not visually dominant enough for a mobile-first climbing workflow.</p>
+              </section>
+              <div class="refinement-screenshot-grid" aria-label="Before and after screenshots for refinement 01">
+                <figure class="refinement-screenshot">
+                  <figcaption>Before: overloaded entry points and less obvious scan action</figcaption>
+                  <img class="refinement-screenshot-image" src="assets/images/beforeafter/interfacebefore.png" alt="Before screenshot showing the earlier interface with overloaded entry points and a less obvious scan action." loading="lazy" decoding="async">
+                </figure>
+                <figure class="refinement-screenshot after">
+                  <figcaption>After: simplified flow with clearer scan-first entry</figcaption>
+                  <img class="refinement-screenshot-image" src="assets/images/beforeafter/interfaceafter.png" alt="After screenshot showing the simplified scan-first interface flow." loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="refinement-detail-grid">
+                <section>
+                  <h4>Design Issue</h4>
+                  <p class="body-font">The early system looked more like a collection of features than a guided accessibility workflow. Users needed to spend extra time figuring out where to start, especially before the wall scan step. This created unnecessary friction before the core route preview experience.</p>
+                </section>
+                <section>
+                  <h4>Change Made</h4>
+                  <p class="body-font">We simplified the overall system structure and made wall scanning a more obvious primary action. The final flow gives stronger visual priority to scan-related actions, reduces unnecessary interface clutter, and makes the route setup process easier to follow.</p>
+                </section>
+                <section>
+                  <h4>Impact / Why it matters</h4>
+                  <p class="body-font">This change makes the system easier to enter and better supports the first stage of HoldLight: capturing the climbing wall before route preview. It also aligns with mobile-first use in a climbing gym, where users need quick, clear, and low-friction interaction rather than a dense feature menu.</p>
+                </section>
+              </div>
+            </article>
+
+            <article class="refinement-case" aria-labelledby="refinement-3-title">
+              <header class="refinement-case-header">
+                <span class="refinement-number">Refinement 02</span>
+                <div>
+                  <h3 id="refinement-3-title">From Verbose Instructions to Brief Direction-First Audio Cueing</h3>
+                  <span class="feedback-source-badge">Feedback Source: Blind and low-vision user testing</span>
+                </div>
+              </header>
+              <section class="refinement-observation">
+                <h4>User Feedback / Observation</h4>
+                <p class="refinement-context body-font">During BLV user testing, detailed in-climb instructions were found to be difficult to process while the climber was already moving or holding body weight on the wall. Users needed cues that were short, consistent, and immediately actionable.</p>
+              </section>
+              <div class="refinement-screenshot-grid" aria-label="Before and after screenshots for refinement 02">
+                <figure class="refinement-screenshot">
+                  <figcaption>Before: verbose in-climb instruction</figcaption>
+                  <img class="refinement-screenshot-image" src="assets/images/beforeafter/cuebefore.png" alt="Before screenshot showing the earlier verbose in-climb instruction style." loading="lazy" decoding="async">
+                </figure>
+                <figure class="refinement-screenshot after">
+                  <figcaption>After: brief direction-first cue with optional detail</figcaption>
+                  <img class="refinement-screenshot-image refinement-screenshot-image-dark" src="assets/images/beforeafter/cueafter.jpg" alt="After screenshot showing the shorter direction-first audio cue interface." loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="refinement-detail-grid">
+                <section>
+                  <h4>Design Issue</h4>
+                  <p class="body-font">The earlier guidance style used longer descriptive prompts. Although these prompts contained more information, they could slow down the climber’s decision-making, interrupt rhythm, and increase cognitive load during movement.</p>
+                </section>
+                <section>
+                  <h4>Change Made</h4>
+                  <p class="body-font">We changed the in-climb audio guidance to a brief direction-first format. Instead of long sentences, cues focus on the body part, direction, and distance, such as “Right hand, two o’clock, far.” More detail can still be requested when needed, but the default cue remains short.</p>
+                </section>
+                <section>
+                  <h4>Impact / Why it matters</h4>
+                  <p class="body-font">This change makes the guidance easier to act on during climbing and reduces cognitive load. It supports HoldLight’s core design principle: give enough information for action without turning the climber into a passive follower.</p>
+                </section>
+              </div>
+            </article>
+
+            <article class="refinement-case" aria-labelledby="refinement-4-title">
+              <header class="refinement-case-header">
+                <span class="refinement-number">Refinement 03</span>
+                <div>
+                  <h3 id="refinement-4-title">From One-by-One Hold Editing to Batch Hold Editing</h3>
+                  <span class="feedback-source-badge">Feedback Source: Real user testing of the route correction workflow</span>
+                </div>
+              </header>
+              <section class="refinement-observation">
+                <h4>User Feedback / Observation</h4>
+                <p class="refinement-context body-font">In route correction testing, users found that adding or deleting detected holds one by one was too slow, especially when the scan result contained multiple incorrect or missing holds. This made the correction process feel repetitive and inefficient.</p>
+              </section>
+              <div class="refinement-screenshot-grid" aria-label="Before and after screenshots for refinement 03">
+                <figure class="refinement-screenshot">
+                  <figcaption>Before: one-by-one hold add / delete</figcaption>
+                  <img class="refinement-screenshot-image" src="assets/images/beforeafter/deletebefore.png" alt="Before screenshot showing one-by-one hold add and delete controls." loading="lazy" decoding="async">
+                </figure>
+                <figure class="refinement-screenshot after">
+                  <figcaption>After: batch hold editing controls</figcaption>
+                  <img class="refinement-screenshot-image" src="assets/images/beforeafter/deleteafter.jpg" alt="After screenshot showing batch hold editing controls." loading="lazy" decoding="async">
+                </figure>
+              </div>
+              <div class="refinement-detail-grid">
+                <section>
+                  <h4>Design Issue</h4>
+                  <p class="body-font">The earlier manual correction flow required users to edit holds individually. This created unnecessary interaction cost before route preview and made the system less practical for real climbing gym use, where lighting, hold density, and wall complexity can cause multiple detection errors at once.</p>
+                </section>
+                <section>
+                  <h4>Change Made</h4>
+                  <p class="body-font">We added batch editing controls for hold correction. Users can now select multiple holds and delete them together, or add and adjust holds more efficiently through a dedicated batch action. The individual editing option remains available for precise correction, but users are no longer forced to repeat the same action one hold at a time.</p>
+                </section>
+                <section>
+                  <h4>Impact / Why it matters</h4>
+                  <p class="body-font">This refinement makes the wall scan correction workflow faster and more realistic for actual use. It also improves the reliability of later route preview and audio guidance because users can clean up the route representation more efficiently before starting the climb.</p>
+                </section>
+              </div>
+            </article>
+          </div>
+
+          <section class="refinement-design-reflection" aria-labelledby="refinement-design-reflection-title">
+            <h3 id="refinement-design-reflection-title">Design Reflection</h3>
+            <p class="body-font">These Before / After refinements show that HoldLight’s design process was not only about improving visual polish. The main changes came from human-centered evaluation: simplifying the interface after team testing, shortening audio cues to reduce cognitive load, and improving batch hold editing after real workflow testing. Together, these changes support a more accessible and practical climbing experience.</p>
+            <p class="body-font">The final design balances autonomy and safety. HoldLight does not replace coaches, guides, or belayers. Instead, it reduces routine information-support burden while keeping human help available for uncertain or safety-critical moments. This is important ethically because an accessibility system for climbing should not hide uncertainty or encourage over-trust in automation. Users should remain in control, understand when the system is uncertain, and be able to request human support when needed.</p>
+            <div class="ai-reflection-note">
+              <h4>AI Reflection</h4>
+              <p class="body-font">AI tools were used to support visual refinement, wording, and coding assistance, but the core design logic, testing findings, and human-centered decisions came from our group’s research and evaluation. AI-generated suggestions were checked against our user requirements, accessibility goals, and actual testing feedback before being used in the final portfolio or system.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="final-reflection" class="portfolio-section" aria-labelledby="reflection-title">
+        <h2 id="reflection-title" class="section-title">Final <span class="text-stroke">Reflection</span></h2>
+        <div class="stage-board reflection-board-standalone">
+          <article class="reflection-card social">
+            <h3>Human-Centric Impact</h3>
+            <p class="body-font">HoldLight began from a simple recognition: indoor climbing is still organised around visual certainty. Route preview, hold identification, and movement planning are usually assumed to be seen before they are acted on. For blind and low-vision climbers, this creates an informational barrier as much as a physical one, limiting access to confidence, independence, and belonging within the activity.</p>
+          </article>
+
+          <article class="reflection-card social">
+            <h3>Social / Ethical Implications</h3>
+            <p class="body-font">Ethically, the question was not how to deliver the most guidance, but how to support the climber without displacing agency or overstating what the system could reliably know. In a climbing context, guidance that is too dense, too continuous, or too certain can interrupt rhythm, increase cognitive load, and imply a level of safety assurance that technology alone cannot guarantee.</p>
+          </article>
+
+          <div class="reflection-lower-grid">
+            <article class="reflection-card ai">
+              <h3>Project Limitations</h3>
+              <p class="body-font">The current prototype remains an early implementation. Route recognition requires further real-gym validation, camera framing still depends partly on assistant support, and audio cue comprehension may vary in noisy climbing environments. The project should not be treated as a complete safety system.</p>
+            </article>
+            <article class="reflection-card takeaway">
+              <h3>Future Work</h3>
+              <p class="body-font">Future development should include testing with blind and low-vision climbers where ethically and practically possible, stronger uncertainty handling, more robust vision evaluation, haptic feedback exploration, and deeper integration with climbing gym workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-reflection" class="portfolio-section" aria-labelledby="ai-title">
+        <h2 id="ai-title" class="section-title">Vibe Coding Process <span class="text-stroke">Overview</span></h2>
+        <div class="ai-evaluation-top-grid">
+          <div class="stage-board ai-tools-board">
+            <section class="ai-tools-section">
+              <div class="ai-tools-header">
+                <h2>AI &amp; Design Resources Used in My Vibe Coding Process</h2>
+                <p>
+                  I used a combination of AI tools and design resource platforms across
+                  research, visual exploration, prototyping, and front-end implementation.
+                  Each tool supported a different stage of the workflow, while the final
+                  design decisions were still reviewed manually based on accessibility,
+                  consistency, and project requirements.
+                </p>
+              </div>
+
+              <ul class="ai-wrapper">
+                <li class="ai-icon chatgpt active" data-tool="chatgpt">
+                  <span class="tooltip">ChatGPT</span>
+                  <img src="assets/ai/chatgpt.svg" alt="ChatGPT logo" />
+                </li>
+
+                <li class="ai-icon gemini" data-tool="gemini">
+                  <span class="tooltip">Gemini</span>
+                  <img src="assets/ai/gemini.svg" alt="Gemini logo" />
+                </li>
+
+                <li class="ai-icon pinterest" data-tool="pinterest">
+                  <span class="tooltip">Pinterest</span>
+                  <img src="assets/ai/pinterest.svg" alt="Pinterest logo" />
+                </li>
+
+                <li class="ai-icon uiverse" data-tool="uiverse">
+                  <span class="tooltip">Uiverse</span>
+                  <img src="assets/ai/uiverse.svg" alt="Uiverse logo" />
+                </li>
+
+                <li class="ai-icon figma" data-tool="figma">
+                  <span class="tooltip">Figma</span>
+                  <img src="assets/ai/figma.svg" alt="Figma logo" />
+                </li>
+
+                <li class="ai-icon studio" data-tool="studio">
+                  <span class="tooltip">Google AI Studio</span>
+                  <img src="assets/ai/google-ai-studio.svg" alt="Google AI Studio logo" />
+                </li>
+
+                <li class="ai-icon codex" data-tool="codex">
+                  <span class="tooltip">Codex</span>
+                  <img src="assets/ai/codex.svg" alt="Codex logo" />
+                </li>
+              </ul>
+
+              <div class="ai-description-card show" id="aiDescription">
+                <div class="ai-description-top">
+                  <span class="ai-description-label">Selected Tool</span>
+                  <h3 id="aiTitle">ChatGPT</h3>
+                </div>
+                <p id="aiText">
+                  I used ChatGPT to structure early ideas, summarize the UI logic, organize
+                  the front-end framework, and turn rough design thoughts into clearer prompts
+                  and implementation instructions.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <div class="ai-review-board" aria-labelledby="ai-review-title">
+            <h3 id="ai-review-title">AI Workflow Review</h3>
+            <div class="ai-review-grid">
+              <article class="ai-review-card worked">
+                <h4>What Works</h4>
+                <ul>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>Fast visual exploration</h5>
+                      <p>AI helped me quickly explore different UI styles, color palettes, and layout directions before building the final interface.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>Clearer design communication</h5>
+                      <p>Text-based AI helped me turn rough design ideas into structured prompts and front-end instructions, which made it easier to communicate with coding tools.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>Faster front-end prototyping</h5>
+                      <p>Google AI Studio and Codex helped me quickly generate and refine early UI prototypes, especially for page structure and navigation flow.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>Better iteration speed</h5>
+                      <p>The workflow allowed me to test multiple design directions and improve the interface step by step.</p>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+
+              <div class="ai-review-connectors" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <article class="ai-review-card review">
+                <h4>What Needed Review</h4>
+                <ul>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>AI output was not always accessible</h5>
+                      <p>Some generated interfaces looked good visually but did not fully consider low-vision readability, contrast, spacing, or simple interaction.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>Navigation logic needed manual correction</h5>
+                      <p>AI could generate pages quickly, but the actual transition logic between screens still needed careful human checking.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>Visual style could become inconsistent</h5>
+                      <p>Different AI outputs sometimes used different spacing, colors, or component styles, so I had to manually unify the UI system.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="review-dot"></span>
+                    <div>
+                      <h5>AI could not replace user-centered judgement</h5>
+                      <p>AI was useful for assistance, but final decisions still needed to be based on project requirements, accessibility needs, and group discussion.</p>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <header class="vibe-process-header">
+          <h3>Vibe Coding Process</h3>
+          <p>UI DESIGN TIMELINE</p>
+        </header>
+
+        <div class="stage-board vibe-process-board">
+          <div class="vibe-process-layout">
+            <div class="vibe-timeline">
+              <svg class="timeline-route timeline-route-shadow" viewBox="0 0 760 4000" preserveAspectRatio="none" aria-hidden="true">
+              <path
+                class="route-shadow"
+                d="
+                  M70 0
+                  L70 160
+                  C70 211 101 242 152 242
+                  L642 242
+                  C700 242 728 276 728 334
+                  L728 420
+                  C728 474 696 506 642 506
+                  L131 506
+                  C88 506 70 576 70 619
+                  L70 680
+                  C70 725 86 741 131 741
+                  L646 741
+                  C704 741 728 800 728 858
+                  L728 940
+                  C728 991 697 1022 646 1022
+                  L139 1022
+                  C88 1022 70 1081 70 1132
+                  L70 1200
+                  C70 1243 96 1269 139 1269
+                  L652 1269
+                  C706 1269 728 1330 728 1384
+                  L728 1540
+                  C728 1598 700 1630 642 1630
+                  L134 1630
+                  C89 1630 70 1710 70 1760
+                  L70 1840
+                  C70 1898 98 1930 156 1930
+                  L642 1930
+                  C700 1930 728 2010 728 2070
+                  L728 2160
+                  C728 2218 700 2250 642 2250
+                  L134 2250
+                  C89 2250 70 2330 70 2388
+                  L70 2460
+                  C70 2518 98 2550 156 2550
+                  L642 2550
+                  C700 2550 728 2630 728 2700
+                  L728 2820
+                  C728 2880 700 2910 642 2910
+                  L134 2910
+                  C89 2910 70 2990 70 3050
+                  L70 3130
+                  C70 3190 98 3220 156 3220
+                  L642 3220
+                  C700 3220 728 3300 728 3370
+                  L728 3460
+                  C728 3520 700 3550 642 3550
+                  L134 3550
+                  C89 3550 70 3630 70 3690
+                  L70 3770
+                  C70 3830 98 3860 156 3860
+                  L642 3860
+                  C700 3860 728 3940 728 4000
+                "
+              />
+              </svg>
+              <svg class="timeline-route timeline-route-progress" viewBox="0 0 760 4000" preserveAspectRatio="none" aria-hidden="true">
+              <path
+                class="route-main"
+                d="
+                  M70 0
+                  L70 160
+                  C70 211 101 242 152 242
+                  L642 242
+                  C700 242 728 276 728 334
+                  L728 420
+                  C728 474 696 506 642 506
+                  L131 506
+                  C88 506 70 576 70 619
+                  L70 680
+                  C70 725 86 741 131 741
+                  L646 741
+                  C704 741 728 800 728 858
+                  L728 940
+                  C728 991 697 1022 646 1022
+                  L139 1022
+                  C88 1022 70 1081 70 1132
+                  L70 1200
+                  C70 1243 96 1269 139 1269
+                  L652 1269
+                  C706 1269 728 1330 728 1384
+                  L728 1540
+                  C728 1598 700 1630 642 1630
+                  L134 1630
+                  C89 1630 70 1710 70 1760
+                  L70 1840
+                  C70 1898 98 1930 156 1930
+                  L642 1930
+                  C700 1930 728 2010 728 2070
+                  L728 2160
+                  C728 2218 700 2250 642 2250
+                  L134 2250
+                  C89 2250 70 2330 70 2388
+                  L70 2460
+                  C70 2518 98 2550 156 2550
+                  L642 2550
+                  C700 2550 728 2630 728 2700
+                  L728 2820
+                  C728 2880 700 2910 642 2910
+                  L134 2910
+                  C89 2910 70 2990 70 3050
+                  L70 3130
+                  C70 3190 98 3220 156 3220
+                  L642 3220
+                  C700 3220 728 3300 728 3370
+                  L728 3460
+                  C728 3520 700 3550 642 3550
+                  L134 3550
+                  C89 3550 70 3630 70 3690
+                  L70 3770
+                  C70 3830 98 3860 156 3860
+                  L642 3860
+                  C700 3860 728 3940 728 4000
+                "
+              />
+              </svg>
+
+              <article class="timeline-step step-01">
+                <div class="step-circle size-xl"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">01</span>
+                    <div>
+                      <h4>App Research</h4>
+                      <p>I explored existing apps such as Keep and other sports products to understand common functions, layout patterns, and user flow structures.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="timeline-step step-02">
+                <div class="step-circle size-xxl"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">02</span>
+                    <div>
+                      <h4>Team Discussion</h4>
+                      <p>After collecting references, I discussed the possible features with my group members and helped decide which functions should be included in the product.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="timeline-step step-03">
+                <div class="step-circle size-sm"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">03</span>
+                    <div>
+                      <h4>Hand Sketch</h4>
+                      <p>I created hand-drawn sketches to map key UI screens and the transition logic between them before moving into digital prototyping.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="timeline-step step-04">
+                <div class="step-circle size-xl"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">04</span>
+                    <div>
+                      <h4>UI Reference Collection</h4>
+                      <p>I searched for sports app interfaces and design references, then compared them with our sketches to preview the possible visual direction.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="timeline-step step-05">
+                <div class="step-circle size-md"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">05</span>
+                    <div>
+                      <h4>AI Style Summary</h4>
+                      <p>I used image-based AI to summarize the visual style, color palette, and interaction mood that best matched our project direction.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="timeline-step step-06">
+                <div class="step-circle size-lg"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">06</span>
+                    <div>
+                      <h4>AI Layout Planning</h4>
+                      <p>I used text-based AI to organize the page structure, layout logic, and navigation flow into clearer design instructions for implementation.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="timeline-step step-07">
+                <div class="step-circle size-sm2"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">07</span>
+                    <div>
+                      <h4>Prototype in Google AI Studio</h4>
+                      <p>Based on the chosen style direction, I generated an early front-end prototype in Google AI Studio and exported the initial zip package.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="timeline-step step-08">
+                <div class="step-circle size-xxl"></div>
+                <div class="step-copy">
+                  <div class="step-row">
+                    <span class="step-number">08</span>
+                    <div>
+                      <h4>Refine in Codex</h4>
+                      <p>Finally, I used Codex to improve component consistency, page transitions, and the interaction logic, turning the early prototype into a more complete front-end result.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="vibe-process-visuals" aria-label="Vibe coding process images">
+              <figure class="vibe-process-shot shot-01 fill-dark">
+                <img src="assets/images/process/01.png" alt="Process step 01 screenshot." loading="lazy" decoding="async">
+                <span>01</span>
+              </figure>
+              <figure class="vibe-process-shot shot-02 fill-light">
+                <img src="assets/images/process/02.jpg" alt="Process step 02 screenshot." loading="lazy" decoding="async">
+                <span>02</span>
+              </figure>
+              <figure class="vibe-process-shot shot-03 fill-light">
+                <img src="assets/images/process/03.jpg" alt="Process step 03 screenshot." loading="lazy" decoding="async">
+                <span>03</span>
+              </figure>
+              <figure class="vibe-process-shot shot-04 fill-light">
+                <img src="assets/images/process/04.png" alt="Process step 04 screenshot." loading="lazy" decoding="async">
+                <span>04</span>
+              </figure>
+              <figure class="vibe-process-shot shot-05 fill-dark">
+                <img src="assets/images/process/05.png" alt="Process step 05 screenshot." loading="lazy" decoding="async">
+                <span>05</span>
+              </figure>
+              <figure class="vibe-process-shot shot-06 fill-dark">
+                <img src="assets/images/process/06.png" alt="Process step 06 screenshot." loading="lazy" decoding="async">
+                <span>06</span>
+              </figure>
+              <figure class="vibe-process-shot shot-07 fill-dark">
+                <img src="assets/images/process/07.png" alt="Process step 07 screenshot." loading="lazy" decoding="async">
+                <span>07</span>
+              </figure>
+              <figure class="vibe-process-shot shot-08 fill-dark">
+                <img src="assets/images/process/08.png" alt="Process step 08 screenshot." loading="lazy" decoding="async">
+                <span>08</span>
+              </figure>
+            </div>
+              </div>
+        </div>
+
+        <section class="ai-technical-reflection" aria-labelledby="ai-technical-reflection-title">
+          <h2 id="ai-technical-reflection-title" class="section-title">Technical Reflection on AI-Assisted Development</h2>
+          <div class="stage-board ai-technical-reflection-board">
+            <p class="ai-technical-reflection-intro body-font">During system development and portfolio front-end implementation, we used AI as a coding assistant, layout assistant, and debugging assistant. However, the core design logic, user research findings, requirement analysis, and human-centered justification came from our group’s own research, testing, and iterative refinement.</p>
+
+            <div class="ai-technical-reflection-grid">
+              <article class="ai-technical-reflection-card prompt-areas">
+                <span class="ai-technical-reflection-label">Prompt Areas</span>
+                <h3>Representative Prompt Areas</h3>
+                <ul>
+                  <li>We used prompt summaries to translate design requirements into front-end components, including route preview cards, requirement sections, and evaluation layouts.</li>
+                  <li>Prompts also supported responsive layout, spacing, and visual hierarchy improvements for the process portfolio.</li>
+                  <li>Debugging prompts focused on UI problems such as overlap, alignment, mobile readability, and inconsistent interaction states.</li>
+                  <li>Accessibility-related prompts helped refine clearer labels, larger touch targets, readable contrast, and simpler interaction flows.</li>
+                </ul>
+              </article>
+
+              <article class="ai-technical-reflection-card verification">
+                <span class="ai-technical-reflection-label">Verification</span>
+                <h3>Verification Against User Requirements</h3>
+                <p>We did not directly accept AI-generated output. Each change was checked against HoldLight’s core requirements: Requirement 1, layered route preview should help users understand the route before climbing; Requirement 2, brief direction-first audio cues should reduce overload during climbing; and Requirement 3, explicit fallback should help users recover from uncertainty.</p>
+                <p>We verified changes through manual walkthroughs of the main user flow, BLV accessibility checks, comparison with testing feedback and before/after refinement cases, and review of mobile readability. We rejected or rewrote AI output when it became overly decorative, low-contrast, or confusing.</p>
+              </article>
+
+              <article class="ai-technical-reflection-card ethics">
+                <span class="ai-technical-reflection-label">Ethics</span>
+                <h3>Ethical and Accessibility Considerations</h3>
+                <p>AI-generated UI may look visually attractive, but it is not automatically accessible. We manually checked contrast, text clarity, label clarity, touch target size, and information overload before treating generated ideas as usable.</p>
+                <p>We also avoided allowing AI to invent user research data, participant quotes, or evaluation findings. Because HoldLight is for blind and low-vision climbers, we prioritized clarity, predictability, and recoverable interaction over decorative complexity.</p>
+              </article>
+            </div>
+
+            <p class="ai-technical-reflection-close body-font">Our final approach was human-led and AI-assisted: AI helped accelerate coding and layout exploration, but design decisions were judged against user needs, accessibility requirements, and the project’s evaluation findings.</p>
+          </div>
+        </section>
+
+        <section class="ethical-reflection-module" aria-labelledby="ethical-reflection-title">
+          <article class="ethical-reflection-card">
+            <div class="ethical-reflection-bg" aria-hidden="true"></div>
+            <div class="ethical-reflection-content">
+              <div class="ethical-reflection-intro">
+                <h3 id="ethical-reflection-title">Ethical Reflection</h3>
+                <p>AI helped me prototype faster, but the final design still needed to be guided by accessibility, safety, and real user needs.</p>
+              </div>
+
+              <div class="ethical-reflection-points" aria-label="Ethical reflection points">
+                <article class="ethical-reflection-point">
+                  <span>1</span>
+                  <div>
+                    <h4>Accessibility First</h4>
+                    <p>Because this project supports blind and low-vision climbers, the UI could not only look visually polished. I needed to manually check readability, contrast, spacing, speech feedback, and simplified interaction.</p>
+                  </div>
+                </article>
+                <article class="ethical-reflection-point">
+                  <span>2</span>
+                  <div>
+                    <h4>Human Safety Matters</h4>
+                    <p>AI and computer vision should not replace human safety support in climbing. The system should provide guidance and fallback messages, while real climbing safety still depends on human supervision and careful judgement.</p>
+                  </div>
+                </article>
+                <article class="ethical-reflection-point">
+                  <span>3</span>
+                  <div>
+                    <h4>Responsible AI Use</h4>
+                    <p>I used AI for visual exploration, layout planning, and front-end iteration, but I did not treat AI output as final. Some AI-generated designs looked good but were not accessible enough, so I reviewed and adjusted them based on project goals and user-centered design principles.</p>
+                  </div>
+                </article>
+              </div>
+
+              <p class="ethical-reflection-conclusion">Overall, vibe coding improved my design speed, but the final decisions were still made through human judgement, group discussion, accessibility review, and testing.</p>
+            </div>
+          </article>
+        </section>
+
+      </section>
+
+      <section id="ai-tool-used" class="portfolio-section" aria-labelledby="ai-tool-references-title">
+        <h2 id="ai-tool-references-title" class="section-title">C. AI Tools <span class="text-stroke">Used</span></h2>
+        <div class="stage-board references-board">
+          <section class="ai-tool-references" aria-labelledby="ai-tool-references-list-title">
+            <h3 id="ai-tool-references-list-title">AI Tools Used</h3>
+            <ol class="ieee-reference-list ai-reference-list">
+              <li><span class="reference-index">[AI-1]</span><span>OpenAI, “ChatGPT,” version not specified, accessed on Apr. 29, 2026, available at <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">https://chatgpt.com/</a>. Used for early idea structuring, UI logic organization, prompt writing, and wording refinement.</span></li>
+              <li><span class="reference-index">[AI-2]</span><span>Google, “Gemini,” version not specified, accessed on Apr. 29, 2026, available at <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">https://gemini.google.com/</a>. Used for comparing design alternatives and summarizing research or UI directions.</span></li>
+              <li><span class="reference-index">[AI-3]</span><span>Pinterest, “Pinterest,” version not specified, accessed on Apr. 29, 2026, available at <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">https://www.pinterest.com/</a>. Used for visual reference collection and mood-board exploration.</span></li>
+              <li><span class="reference-index">[AI-4]</span><span>Uiverse, “Uiverse,” version not specified, accessed on Apr. 29, 2026, available at <a href="https://uiverse.io/" target="_blank" rel="noopener noreferrer">https://uiverse.io/</a>. Used for UI interaction and component style inspiration.</span></li>
+              <li><span class="reference-index">[AI-5]</span><span>Figma, “Figma,” version not specified, accessed on Apr. 29, 2026, available at <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">https://www.figma.com/</a>. Used for visual design exploration, interface planning, and prototype review.</span></li>
+              <li><span class="reference-index">[AI-6]</span><span>Google, “Google AI Studio,” version not specified, accessed on Apr. 29, 2026, available at <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer">https://aistudio.google.com/</a>. Used for early front-end prototype generation and layout exploration.</span></li>
+              <li><span class="reference-index">[AI-7]</span><span>OpenAI, “Codex,” version not specified, accessed on Apr. 29, 2026, available at <a href="https://openai.com/codex/" target="_blank" rel="noopener noreferrer">https://openai.com/codex/</a>. Used for front-end implementation, debugging, component consistency, and responsive layout refinement.</span></li>
+            </ol>
+
+            <article class="reference-disclosure-note">
+              <span class="card-label">Image / Generation Disclosure</span>
+              <p>Current portfolio images use local project assets and placeholders. If image generation tools are used later, generated assets and prompts should be documented in the references or AI logs.</p>
+            </article>
+          </section>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
+

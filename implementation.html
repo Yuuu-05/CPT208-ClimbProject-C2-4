@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 Technical Implementation - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body class="module-page integrated-page process-page implementation-page squad-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="modules.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link">Why</a>
+          <a href="user-requirements.html" class="page-link">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link active">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <span class="page-title-backdrop page-title-backdrop-cyan" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-black" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-dots" aria-hidden="true"></span>
+          <div class="page-id">04. DEVELOPMENT</div>
+          <h1 id="page-title">Technical Implementation</h1>
+        </section>
+
+        <div class="hero-collage" aria-label="Implementation section markers">
+          <span class="title-shard title-shard-black">Bringing</span>
+          <span class="title-shard title-shard-red">HoldLight To Life</span>
+          <span class="title-shard title-shard-white">System architecture, technical deployment, and our team's collaborative engineering efforts.</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="squad" class="portfolio-section squad-section" aria-labelledby="squad-title">
+        <h2 id="squad-title" class="section-title">Squad / Individual <span class="text-stroke">Contributions</span></h2>
+        <div class="squad-stage" aria-label="Animated squad contribution cards">
+          <div id="epicenter">
+            <div class="p5-star-wrapper epicenter-p5-star">
+              <div class="p5-star-layer p5-star-l1"></div>
+              <div class="p5-star-layer p5-star-l2"></div>
+              <div class="p5-star-layer p5-star-l3"></div>
+              <div class="p5-star-layer p5-star-l4"></div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-1">
+              <div class="member-block">
+                <img src="CPT208-images/ChenYu.png" class="shard-photo" alt="Chenyu Du">
+                <div class="shard-info">
+                  <h3 class="shard-name">Chenyu <span class="p5-surname-initial">D</span>u</h3>
+                  <div class="shard-role">Student ID: 2360743</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-2">
+              <div class="member-block">
+                <img src="CPT208-images/JunYan.png" class="shard-photo" alt="Junyan He">
+                <div class="shard-info">
+                  <h3 class="shard-name">Junyan <span class="p5-surname-initial">H</span>e</h3>
+                  <div class="shard-role">Student ID: 2363304</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-3">
+              <div class="member-block">
+                <img src="CPT208-images/JiaFei.png" class="shard-photo" alt="Jiafei Sun">
+                <div class="shard-info">
+                  <h3 class="shard-name">Jiafei <span class="p5-surname-initial">S</span>un</h3>
+                  <div class="shard-role">Student ID: 2361510</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="radial-shard-wrapper shard-4">
+              <div class="member-block">
+                <img src="CPT208-images/YouMing.png" class="shard-photo" alt="Youming Yang">
+                <div class="shard-info">
+                  <h3 class="shard-name">Youming <span class="p5-surname-initial">Y</span>ang</h3>
+                  <div class="shard-role">Student ID: 2361217</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="counter-burst-wrapper cb-1"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-2"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-3"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-4"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-5"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-6"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-7"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-8"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-9"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-10"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-11"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-12"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-13"><div class="deco-shard"></div></div>
+            <div class="counter-burst-wrapper cb-14"><div class="deco-shard"></div></div>
+          </div>
+
+          <div class="p5-star-wrapper p5-star-side-1"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+          <div class="p5-star-wrapper p5-star-side-2"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+          <div class="p5-star-wrapper p5-star-side-3"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+          <div class="p5-star-wrapper p5-star-side-4"><div class="p5-star-layer p5-star-l1"></div><div class="p5-star-layer p5-star-l2"></div><div class="p5-star-layer p5-star-l3"></div><div class="p5-star-layer p5-star-l4"></div></div>
+        </div>
+
+        <div class="stage-board contribution-board contribution-board--table">
+          <div class="contribution-table-shell">
+            <table class="individual-contribution-table" aria-label="Individual contributions showing exactly what each member built">
+              <caption>Individual contribution evidence: what each member built</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Member</th>
+                  <th scope="col">Main Role Areas</th>
+                  <th scope="col">Code / System Contribution</th>
+                  <th scope="col">Design / Research / Content Contribution</th>
+                  <th scope="col">Testing / Documentation Evidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-label="Member">
+                    <strong class="contribution-member-name">Chenyu Du</strong>
+                    <img class="contribution-member-avatar" src="CPT208-images/ChenYu.png" alt="Chenyu Du">
+                  </th>
+                  <td data-label="Main Role Areas">
+                    <div class="role-pill-list" aria-label="Chenyu Du role areas">
+                      <span>Frontend/Backend</span>
+                      <span>Computer Vision</span>
+                      <span>Route Planning</span>
+                      <span>Accessibility</span>
+                      <span>Deployment</span>
+                      <span>User Research</span>
+                    </div>
+                  </td>
+                  <td data-label="Code / System Contribution">
+                    <ul>
+                      <li>Built the main React/Vite frontend and Express/MongoDB backend, including JWT login and user preference storage.</li>
+                      <li>Implemented the wall-scanning workflow, Detectron2/TripletNet hold recognition, and route-planning algorithms for same-colour generation and recommended sequences.</li>
+                      <li>Developed real-time wall alignment, audio speech guidance, manual hold correction, low-vision settings, and completed deployment configuration.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Design / Research / Content Contribution">
+                    <ul>
+                      <li>Led the evaluation design through questionnaires, blind and low-vision user interviews, and a data analysis framework.</li>
+                      <li>Contributed to poster content and structure so the system work and research evidence were clearly presented.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Testing / Documentation Evidence">
+                    <ul>
+                      <li>Used questionnaires, blind and low-vision user interviews, and analysis planning as evaluation evidence.</li>
+                      <li>Supported the documentation of deployment, accessibility functions, and poster evidence drawn from the implemented system.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Member">
+                    <strong class="contribution-member-name">Junyan He</strong>
+                    <img class="contribution-member-avatar" src="CPT208-images/JunYan.png" alt="Junyan He">
+                  </th>
+                  <td data-label="Main Role Areas">
+                    <div class="role-pill-list" aria-label="Junyan He role areas">
+                      <span>UI/UX Design</span>
+                      <span>Inclusive Interface</span>
+                      <span>Portfolio Website</span>
+                      <span>Internal Testing</span>
+                      <span>Poster Assets</span>
+                    </div>
+                  </td>
+                  <td data-label="Code / System Contribution">
+                    <ul>
+                      <li>Built and structured the process portfolio website as the project evidence platform.</li>
+                      <li>Translated the design direction into working portfolio page structure and presentation layouts.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Design / Research / Content Contribution">
+                    <ul>
+                      <li>Led visual iteration of the mobile prototype, including the user flow, route preview, and scanning layouts.</li>
+                      <li>Focused on low-vision accessibility through high-contrast presentations, large-text layouts, and simplified interactions.</li>
+                      <li>Collaborated on poster planning, writing, and visual assets.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Testing / Documentation Evidence">
+                    <ul>
+                      <li>Conducted internal testing and used the outcomes to support prototype and portfolio refinement.</li>
+                      <li>Contributed to poster writing, visual evidence, and portfolio documentation.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Member">
+                    <strong class="contribution-member-name">Jiafei Sun</strong>
+                    <img class="contribution-member-avatar" src="CPT208-images/JiaFei.png" alt="Jiafei Sun">
+                  </th>
+                  <td data-label="Main Role Areas">
+                    <div class="role-pill-list" aria-label="Jiafei Sun role areas">
+                      <span>Human Pose Recognition</span>
+                      <span>Technology Evaluation</span>
+                      <span>Technical Testing</span>
+                      <span>Research Support</span>
+                      <span>Poster Visuals</span>
+                    </div>
+                  </td>
+                  <td data-label="Code / System Contribution">
+                    <ul>
+                      <li>Selected and adapted MediaPipe after comparing multiple pose-tracking frameworks for indoor climbing performance.</li>
+                      <li>Connected pose-related outputs to the climbing scenario so the prototype could consider climber body movement and position during guidance.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Design / Research / Content Contribution">
+                    <ul>
+                      <li>Conducted comparative technology research on pose-tracking frameworks before implementation.</li>
+                      <li>Refined questionnaires and evaluation materials, and contributed to the poster framework and visuals.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Testing / Documentation Evidence">
+                    <ul>
+                      <li>Participated in technical testing of the pose component and internal system trials.</li>
+                      <li>Supported evaluation material refinement and documented pose-related technical evidence for the project presentation.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" data-label="Member">
+                    <strong class="contribution-member-name">Youming Yang</strong>
+                    <img class="contribution-member-avatar" src="CPT208-images/YouMing.png" alt="Youming Yang">
+                  </th>
+                  <td data-label="Main Role Areas">
+                    <div class="role-pill-list" aria-label="Youming Yang role areas">
+                      <span>Market Research</span>
+                      <span>Evaluation Support</span>
+                      <span>User Testing</span>
+                      <span>Data Organization</span>
+                      <span>Documentation</span>
+                    </div>
+                  </td>
+                  <td data-label="Code / System Contribution">
+                    <ul>
+                      <li>Supported system refinement by identifying usability, accessibility, and interaction-flow issues during internal prototype testing.</li>
+                      <li>Contributed design implications from user research data back into the prototype refinement process.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Design / Research / Content Contribution">
+                    <ul>
+                      <li>Investigated the problem space and conducted competitive analysis of climbing applications to identify the lack of accessible solutions.</li>
+                      <li>Organized questionnaire and user research data, translating findings into actionable design implications.</li>
+                    </ul>
+                  </td>
+                  <td data-label="Testing / Documentation Evidence">
+                    <ul>
+                      <li>Joined internal testing sessions to identify usability, accessibility, and interaction-flow issues.</li>
+                      <li>Documented testing findings, project outcomes, and refinement decisions for the portfolio and poster.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      <div class="timeline-scroll" id="development-timeline">
+        <section class="project-steps-timeline" id="holdlightTimeline" aria-labelledby="developmentTimelineTitle">
+          <header class="timeline-heading">
+            <h2 id="developmentTimelineTitle">Development Timeline</h2>
+            <p>From Research Insight to Final Prototype</p>
+          </header>
+
+          <div class="timeline-axis" aria-hidden="true">
+            <div class="axis-labels">
+              <span>Mar 06</span>
+              <span>Mar 10</span>
+              <span>Mar 12</span>
+              <span>Mar 24</span>
+              <span>Apr 01</span>
+              <span>Apr 10</span>
+              <span>Apr 20</span>
+              <span>May 06</span>
+            </div>
+
+            <div class="axis-red-line">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="axis-bars">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="timeline-stage">
+            <article class="milestone m-1">
+              <button class="milestone-dot" type="button" aria-label="March 6 Team Formation">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <circle cx="17" cy="19" r="5"></circle>
+                  <circle cx="31" cy="19" r="5"></circle>
+                  <path d="M8 36c1.6-7 7.2-10 13-10"></path>
+                  <path d="M40 36c-1.6-7-7.2-10-13-10"></path>
+                  <path d="M15 37c1.4-5.6 4.8-8.4 9-8.4s7.6 2.8 9 8.4"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">01</div>
+                <h3><span>03.06</span>Team Formation</h3>
+                <p>The project team was created and the initial collaboration structure was confirmed.</p>
+                <p>This stage established the basis for user research, UX design, frontend development, backend logic, and evaluation work.</p>
+              </div>
+            </article>
+
+            <article class="milestone m-2">
+              <button class="milestone-dot" type="button" aria-label="March 10 Theme Idea Confirmed">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <path d="M18 38h12"></path>
+                  <path d="M20 32h8"></path>
+                  <path d="M17 28c-4-3.2-6-7-6-11a13 13 0 0 1 26 0c0 4-2 7.8-6 11-1.8 1.4-2.4 2.8-2.8 4H19.8c-.4-1.2-1-2.6-2.8-4Z"></path>
+                  <path d="M24 7v4"></path>
+                  <path d="M35 12l-3 3"></path>
+                  <path d="M13 12l3 3"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">02</div>
+                <h3><span>03.10</span>Theme Idea Fixed</h3>
+                <p>The team confirmed the core product direction: an accessible climbing support system for blind and low-vision users.</p>
+                <p>The design focus shifted toward route preview, brief voice guidance, explicit fallback, and inclusive interaction flow.</p>
+              </div>
+            </article>
+
+            <article class="milestone m-3">
+              <button class="milestone-dot" type="button" aria-label="March 12 BLV Interview and Role Division">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <path d="M13 16h22a6 6 0 0 1 6 6v4a6 6 0 0 1-6 6H24l-8 6v-6h-3a6 6 0 0 1-6-6v-4a6 6 0 0 1 6-6Z"></path>
+                  <path d="M17 24h.1"></path>
+                  <path d="M24 24h.1"></path>
+                  <path d="M31 24h.1"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">03</div>
+                <h3><span>03.12</span>BLV Interview &amp; Division</h3>
+                <p>The first BLV interview helped the team understand route-reading barriers, audio guidance needs, and uncertainty during climbing.</p>
+                <p>The team then divided responsibilities across frontend, backend, research, inclusive UX design, and testing preparation.</p>
+              </div>
+            </article>
+
+            <article class="milestone m-4">
+              <button class="milestone-dot" type="button" aria-label="March 24 First System Prototype">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <path d="M18 14h-7a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3v-7"></path>
+                  <path d="M30 8h7a3 3 0 0 1 3 3v20a3 3 0 0 1-3 3h-7"></path>
+                  <path d="M18 24h12"></path>
+                  <path d="M25 18l7 6-7 6"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">04</div>
+                <h3><span>03.24</span>First System Prototype</h3>
+                <p>The first frontend-backend integration produced an initial working prototype with a connected scan-to-guidance flow.</p>
+                <p>This made it possible to test whether route preview, cue delivery, and fallback could work as one coherent user journey.</p>
+              </div>
+            </article>
+
+            <article class="milestone m-5">
+              <button class="milestone-dot" type="button" aria-label="April 1 BLV Pilot Testing">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <path d="M10 25c4-8 9-12 14-12s10 4 14 12c-4 8-9 12-14 12S14 33 10 25Z"></path>
+                  <circle cx="24" cy="25" r="5"></circle>
+                  <path d="M38 13l4-4"></path>
+                  <path d="M39 25h5"></path>
+                  <path d="M38 37l4 4"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">05</div>
+                <h3><span>04.01</span>BLV Pilot Testing</h3>
+                <p>The first pilot test with a BLV participant showed that long voice instructions were difficult to process during climbing.</p>
+                <p>Iteration 1 simplified the audio wording into shorter, direction-first cues and reduced unnecessary guidance details.</p>
+              </div>
+            </article>
+
+            <article class="milestone m-6">
+              <button class="milestone-dot" type="button" aria-label="April 10 Team Testing">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <rect x="9" y="10" width="30" height="22" rx="3"></rect>
+                  <path d="M15 18h18"></path>
+                  <path d="M15 24h11"></path>
+                  <path d="M18 39h12"></path>
+                  <path d="M24 32v7"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">06</div>
+                <h3><span>04.10</span>Team Testing</h3>
+                <p>Internal team testing revealed that several interface areas were visually overloaded and not clear enough for quick use.</p>
+                <p>Iteration 2 simplified the interface and made the main scanning, preview, and guidance actions easier to identify.</p>
+              </div>
+            </article>
+
+            <article class="milestone m-7">
+              <button class="milestone-dot" type="button" aria-label="April 20 BLV Retest and Iteration 3">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <rect x="9" y="10" width="12" height="12" rx="2"></rect>
+                  <rect x="27" y="10" width="12" height="12" rx="2"></rect>
+                  <rect x="9" y="28" width="12" height="12" rx="2"></rect>
+                  <rect x="27" y="28" width="12" height="12" rx="2"></rect>
+                  <path d="M15 16h.1"></path>
+                  <path d="M33 16h.1"></path>
+                  <path d="M15 34h.1"></path>
+                  <path d="M33 34h.1"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">07</div>
+                <h3><span>04.20</span>BLV Retest &amp; Iteration 3</h3>
+                <p>A second BLV test and interview exposed the need for faster hold correction during route setup.</p>
+                <p>Iteration 3 added multi-select controls for adding or removing detected climbing holds more efficiently.</p>
+              </div>
+            </article>
+
+            <article class="milestone m-8 is-active">
+              <button class="milestone-dot" type="button" aria-label="May 6 Final Version Optimised">
+                <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <path d="M24 5l5.6 11.4 12.6 1.8-9.1 8.9 2.1 12.5L24 33.7 12.8 39.6l2.1-12.5-9.1-8.9 12.6-1.8L24 5Z"></path>
+                  <path d="M20 25l3 3 6-7"></path>
+                </svg>
+              </button>
+              <div class="milestone-copy">
+                <div class="milestone-number">08</div>
+                <h3><span>05.06</span>Final Version Optimised</h3>
+                <p>The final version was polished through interface tuning, flow adjustment, and interaction cleanup.</p>
+                <p>The product was prepared as a more stable and presentable accessibility-focused climbing prototype for final submission.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+      </section>
+
+      <section id="high-fi" class="portfolio-section" aria-labelledby="highfi-title">
+        <h2 id="highfi-title" class="section-title">High-Fi <span class="text-stroke">Prototype</span></h2>
+        <div class="phantom-entry-row" aria-label="High-Fi prototype links">
+          <a href="https://climb-app-frontend-img.onrender.com" class="phantom-btn phantom-btn-red" aria-label="Open Live Web App" target="_blank" rel="noopener noreferrer">
+            <span class="ptrig p-1"></span><span class="ptrig p-2"></span><span class="ptrig p-3"></span>
+            <span class="ptrig p-4"></span><span class="ptrig p-5"></span><span class="ptrig p-6"></span>
+            <span class="ptrig p-7"></span><span class="ptrig p-8"></span><span class="ptrig p-9"></span>
+            <span class="phantom-wrapper">
+              <span class="action-star"></span>
+              <span class="shard-layer layer-1"></span>
+              <span class="shard-layer layer-2"></span>
+              <span class="shard-layer layer-3"></span>
+              <span class="heist-content">
+                <span class="ransom-row" aria-hidden="true">
+                  <span class="note-block b-w" style="--i: 1"><span class="txt">L</span></span>
+                  <span class="note-block b-b" style="--i: 2"><span class="txt">I</span></span>
+                  <span class="note-block b-w" style="--i: 3"><span class="txt">V</span></span>
+                  <span class="note-block b-b" style="--i: 4"><span class="txt">E</span></span>
+                  <span class="spacer"></span>
+                  <span class="note-block b-w" style="--i: 5"><span class="txt">W</span></span>
+                  <span class="note-block b-b" style="--i: 6"><span class="txt">E</span></span>
+                  <span class="note-block b-w" style="--i: 7"><span class="txt">B</span></span>
+                  <span class="spacer"></span>
+                  <span class="note-block b-b" style="--i: 8"><span class="txt">A</span></span>
+                  <span class="note-block b-w" style="--i: 9"><span class="txt">P</span></span>
+                  <span class="note-block b-b" style="--i: 10"><span class="txt">P</span></span>
+                </span>
+                <span class="card-socket" aria-hidden="true">
+                  <span class="calling-card">
+                    <span class="card-face front"><span class="card-mark">WEB</span></span>
+                    <span class="card-face back"><span class="card-mark">GO</span></span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <a href="https://github.com/Yuuu-05/CPT208-ClimbApp" class="phantom-btn phantom-btn-blue" aria-label="Open GitHub Repository" target="_blank" rel="noopener noreferrer">
+            <span class="ptrig p-1"></span><span class="ptrig p-2"></span><span class="ptrig p-3"></span>
+            <span class="ptrig p-4"></span><span class="ptrig p-5"></span><span class="ptrig p-6"></span>
+            <span class="ptrig p-7"></span><span class="ptrig p-8"></span><span class="ptrig p-9"></span>
+            <span class="phantom-wrapper">
+              <span class="action-star"></span>
+              <span class="shard-layer layer-1"></span>
+              <span class="shard-layer layer-2"></span>
+              <span class="shard-layer layer-3"></span>
+              <span class="heist-content">
+                <span class="ransom-row" aria-hidden="true">
+                  <span class="note-block b-w" style="--i: 1"><span class="txt">G</span></span>
+                  <span class="note-block b-b" style="--i: 2"><span class="txt">I</span></span>
+                  <span class="note-block b-w" style="--i: 3"><span class="txt">T</span></span>
+                  <span class="note-block b-b" style="--i: 4"><span class="txt">H</span></span>
+                  <span class="note-block b-w" style="--i: 5"><span class="txt">U</span></span>
+                  <span class="note-block b-b" style="--i: 6"><span class="txt">B</span></span>
+                  <span class="spacer"></span>
+                  <span class="note-block b-w" style="--i: 7"><span class="txt">R</span></span>
+                  <span class="note-block b-b" style="--i: 8"><span class="txt">E</span></span>
+                  <span class="note-block b-w" style="--i: 9"><span class="txt">P</span></span>
+                  <span class="note-block b-b" style="--i: 10"><span class="txt">O</span></span>
+                </span>
+                <span class="card-socket" aria-hidden="true">
+                  <span class="calling-card">
+                    <span class="card-face front"><span class="card-mark">GIT</span></span>
+                    <span class="card-face back"><span class="card-mark">GO</span></span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </a>
+        </div>
+        <div class="stage-board">
+          <div class="implementation-showcase">
+            <figure class="asset-figure implementation-flow">
+              <img src="assets/images/prototype/overview/hi-overview2.png" alt="High-Fi prototype overview showing the final HoldLight mobile interface screens." class="asset-image">
+              <figcaption class="highfi-overview-caption">
+                <strong>Final Hi-Fi Overview.</strong>
+                <span>This overview shows the final mobile interface direction and the main HoldLight prototype screens.</span>
+              </figcaption>
+            </figure>
+
+            <figure class="asset-figure implementation-video">
+              <video controls preload="metadata" class="prototype-video prototype-video-large" aria-label="Final HoldLight system demo video">
+                <source src="assets/videos/hi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>
+                <strong>Final System Demo.</strong>
+                <span>This video demonstrates the final Hi-Fi prototype and the core user journey of HoldLight.</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="info-grid three-col section-gap">
+            <article class="info-card accent-cyan">
+              <span class="card-label">User Can Do</span>
+              <h3>Start from scanning</h3>
+              <p class="body-font">The main journey begins with route scanning rather than a dense dashboard, making the core task easier to find.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Requirement Supported</span>
+              <h3>Preview + short guidance</h3>
+              <p class="body-font">The flow supports route preview, route correction, short guidance, and recovery controls.</p>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">Accessibility Value</span>
+              <h3>Lower cognitive load</h3>
+              <p class="body-font">The final prototype reduces feature density and focuses on the moments that matter for blind and low-vision beginner climbers.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="core-features" class="portfolio-section" aria-labelledby="features-title">
+        <h2 id="features-title" class="section-title">Core Feature <span class="text-stroke">Set</span></h2>
+        <div class="stage-board">
+          <div class="info-grid three-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Feature 01</span>
+              <h3>Scan &amp; Route Preview</h3>
+              <p class="body-font"><strong>User problem:</strong> route shape is hard to access visually.</p>
+              <p class="body-font"><strong>Implemented feature:</strong> camera scan, route confirmation, and simplified preview.</p>
+              <p class="body-font"><strong>Requirement supported:</strong> confidence-building route preview.</p>
+              <p class="body-font"><strong>Current limitation:</strong> recognition still needs confirmation in real gym conditions.</p>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Feature 02</span>
+              <h3>Short Audio Guidance</h3>
+              <p class="body-font"><strong>User problem:</strong> screen prompts are not practical while climbing.</p>
+              <p class="body-font"><strong>Implemented feature:</strong> concise Web Speech API cue output with repeat and pause.</p>
+              <p class="body-font"><strong>Requirement supported:</strong> low-overload audio guidance.</p>
+              <p class="body-font"><strong>Current limitation:</strong> noisy gym environments may still reduce comprehension.</p>
+            </article>
+            <article class="info-card accent-green">
+              <span class="card-label">Feature 03</span>
+              <h3>Accessibility &amp; Fallback Controls</h3>
+              <p class="body-font"><strong>User problem:</strong> uncertainty can become unsafe or confusing.</p>
+              <p class="body-font"><strong>Implemented feature:</strong> text size, contrast, repeat, pause, and request-help controls.</p>
+              <p class="body-font"><strong>Requirement supported:</strong> safe fallback and recovery.</p>
+              <p class="body-font"><strong>Current limitation:</strong> human support is still required for safety-critical decisions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="portfolio-section" aria-labelledby="architecture-title">
+        <h2 id="architecture-title" class="section-title">System Architecture <span class="text-stroke">and Data Flow</span></h2>
+        <div class="stage-board">
+          <div class="intro-panel architecture-intro">
+            <p>HoldLight is structured as a mobile-first web application that combines browser-side interaction with backend vision processing. The React + Vite frontend manages authentication, onboarding, dashboard, accessibility, speech, camera access, and the Climb Assist flow. Local browser capabilities such as getUserMedia, MediaPipe Pose, speech synthesis, audio, and haptics support real-time interaction on the user's device. Requests are routed through static hosting and an API proxy to a Node + Express backend, which handles users, notifications, climb scans, climb sessions, guidance logs, and vision requests. A Python vision runtime performs wall detection, hold grouping, color analysis, and planar calibration, while MongoDB stores user, scan, session, and guidance data. The system supports two main pipelines: wall scanning and live guidance.</p>
+          </div>
+          <figure class="architecture-diagram">
+            <div class="architecture-image-frame">
+              <img src="assets/images/holdlight-architecture.png" alt="HoldLight system architecture diagram showing users, React and Vite browser frontend, browser local capabilities, reverse proxy and static hosting, Node Express API, MongoDB, Python vision runtime, and two data pipelines for wall scan and live guidance." class="architecture-image">
+            </div>
+            <figcaption>System architecture of HoldLight, showing the frontend, browser local capabilities, static hosting, Node/Express backend, MongoDB storage, Python vision runtime, and the wall scan / live guidance pipelines.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="technical-notes" class="portfolio-section" aria-labelledby="technical-title">
+        <h2 id="technical-title" class="section-title">Technical Notes / <span class="text-stroke">AI Logs</span></h2>
+        <div class="stage-board">
+          <div class="info-grid two-col">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Tech Stack</span>
+              <h3>Mobile web prototype</h3>
+              <ul class="body-font compact-list">
+                <li>Browser frontend for mobile interaction and accessibility controls.</li>
+                <li>Node / Express API for backend coordination.</li>
+                <li>MongoDB for persistent app data.</li>
+                <li>Python vision engine for camera-based recognition experiments.</li>
+                <li>Web Speech API / speech synthesis for audio cues.</li>
+              </ul>
+            </article>
+            <article class="info-card accent-yellow">
+              <span class="card-label">Verification + AI Logs</span>
+              <h3>Setup and evidence trail</h3>
+              <ul class="body-font compact-list">
+                <li>README / setup instructions should document how to run the app locally.</li>
+                <li>The repository includes <code>/ai-logs</code> with placeholder prompt documentation to be completed before final submission.</li>
+                <li>Verification methods include manual user-flow checks, responsive layout checks, and accessibility review.</li>
+                <li>AI-assisted code suggestions should be reviewed before adoption.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener("mousemove", function(event) {
+      const xAxis = (window.innerWidth / 2 - event.clientX) * 0.04;
+      const yAxis = (window.innerHeight / 2 - event.clientY) * 0.04;
+      document.documentElement.style.setProperty("--mx", `${xAxis}px`);
+      document.documentElement.style.setProperty("--my", `${yAxis}px`);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 Motivation &amp; Research - HoldLight Process Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+</head>
+<body class="module-page integrated-page process-page why-gap-page">
+  <div class="page-wrap">
+    <header class="page-header">
+      <div class="top-strip">
+        <a href="modules.html" class="back-home">Home</a>
+        <nav class="page-nav" aria-label="Main portfolio navigation">
+          <a href="why-gap.html" class="page-link active">Why</a>
+          <a href="user-requirements.html" class="page-link">Requirements</a>
+          <a href="iteration-alternatives.html" class="page-link">Iteration</a>
+          <a href="implementation.html" class="page-link">Implementation</a>
+          <a href="evaluation-reflection.html" class="page-link">Evaluation</a>
+        </nav>
+      </div>
+
+      <div class="page-hero">
+        <section class="page-title-card" aria-labelledby="page-title">
+          <span class="page-title-backdrop page-title-backdrop-cyan" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-black" aria-hidden="true"></span>
+          <span class="page-title-backdrop page-title-backdrop-dots" aria-hidden="true"></span>
+          <div class="page-id">01. RESEARCH</div>
+          <h1 id="page-title">Motivation &amp; Research</h1>
+        </section>
+
+        <div class="hero-collage" aria-label="Why and gap section markers">
+          <span class="title-shard title-shard-black">Discovering</span>
+          <span class="title-shard title-shard-red">The Gap</span>
+          <span class="title-shard title-shard-white">Exploring the accessibility gap in indoor climbing and defining our target stakeholders.</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section id="motivation" class="portfolio-section" aria-labelledby="motivation-title">
+        <h2 id="motivation-title" class="section-title">Why We Chose <span class="text-stroke">Go Climbers</span></h2>
+
+        <div class="stage-board">
+          <div class="why-board">
+            <article class="statement-panel">
+              <h3>Active Lifestyles</h3>
+              <div class="statement-columns">
+                <p>We chose the Active track because accessibility in physical activity should not only mean access to a venue, but also meaningful participation within the activity itself. Indoor climbing made this gap especially visible to us. Climbing depends heavily on route preview, movement planning, and real-time action, so visual information is not secondary; it shapes how climbers understand and enjoy the route. For blind and low-vision climbers, this creates barriers to independent route understanding, usable in-climb guidance, and confident self-directed participation. Existing assistive research for accessible climbing and embodied guidance is promising but still early-stage, while mainstream climbing apps mainly focus on route browsing, logging, beta sharing, and community rather than BLV accessibility.</p>
+                <p>This made the Active track the strongest fit for our project. It allowed us to design for agency, flow, confidence, and enjoyment in a physically demanding setting, not just basic usability. Through HoldLight, we wanted to support active participation rather than passive accommodation: helping blind and low-vision climbers understand routes before climbing, receive lightweight support during movement, and stay in control while preserving human fallback when safety or uncertainty requires it.</p>
+              </div>
+            </article>
+
+            <aside class="side-note">
+              <h3>Design Priorities</h3>
+              <ol class="priority-list">
+                <li>Clear route understanding before the climb starts.</li>
+                <li>Short support that preserves climbing rhythm and reduces cognitive load.</li>
+                <li>Autonomy with explicit fallback when guidance becomes uncertain.</li>
+              </ol>
+              <div class="route-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem-space" class="portfolio-section" aria-labelledby="problem-title">
+        <h2 id="problem-title" class="section-title">Problem <span class="text-stroke">Space</span></h2>
+        <div class="stage-board">
+          <div class="intro-panel">
+            <p>HoldLight is an accessibility-oriented mobile web app for indoor climbing. The system combines route and hold recognition, simplified route preview, short audio guidance, and assistant-supported fallback to reduce uncertainty before and during climbing.</p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="info-card accent-cyan">
+              <span class="card-label">Problem 01</span>
+              <h3>Route visibility problem</h3>
+              <p class="body-font">Indoor routes are visually encoded through hold colour, position, and route shape. Blind and low-vision climbers often need another person to translate that structure before they can plan movement.</p>
+              <p class="body-font"><strong>Design implication:</strong> provide a confidence-building route preview before climbing.</p>
+            </article>
+
+            <article class="info-card accent-yellow">
+              <span class="card-label">Problem 02</span>
+              <h3>Cognitive load problem</h3>
+              <p class="body-font">Long explanations are hard to retain once the climber is physically engaged on the wall. Guidance needs to be brief, timed carefully, and easy to repeat.</p>
+              <p class="body-font"><strong>Design implication:</strong> keep in-climb support short, audio-first, and low-overload.</p>
+            </article>
+
+            <article class="info-card accent-red">
+              <span class="card-label">Problem 03</span>
+              <h3>Safety and trust problem</h3>
+              <p class="body-font">A climbing support system cannot pretend to be perfectly certain. Users need to know when recognition is uncertain and how to pause, repeat, or ask for human help.</p>
+              <p class="body-font"><strong>Design implication:</strong> make fallback and recovery states explicit.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="academic-gap" class="portfolio-section" aria-labelledby="academic-title">
+        <h2 id="academic-title" class="section-title">Academic Research <span class="text-stroke">Gap</span></h2>
+        <div class="stage-board">
+          <div class="research-grid gap-analysis-grid">
+            <article class="research-card">
+              <span class="card-label">Paper 01</span>
+              <h3>Braun et al. (2025)</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Clearly identifies the real accessibility barriers faced by BLV climbers in climbing and bouldering.</li>
+                  <li>Provides a strong user-needs foundation that supports the motivation for assistive climbing design.</li>
+                  <li>Shows that accessibility should be treated as a core design requirement rather than an optional add-on.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>Remains mainly at the needs-assessment stage rather than demonstrating a complete deployable system.</li>
+                  <li>Provides limited evidence on how support should be delivered during an actual climb without disrupting flow.</li>
+                  <li>Does not fully combine pre-climb route understanding, real-time lightweight guidance, and gym-ready implementation.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Paper 02</span>
+              <h3>Ramsay &amp; Chang (2020)</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Demonstrates that auditory feedback can act as a meaningful non-visual channel for blind climbers.</li>
+                  <li>Explores support during the climb, addressing a stage often missed by route-browsing tools.</li>
+                  <li>Offers a technically creative approach for translating body-position information into accessible feedback.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>Sound-based feedback may add cognitive load if climbers must interpret too much information while moving.</li>
+                  <li>The focus is mainly on body pose rather than a complete understanding of the route sequence and hold layout.</li>
+                  <li>The system appears closer to a research prototype than a practical tool that can be easily adopted by climbing gyms.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Paper 03</span>
+              <h3>Richardson et al. (2022)</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Uses computer vision to address the visual dependency of rock climbing in a direct and relevant way.</li>
+                  <li>Provides useful inspiration for automatic hold detection and sensory substitution in accessible climbing.</li>
+                  <li>Moves beyond simple logging or route browsing by attempting to convert visual route information into alternative feedback.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>Computer vision may be difficult to keep reliable in real gyms with variable lighting, occlusion, wall angles, and crowded conditions.</li>
+                  <li>Additional sensing or feedback devices may affect comfort, safety, or climbing flow.</li>
+                  <li>The work demonstrates technical potential but provides limited evidence of a robust, scalable gym deployment workflow.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Paper 04</span>
+              <h3>Simone &amp; Galatolo (2020)</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Provides rich insight into how visually impaired climbers are guided through real human instruction.</li>
+                  <li>Highlights the importance of timing, trust, communication, and safety in accessible climbing support.</li>
+                  <li>Offers practical design implications for creating guidance that feels natural rather than purely technical.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>The approach depends heavily on another person, which limits independent route preview and decision-making.</li>
+                  <li>Partner-based instruction is difficult to scale consistently across normal climbing gyms.</li>
+                  <li>Frequent verbal guidance may interrupt rhythm, concentration, and the climber's own problem-solving process.</li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="commercial-gap" class="portfolio-section" aria-labelledby="commercial-title">
+        <h2 id="commercial-title" class="section-title">Commercial Product <span class="text-stroke">Gap</span></h2>
+        <div class="stage-board">
+          <div class="research-grid product-grid gap-analysis-grid">
+            <article class="research-card">
+              <span class="card-label">Product 01</span>
+              <h3>KAYA</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Provides strong route discovery, beta content, and climbing media for mainstream climbers.</li>
+                  <li>Supports long-term engagement through logging, progress tracking, and performance history.</li>
+                  <li>Builds a community ecosystem where climbers can share beta, routes, and climbing experiences.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>The experience is strongly visual-first, relying heavily on images, videos, maps, and visual route information.</li>
+                  <li>Beta videos are not sufficiently accessible without structured audio description or non-visual route summaries.</li>
+                  <li>The product supports climbing participation broadly but is not designed around BLV climbers' independent route understanding or in-climb assistance.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Product 02</span>
+              <h3>Vertical-Life</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Organises route, topo, grade, and climbing-area information in a clear and scalable structure.</li>
+                  <li>Supports pre-climb planning by helping climbers browse routes, locations, and difficulty levels.</li>
+                  <li>Shows that digital route information platforms can be commercially viable and integrated into climbing communities.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>Visual topos remain the central interaction method, creating a major accessibility barrier for BLV users.</li>
+                  <li>Route information is not transformed into step-by-step audio, tactile, or semantic explanations.</li>
+                  <li>The platform focuses on route browsing and guidebook access rather than real-time, low-interruption climbing support.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Product 03</span>
+              <h3>TopLogger</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Fits well into indoor climbing gym contexts, especially for route updates, grading, and logging.</li>
+                  <li>Encourages continued participation through dashboards, rankings, personal progress, and achievement tracking.</li>
+                  <li>Connects climbers with gym-specific route resets and performance records, making it practical for regular gym use.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>Logging a completed climb does not help BLV climbers understand the route before attempting it.</li>
+                  <li>Competitive features such as rankings and leaderboards do not directly address accessibility, independence, or safety.</li>
+                  <li>The value of the system depends heavily on whether a specific gym has adopted and maintained the platform.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <span class="card-label">Product 04</span>
+              <h3>RouteIt Indoor Bouldering</h3>
+              <div class="gap-point-group gap-strengths">
+                <h4>Strengths</h4>
+                <ul>
+                  <li>Focuses specifically on indoor bouldering, making it more relevant to gym-based climbing workflows.</li>
+                  <li>Supports pre-climb preparation through route images, beta videos, and route status tracking.</li>
+                  <li>Combines gym connection, beta sharing, personal statistics, and route progress in one mainstream climbing platform.</li>
+                </ul>
+              </div>
+              <div class="gap-point-group gap-limitations">
+                <h4>Limitations</h4>
+                <ul>
+                  <li>The interface remains image- and video-heavy, which makes independent use difficult for BLV climbers.</li>
+                  <li>Its usefulness depends on gym coverage, route database completeness, and local adoption.</li>
+                  <li>It does not provide a robust method for real-time in-climb guidance that preserves flow and reduces cognitive load.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gap-references" class="portfolio-section" aria-labelledby="gap-references-title">
+        <h2 id="gap-references-title" class="section-title">References &amp; <span class="text-stroke">Sources Reviewed</span></h2>
+        <div class="stage-board references-board">
+          <div class="references-intro">
+            <span class="section-kicker">Sources Reviewed &amp; References</span>
+            <p>This section lists the academic papers and commercial products reviewed during the research stage. These sources informed the problem framing, accessibility gap analysis, design requirements, and final evaluation focus of HoldLight.</p>
+          </div>
+
+          <section class="sources-reviewed" aria-labelledby="sources-reviewed-title">
+            <h3 id="sources-reviewed-title">A. Sources Reviewed</h3>
+
+            <div class="source-group">
+              <div class="source-group-header">
+                <span>4 Academic Papers</span>
+                <h4>Academic Papers</h4>
+              </div>
+              <div class="source-card-grid">
+                <article class="source-card academic-source">
+                  <span class="source-number">[1]</span>
+                  <span class="source-type">Academic Paper</span>
+                  <h5>Braun et al. (2025) — Needs Assessment for an Assistance System for the Visually Impaired and Blind in Climbing and Bouldering</h5>
+                  <p>Informed our understanding of BLV climbers’ accessibility needs and the gap between climbing practice and assistive system design.</p>
+                </article>
+                <article class="source-card academic-source">
+                  <span class="source-number">[2]</span>
+                  <span class="source-type">Academic Paper</span>
+                  <h5>Ramsay &amp; Chang (2020) — Body Pose Sonification for a View-Independent Auditory Aid to Blind Rock Climbers</h5>
+                  <p>Helped us compare HoldLight with audio-based climbing assistance and understand the limitation of technical guidance without a full workflow.</p>
+                </article>
+                <article class="source-card academic-source">
+                  <span class="source-number">[3]</span>
+                  <span class="source-type">Academic Paper</span>
+                  <h5>Richardson et al. (2022) — Climb-o-Vision: A Computer Vision Driven Sensory Substitution Device for Rock Climbing</h5>
+                  <p>Provided a useful reference for computer-vision-assisted climbing support, while highlighting the need for deployable and user-controlled interaction.</p>
+                </article>
+                <article class="source-card academic-source">
+                  <span class="source-number">[4]</span>
+                  <span class="source-type">Academic Paper</span>
+                  <h5>Simone &amp; Galatolo (2020) — Climbing as a Pair: Instructions and Instructed Body Movements in Indoor Climbing with Visually Impaired Athletes</h5>
+                  <p>Informed our understanding of human guidance, verbal instruction, timing, and the social nature of BLV climbing support.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="source-group">
+              <div class="source-group-header">
+                <span>4 Commercial Products</span>
+                <h4>Commercial Products</h4>
+              </div>
+              <div class="source-card-grid">
+                <article class="source-card commercial-source">
+                  <span class="source-number">[5]</span>
+                  <span class="source-type">Commercial Product</span>
+                  <h5>KAYA — climbing app for route discovery, beta videos, logging, and community features.</h5>
+                  <p>Useful for understanding commercial climbing platforms, but it provides little publicly documented accessibility support for BLV climbers.</p>
+                </article>
+                <article class="source-card commercial-source">
+                  <span class="source-number">[6]</span>
+                  <span class="source-type">Commercial Product</span>
+                  <h5>Vertical-Life — climbing platform/app for indoor and outdoor topos, gym route information, route logging, and climber feedback.</h5>
+                  <p>Shows how route information and gym feedback are supported in mainstream climbing apps, but not specifically for BLV route understanding.</p>
+                </article>
+                <article class="source-card commercial-source">
+                  <span class="source-number">[7]</span>
+                  <span class="source-type">Commercial Product</span>
+                  <h5>TopLogger — indoor climbing app for route logging, grade tracking, gym rankings, and route updates.</h5>
+                  <p>Strong for indoor logging and progress tracking, but does not address accessible route preview or in-climb next-hold guidance.</p>
+                </article>
+                <article class="source-card commercial-source">
+                  <span class="source-number">[8]</span>
+                  <span class="source-type">Commercial Product</span>
+                  <h5>RouteIt Indoor Bouldering — indoor bouldering app for gym route images, beta videos, climb status tracking, and personal statistics.</h5>
+                  <p>Useful for route images and beta sharing, but still assumes visual route access and does not support BLV climbing workflow needs.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="formal-references" aria-labelledby="formal-references-title">
+            <h3 id="formal-references-title">B. Formal IEEE References</h3>
+            <ol class="ieee-reference-list">
+              <li><span class="reference-index">[1]</span><span>F. Braun, J. Stadlbauer, S. Haug, and V. I. Schneider, “Needs assessment for an assistance system for the visually impaired and blind in climbing and bouldering,” <em>Studies in Health Technology and Informatics</em>, vol. 327, pp. 29–34, 2025, doi: <a href="https://doi.org/10.3233/SHTI250153" target="_blank" rel="noopener noreferrer">10.3233/SHTI250153</a>.</span></li>
+              <li><span class="reference-index">[2]</span><span>J. Ramsay and A. Chang, “Body pose sonification for a view-independent auditory aid to blind rock climbers,” in <em>Proceedings of the International Conference on Auditory Display</em>, 2020.</span></li>
+              <li><span class="reference-index">[3]</span><span>M. Richardson, K. Petrini, and M. J. Proulx, “Climb-o-Vision: A computer vision driven sensory substitution device for rock climbing,” in <em>Extended Abstracts of the 2022 CHI Conference on Human Factors in Computing Systems</em>, 2022, pp. 1–7, doi: <a href="https://doi.org/10.1145/3491101.3519680" target="_blank" rel="noopener noreferrer">10.1145/3491101.3519680</a>.</span></li>
+              <li><span class="reference-index">[4]</span><span>M. Simone and R. Galatolo, “Climbing as a pair: Instructions and instructed body movements in indoor climbing with visually impaired athletes,” <em>Journal of Pragmatics</em>, vol. 155, pp. 286–302, 2020, doi: <a href="https://doi.org/10.1016/j.pragma.2019.09.008" target="_blank" rel="noopener noreferrer">10.1016/j.pragma.2019.09.008</a>.</span></li>
+              <li><span class="reference-index">[5]</span><span>KAYA, “KAYA | The Climber’s App.” Accessed: Apr. 29, 2026. [Online]. Available: <a href="https://kayaclimb.com/" target="_blank" rel="noopener noreferrer">https://kayaclimb.com/</a></span></li>
+              <li><span class="reference-index">[6]</span><span>Vertical-Life, “Vertical-Life App.” Accessed: Apr. 29, 2026. [Online]. Available: <a href="https://gym.vertical-life.info/vertical-life-app/" target="_blank" rel="noopener noreferrer">https://gym.vertical-life.info/vertical-life-app/</a></span></li>
+              <li><span class="reference-index">[7]</span><span>TopLogger, “TopLogger — Track your climbing progress.” Accessed: Apr. 29, 2026. [Online]. Available: <a href="https://toplogger.nu/en/for-climbers" target="_blank" rel="noopener noreferrer">https://toplogger.nu/en/for-climbers</a></span></li>
+              <li><span class="reference-index">[8]</span><span>Apple App Store, “RouteIt Indoor Bouldering.” Accessed: Apr. 29, 2026. [Online]. Available: <a href="https://apps.apple.com/us/app/routeit-indoor-bouldering/id1521156087" target="_blank" rel="noopener noreferrer">https://apps.apple.com/us/app/routeit-indoor-bouldering/id1521156087</a></span></li>
+            </ol>
+          </section>
+        </div>
+      </section>
+      <section id="stakeholders" class="portfolio-section" aria-labelledby="stakeholder-title">
+        <h2 id="stakeholder-title" class="section-title">Stakeholder <span class="text-stroke">Overview</span></h2>
+        <div class="stage-board">
+          <section id="personas" class="portfolio-section" aria-label="Stakeholder personas">
+            <div id="persona-groups" class="persona-groups"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    const personas = [
+      {
+        id: "li-wen",
+        group: "low-vision",
+        name: "Li Wen",
+        role: "Blind/Low-Vision (BLV) Indoor Climber",
+        image: "CPT208-images/LiWen.png",
+        accent: "var(--hold-cyan)",
+        secondary: "var(--punk-red)",
+        panel: "var(--hold-yellow)",
+        border: "var(--pure-white)",
+        actionLabel: "Analyze",
+        actionAlert: "Opening Li Wen persona file.",
+        quote: "I want enough information to solve the route myself, not constant instructions.",
+        tags: ["Accessible Mode", "Audio Cues"],
+        panels: [
+          { title: "Background", type: "text", content: "Li Wen is a composite persona representing blind and low-vision indoor climbers with prior climbing experience. She usually relies on a coach or sighted guide for route explanations before climbing and occasional prompts during the climb. However, she does not want to be directed move by move throughout the entire route. She wants enough support to understand the route, recover when uncertain, and keep the climb her own. For Li Wen, a good climbing experience is not only about safety, but also about autonomy, confidence, rhythm, and equal access to meaningful participation." },
+          { title: "Goals", type: "list", content: ["Gain a usable understanding of the route before starting.", "Make independent movement decisions while preserving climbing rhythm.", "Recover quickly when uncertain about the next hold.", "Feel confident, in control, and actively engaged."] },
+          { title: "Frustrations", type: "list", content: ["Route explanations are fragmented and easily forgotten mid-climb.", "Physical load and noisy gyms make long instructions harder to remember and use.", "Long or poorly timed prompts disrupt movement and reduce confidence.", "Overconfident prompts are frustrating or unsafe when the system or guide is lost.", "Repeatedly asking others for help can feel socially burdensome."] },
+          { title: "Needs", type: "list", content: ["A layered, on-demand route preview before climbing.", "Short and actionable next-hold cues during climbing.", "Clear fallback options such as repeat, simplify, pause, or request human help."] },
+          { title: "What this persona means for our design", type: "list", content: ["Route preview must come before live guidance.", "Audio cues must be short enough to act on while moving.", "Fallback controls must preserve autonomy rather than forcing constant assistant intervention."] }
+        ]
+      },
+      {
+        id: "lance",
+        group: "assistant",
+        name: "Lance",
+        role: "Sighted Guide / Coach",
+        image: "CPT208-images/Lance.jpg",
+        avatarPosition: "center 18%",
+        accent: "var(--helper-teal)",
+        secondary: "var(--helper-orange)",
+        panel: "var(--hold-yellow)",
+        border: "var(--helper-teal)",
+        actionLabel: "Calibrate",
+        actionAlert: "Opening Lance assistant setup flow.",
+        quote: "I want to support when needed, not become the entire guidance system.",
+        tags: ["Setup Support", "Safety Backup"],
+        panels: [
+          { title: "Background", type: "text", content: "Lance is an experienced supporter who helps blind and low-vision climbers with route explanations, in-climb prompts, and safety oversight. In practice, he often needs to translate route structure and spatial information into short verbal cues while also monitoring the climber’s pace, uncertainty, and physical safety. He wants structured system support that reduces constant manual explanation while reserving his intervention for safety-critical or high-uncertainty moments. For Lance, good support means helping the climber stay safe and successful without taking away their autonomy or enjoyment." },
+          { title: "Goals", type: "list", content: ["Maintain safety oversight without dominating the climbing experience.", "Reduce constant manual prompting throughout the climb.", "Know when to step in, clarify, or let the climber continue independently."] },
+          { title: "Frustrations", type: "list", content: ["High cognitive load in noisy or crowded gym environments.", "Complex spatial route information is hard to translate into brief, timely cues.", "Over-directing can diminish climber autonomy, pace, and problem-solving.", "Decision points can be unclear: repeat, simplify, pause, or take over."] },
+          { title: "Needs", type: "list", content: ["A bounded workflow for routine route-information support.", "Clear fallback states and handoff moments between system guidance and human intervention.", "Smooth takeover in safety-critical or high-uncertainty moments."] },
+          { title: "What this persona means for our design", type: "list", content: ["Assistant confirmation should be built into setup.", "The system needs explicit uncertainty and request-help states.", "Support tools must reduce repetitive assistant work, not add more burden."] }
+        ]
+      }
+    ];
+
+    const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#39;"
+    }[char]));
+
+    const panelTones = ["accent", "secondary", "white", "panel", "accent"];
+    const personaGroups = [
+      { id: "low-vision", title: "Blind or Low-Vision Climber", kicker: "Primary User File", accent: "var(--hold-cyan)", secondary: "var(--punk-red)" },
+      { id: "assistant", title: "Assistant Support", kicker: "Secondary User File", accent: "var(--helper-teal)", secondary: "var(--helper-orange)" }
+    ];
+
+    const renderPanelContent = (panel) => {
+      if (panel.type === "list") {
+        return `<ul class="stats-list persona-list">${panel.content.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}</ul>`;
+      }
+      return `<div class="bio-text">${escapeHTML(panel.content)}</div>`;
+    };
+
+    const renderPanel = (panel, index) => `
+      <div class="stat-block stat-block--${panelTones[index % panelTones.length]}">
+        <h4>${escapeHTML(panel.title)}</h4>
+        ${renderPanelContent(panel)}
+      </div>
+    `;
+
+    const renderPersonaAvatar = (persona) => `
+      <button class="persona-avatar-card" type="button" data-persona-id="${escapeHTML(persona.id)}" aria-pressed="false" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border}; --persona-avatar-position: ${escapeHTML(persona.avatarPosition || "center center")};">
+        <span class="persona-avatar-frame">
+          <img src="${escapeHTML(persona.image)}" alt="${escapeHTML(persona.name)} portrait">
+        </span>
+        <span class="persona-avatar-copy">
+          <span class="persona-avatar-name">${escapeHTML(persona.name)}</span>
+          <span class="persona-avatar-role">${escapeHTML(persona.role)}</span>
+        </span>
+        <span class="persona-avatar-cta">Open File</span>
+      </button>
+    `;
+
+    const renderPersonaEntry = (group) => {
+      const groupPersonas = personas.filter((persona) => persona.group === group.id);
+      return `
+        <section class="persona-group-section persona-entry-card" style="--group-accent: ${group.accent}; --group-secondary: ${group.secondary};">
+          <div class="persona-group-header">
+            <span class="persona-group-kicker">${escapeHTML(group.kicker)}</span>
+            <h3>${escapeHTML(group.title)}</h3>
+          </div>
+          <div class="persona-avatar-grid">${groupPersonas.map(renderPersonaAvatar).join("")}</div>
+        </section>
+      `;
+    };
+
+    const renderPersonaCard = (persona) => `
+      <article class="persona-card" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border};">
+        <div class="persona-hold-decor" aria-hidden="true">
+          <span class="persona-hold persona-hold--v0" data-grade="V0"></span>
+          <span class="persona-hold persona-hold--v1" data-grade="V1"></span>
+          <span class="persona-hold persona-hold--v2" data-grade="V2"></span>
+          <span class="persona-hold persona-hold--v3" data-grade="V3"></span>
+        </div>
+
+        <div class="persona-header">
+          <div class="persona-title">
+            <div class="persona-title-line">
+              <h3>${escapeHTML(persona.name)}</h3>
+              <div class="tag-row tag-row--inline">${persona.tags.map((tag) => `<span class="tag">${escapeHTML(tag)}</span>`).join("")}</div>
+            </div>
+            <div class="persona-subtitle">${escapeHTML(persona.role)}</div>
+          </div>
+          <button class="action-btn" type="button" data-persona-alert="${escapeHTML(persona.actionAlert)}" aria-label="${escapeHTML(persona.actionLabel)} ${escapeHTML(persona.name)} persona file">${escapeHTML(persona.actionLabel)}</button>
+        </div>
+
+        <div class="persona-layout">
+          <div class="persona-left">
+            <img class="persona-photo" src="${escapeHTML(persona.image)}" alt="${escapeHTML(persona.name)}">
+            <div class="quote-box">"${escapeHTML(persona.quote)}"</div>
+          </div>
+          <div class="persona-right">${persona.panels.map(renderPanel).join("")}</div>
+        </div>
+      </article>
+    `;
+
+    const personaGroupMount = document.getElementById("persona-groups");
+    personaGroupMount.innerHTML = `
+      <div class="persona-entry-grid">${personaGroups.map(renderPersonaEntry).join("")}</div>
+      <div class="persona-cards persona-detail persona-expanded-panel" data-persona-detail="personas" aria-live="polite"></div>
+    `;
+
+    const bindPersonaActions = () => {
+      document.querySelectorAll("[data-persona-alert]").forEach((button) => {
+        button.addEventListener("click", () => alert(button.dataset.personaAlert));
+      });
+    };
+
+    const showPersona = (personaId) => {
+      const persona = personas.find((item) => item.id === personaId);
+      if (!persona) return;
+
+      const activeButton = document.querySelector(`[data-persona-id="${personaId}"]`);
+      const isAlreadyOpen = activeButton && activeButton.classList.contains("is-active");
+
+      if (isAlreadyOpen) {
+        document.querySelectorAll("[data-persona-detail]").forEach((detail) => {
+          detail.innerHTML = "";
+        });
+
+        activeButton.classList.remove("is-active");
+        activeButton.setAttribute("aria-pressed", "false");
+        return;
+      }
+
+      document.querySelectorAll("[data-persona-detail]").forEach((detail) => {
+        detail.innerHTML = detail.dataset.personaDetail === "personas" ? renderPersonaCard(persona) : "";
+      });
+
+      document.querySelectorAll("[data-persona-id]").forEach((button) => {
+        const isActive = button.dataset.personaId === personaId;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      bindPersonaActions();
+
+      const activeDetail = document.querySelector(`[data-persona-detail="personas"]`);
+      if (activeDetail) activeDetail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    };
+
+    document.querySelectorAll("[data-persona-id]").forEach((button) => {
+      button.addEventListener("click", () => showPersona(button.dataset.personaId));
+    });
+  </script>
+</body>
+</html>
+
