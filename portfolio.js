@@ -585,6 +585,21 @@
 
     const getStageScale = () => clamp(timeline.clientWidth / baseTimelineWidth, 0.58, 1);
 
+    const getRouteViewportMapper = () => {
+      const svg = routeMain.ownerSVGElement;
+      const rect = svg?.getBoundingClientRect();
+      const viewBox = svg?.viewBox?.baseVal;
+
+      if (!svg || !rect || !viewBox || rect.width <= 0 || rect.height <= 0) {
+        return null;
+      }
+
+      return (point) => ({
+        x: rect.left + ((point.x - viewBox.x) / viewBox.width) * rect.width,
+        y: rect.top + ((point.y - viewBox.y) / viewBox.height) * rect.height
+      });
+    };
+
     const resetTilt = (shot) => {
       shot.style.setProperty("--vibe-tilt-x", "0deg");
       shot.style.setProperty("--vibe-tilt-y", "0deg");
@@ -610,24 +625,40 @@
         return false;
       }
 
-      const stageScale = getStageScale();
+      const routeViewportPoint = getRouteViewportMapper();
+
+      if (!routeViewportPoint) {
+        stepCenters = [];
+        stepRouteProgresses = [];
+        return false;
+      }
 
       stepCenters = steps.map((step) => {
         const circle = step.querySelector(".step-circle");
-        const routeSpaceLeft = step.offsetLeft / stageScale;
-        const routeSpaceTop = step.offsetTop / stageScale;
 
         if (!circle) {
           return {
-            x: routeSpaceLeft + (step.offsetWidth / 2),
-            y: routeSpaceTop + (step.offsetHeight / 2)
+            x: step.offsetLeft + (step.offsetWidth / 2),
+            y: step.offsetTop + (step.offsetHeight / 2),
+            viewportX: 0,
+            viewportY: 0,
+            viewportRadius: 0
           };
         }
 
+        const circleRect = circle.getBoundingClientRect();
+        const routeRect = routeMain.ownerSVGElement.getBoundingClientRect();
+        const viewBox = routeMain.ownerSVGElement.viewBox.baseVal;
+        const viewportX = circleRect.left + (circleRect.width / 2);
+        const viewportY = circleRect.top + (circleRect.height / 2);
+
         return {
-          x: routeSpaceLeft + circle.offsetLeft + (circle.offsetWidth / 2),
-          y: routeSpaceTop + circle.offsetTop + (circle.offsetHeight / 2),
-          radius: Math.min(circle.offsetWidth, circle.offsetHeight) / 2
+          x: ((viewportX - routeRect.left) / routeRect.width) * viewBox.width,
+          y: ((viewportY - routeRect.top) / routeRect.height) * viewBox.height,
+          radius: Math.min(circle.offsetWidth, circle.offsetHeight) / 2,
+          viewportX,
+          viewportY,
+          viewportRadius: Math.min(circleRect.width, circleRect.height) / 2
         };
       });
 
@@ -640,10 +671,17 @@
       const routeSamples = Array.from({ length: sampleCount + 1 }, (_, sampleIndex) => {
         const length = (routeLength * sampleIndex) / sampleCount;
         const point = routeMain.getPointAtLength(length);
-        return { length, x: point.x, y: point.y };
+        const viewportPoint = routeViewportPoint(point);
+        return {
+          length,
+          x: point.x,
+          y: point.y,
+          viewportX: viewportPoint.x,
+          viewportY: viewportPoint.y
+        };
       });
       const findRouteProgressAtCircle = (center, minimumProgress = 0) => {
-        const radius = Math.max(12, (center.radius ?? 0) - 2);
+        const radius = Math.max(10, (center.viewportRadius ?? 0) - 3);
         const minimumLength = routeLength * minimumProgress;
         let isInsideCircle = false;
         let closestInsideLength = 0;
@@ -653,7 +691,10 @@
           const current = routeSamples[sampleIndex];
           if (current.length < minimumLength) continue;
 
-          const currentDistance = Math.hypot(current.x - center.x, current.y - center.y);
+          const currentDistance = Math.hypot(
+            current.viewportX - center.viewportX,
+            current.viewportY - center.viewportY
+          );
 
           if (currentDistance <= radius) {
             isInsideCircle = true;
@@ -669,32 +710,26 @@
 
         return isInsideCircle ? closestInsideLength / routeLength : null;
       };
-      const findNearestRouteProgressAfterNodeLevel = (center, minimumProgress = 0) => {
-        let nearestSample = null;
-        let nearestDistance = Infinity;
+      const findRouteProgressAtViewportY = (targetY, minimumProgress = 0) => {
+        const minimumLength = routeLength * minimumProgress;
+        const firstSample = routeSamples.find((sample) => sample.length >= minimumLength) ?? routeSamples[0];
 
-        routeSamples.forEach((sample) => {
-          const sampleProgress = sample.length / routeLength;
-          if (sampleProgress <= minimumProgress || sample.y < center.y) return;
+        if (targetY <= firstSample.viewportY) return minimumProgress;
 
-          const distance = Math.hypot(sample.x - center.x, sample.y - center.y);
-          if (distance < nearestDistance) {
-            nearestDistance = distance;
-            nearestSample = sample;
+        for (let sampleIndex = 1; sampleIndex < routeSamples.length; sampleIndex += 1) {
+          const previous = routeSamples[sampleIndex - 1];
+          const current = routeSamples[sampleIndex];
+
+          if (current.length < minimumLength) continue;
+
+          if (previous.viewportY <= targetY && current.viewportY >= targetY) {
+            const spanY = Math.max(0.0001, current.viewportY - previous.viewportY);
+            const blend = clamp((targetY - previous.viewportY) / spanY, 0, 1);
+            return (previous.length + ((current.length - previous.length) * blend)) / routeLength;
           }
-        });
-
-        if (!nearestSample) {
-          return {
-            distance: Infinity,
-            progress: 1
-          };
         }
 
-        return {
-          distance: nearestDistance,
-          progress: nearestSample.length / routeLength
-        };
+        return 1;
       };
 
       stepRouteProgresses = stepCenters.reduce((progresses, center, index) => {
@@ -702,13 +737,8 @@
         let routeProgress = findRouteProgressAtCircle(center, previous);
 
         if (routeProgress === null) {
-          const fallback = findNearestRouteProgressAfterNodeLevel(center, previous);
-          const missDistance = Math.max(0, fallback.distance - (center.radius ?? 0));
-          const fallbackDelay = index > 1
-            ? Math.min(0.045, (missDistance * 1.85) / routeLength)
-            : 0;
-
-          routeProgress = fallback.progress + fallbackDelay;
+          const targetY = center.viewportY + ((center.viewportRadius ?? 0) * 0.55);
+          routeProgress = findRouteProgressAtViewportY(targetY, previous);
         }
 
         progresses.push(clamp(
