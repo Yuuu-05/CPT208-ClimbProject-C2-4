@@ -8791,6 +8791,24 @@ body:is(
   line-height: 1.65;
 }
 
+body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation-page).process-page .page-hero {
+  max-width: 1500px;
+}
+
+body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation-page).process-page .page-title-card {
+  width: 100%;
+  max-width: none;
+  min-height: clamp(360px, 31vw, 520px);
+}
+
+body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation-page).process-page .hero-collage {
+  min-height: clamp(320px, 29vw, 500px);
+}
+
+body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation-page).process-page .page-main {
+  max-width: 1600px;
+}
+
 .module-subsection-nav {
   position: relative;
   width: min(100%, 1280px);
