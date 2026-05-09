@@ -75,21 +75,23 @@ a {
   transform: none;
 }
 
-body.evaluation-page.site-scale-enabled {
+body:is(
+  .why-gap-page,
+  .user-requirements-page,
+  .iteration-page,
+  .implementation-page,
+  .evaluation-page
+).site-scale-enabled {
   min-height: 100vh;
 }
 
-body.integrated-page:not(.evaluation-page) {
-  --site-visual-scale: 0.92;
-}
-
-body.integrated-page.user-requirements-page,
-body.integrated-page.iteration-page,
-body.integrated-page.implementation-page {
-  --site-visual-scale: 0.86;
-}
-
-.evaluation-page .site-scale-wrapper {
+:is(
+  .why-gap-page,
+  .user-requirements-page,
+  .iteration-page,
+  .implementation-page,
+  .evaluation-page
+) .site-scale-wrapper {
   position: static;
   width: 100%;
   min-height: 100vh;
