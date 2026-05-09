@@ -4095,6 +4095,7 @@ body:is(
   margin-bottom: 60px;
   position: relative;
   isolation: isolate;
+  scroll-margin-top: 24px;
 }
 
 .persona-hold-decor {

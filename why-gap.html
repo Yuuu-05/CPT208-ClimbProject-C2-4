@@ -477,7 +477,7 @@
     };
 
     const renderPersonaCard = (persona) => `
-      <article class="persona-card" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border};">
+      <article id="persona-card-${escapeHTML(persona.id)}" class="persona-card" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border};">
         <div class="persona-hold-decor" aria-hidden="true">
           <span class="persona-hold persona-hold--v0" data-grade="V0"></span>
           <span class="persona-hold persona-hold--v1" data-grade="V1"></span>
@@ -520,8 +520,11 @@
       const isAlreadyOpen = activeCard && activeCard.classList.contains("is-active");
 
       if (isAlreadyOpen) {
-        const activeDetail = document.querySelector(`[data-persona-detail="personas"]`);
-        if (activeDetail) activeDetail.scrollIntoView({ behavior: "smooth", block: "start" });
+        const activePersonaCard = document.getElementById(`persona-card-${personaId}`);
+        if (activePersonaCard) {
+          activePersonaCard.scrollIntoView({ behavior: "smooth", block: "start" });
+          history.replaceState(null, "", `#persona-card-${personaId}`);
+        }
         return;
       }
 
@@ -536,13 +539,21 @@
         button.setAttribute("aria-pressed", isActive ? "true" : "false");
       });
 
-      const activeDetail = document.querySelector(`[data-persona-detail="personas"]`);
-      if (activeDetail) activeDetail.scrollIntoView({ behavior: "smooth", block: "start" });
+      const activePersonaCard = document.getElementById(`persona-card-${personaId}`);
+      if (activePersonaCard) {
+        activePersonaCard.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", `#persona-card-${personaId}`);
+      }
     };
 
     document.querySelectorAll(".persona-avatar-cta[data-persona-id]").forEach((button) => {
       button.addEventListener("click", () => showPersona(button.dataset.personaId));
     });
+
+    const initialPersonaMatch = window.location.hash.match(/^#persona-card-(.+)$/);
+    if (initialPersonaMatch) {
+      showPersona(initialPersonaMatch[1]);
+    }
   </script>
 </body>
 </html>
