@@ -4063,26 +4063,6 @@ body:is(
   transition: translate 0.1s ease-out;
 }
 
-.action-btn {
-  background: var(--persona-secondary, var(--punk-red));
-  color: var(--pure-white);
-  border: none;
-  font-size: 1.8rem;
-  padding: 12px 30px;
-  cursor: pointer;
-  text-transform: uppercase;
-  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-  transition: transform 0.14s cubic-bezier(0.22, 1.2, 0.35, 1), background-color 0.08s linear, color 0.08s linear, filter 0.08s linear;
-  filter: drop-shadow(6px 6px 0 var(--persona-accent, var(--hold-cyan)));
-}
-
-.action-btn:hover {
-  background: var(--persona-accent, var(--hold-cyan));
-  color: var(--bg-black);
-  transform: translate(-4px, -4px);
-  filter: drop-shadow(10px 10px 0 var(--pure-white));
-}
-
 .persona-card {
   --persona-accent: var(--hold-cyan);
   --persona-secondary: var(--punk-red);
@@ -4444,6 +4424,7 @@ body:is(
   line-height: 1.45;
 }
 
+.persona-avatar-card button.persona-avatar-cta,
 .persona-avatar-cta {
   --bg: #e74c3c;
   --text-color: #fff;
@@ -4463,13 +4444,19 @@ body:is(
   letter-spacing: 1px;
   box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
   cursor: pointer;
+  appearance: none;
+  box-sizing: border-box;
+  text-align: center;
 }
 
+.persona-avatar-card button.persona-avatar-cta:hover,
+.persona-avatar-card button.persona-avatar-cta:focus-visible,
 .persona-avatar-cta:hover,
 .persona-avatar-cta:focus-visible {
   opacity: 1;
 }
 
+.persona-avatar-card button.persona-avatar-cta:active,
 .persona-avatar-cta:active {
   top: 4px;
   box-shadow: #c0392b 0px 3px 2px, #000 0px 3px 5px;
@@ -5078,9 +5065,6 @@ body:is(
     text-align: left;
   }
 
-  .action-btn {
-    font-size: 1.3rem;
-  }
 }
 
 .progression-page .page-description {
@@ -8997,7 +8981,6 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .back-home,
 .page-link,
-.action-btn,
 .persona-avatar-card,
 .persona-avatar-cta {
   -webkit-tap-highlight-color: transparent;
@@ -9005,7 +8988,6 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .back-home:focus-visible,
 .page-link:focus-visible,
-.action-btn:focus-visible,
 .persona-avatar-card:focus-visible,
 .persona-avatar-cta:focus-visible {
   outline: 3px solid var(--hold-cyan);
