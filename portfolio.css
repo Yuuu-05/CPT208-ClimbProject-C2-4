@@ -4431,15 +4431,15 @@ body:is(
   position: relative;
   top: 0;
   justify-self: start;
-  width: 180px;
+  width: 205px;
   border: none;
   background: var(--bg);
   color: var(--text-color);
-  padding: 1.08em 1.2em;
+  padding: 1.12em 1.25em;
   font-family: Arial, sans-serif;
-  font-size: 1.08rem;
-  font-weight: 900;
-  line-height: 1;
+  font-size: 1.24rem;
+  font-weight: 750;
+  line-height: 1.05;
   text-transform: uppercase;
   transition: 0.2s;
   border-radius: 5px;
@@ -4457,8 +4457,10 @@ body:is(
 .persona-avatar-card button.persona-avatar-cta:focus-visible,
 .persona-avatar-cta:hover,
 .persona-avatar-cta:focus-visible {
+  --bg: #ff2618;
   opacity: 1;
-  filter: brightness(1.08);
+  filter: brightness(1.18) saturate(1.18);
+  box-shadow: #e11408 0px 8px 2px, rgba(0, 0, 0, 0.72) 0px 10px 7px;
 }
 
 .persona-avatar-card button.persona-avatar-cta:active,
