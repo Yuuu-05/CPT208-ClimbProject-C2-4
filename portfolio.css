@@ -12860,7 +12860,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 2px;
-  padding-right: clamp(146px, 14vw, 196px);
+  padding-right: clamp(172px, 16vw, 226px);
 }
 
 .evaluation-page .ai-log-link {
@@ -12939,9 +12939,9 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 .evaluation-page .ai-log-tap-hint {
   position: absolute;
   right: clamp(104px, 10vw, 152px);
-  top: -8px;
+  top: 12px;
   z-index: 2;
-  width: clamp(96px, 9.5vw, 126px);
+  width: clamp(122px, 12vw, 156px);
   aspect-ratio: 1;
   color: #000;
   pointer-events: none;
@@ -12954,9 +12954,9 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   position: absolute;
   top: 10%;
   left: 21%;
-  width: 44%;
+  width: 48%;
   aspect-ratio: 1;
-  border: clamp(4px, 0.48vw, 6px) solid var(--hold-yellow);
+  border: clamp(5px, 0.58vw, 8px) solid var(--hold-yellow);
   border-radius: 50%;
   background: rgba(255, 213, 74, 0.12);
   box-shadow: 0 0 0 2px #000;
@@ -12965,9 +12965,9 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .evaluation-page .ai-log-tap-hint .testing-evidence-tap-hand {
   position: absolute;
-  inset: 15% 3% 0 12%;
-  width: 84%;
-  height: 84%;
+  inset: 16% 0 0 10%;
+  width: 92%;
+  height: 92%;
   overflow: visible;
 }
 
@@ -13178,9 +13178,9 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   }
 
   .evaluation-page .ai-log-tap-hint {
-    top: -10px;
-    right: 18px;
-    width: 88px;
+    top: 8px;
+    right: 12px;
+    width: 112px;
   }
 
   .evaluation-page .ethical-reflection-card {
