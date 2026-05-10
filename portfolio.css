@@ -7054,7 +7054,7 @@ body:is(
   right: calc((100% - var(--testing-evidence-card-width)) / 2 + clamp(12px, 1.8vw, 24px));
   bottom: clamp(42px, 5.8vw, 70px);
   z-index: 8;
-  width: clamp(78px, 8.6vw, 110px);
+  width: clamp(92px, 9.8vw, 128px);
   aspect-ratio: 1;
   color: #000;
   pointer-events: none;
@@ -7076,11 +7076,11 @@ body:is(
 
 .testing-iteration-page .testing-evidence-tap-ring {
   position: absolute;
-  top: 7%;
-  left: 26%;
-  width: 38%;
+  top: 10%;
+  left: 21%;
+  width: 44%;
   aspect-ratio: 1;
-  border: clamp(4px, 0.48vw, 6px) solid var(--hold-yellow);
+  border: clamp(5px, 0.56vw, 7px) solid var(--hold-yellow);
   border-radius: 50%;
   background: rgba(255, 213, 74, 0.12);
   box-shadow: 0 0 0 2px #000;
