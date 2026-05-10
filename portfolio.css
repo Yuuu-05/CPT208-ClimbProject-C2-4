@@ -7296,10 +7296,9 @@ body:is(
   border-radius: 6px;
 }
 
-.testing-iteration-page .testing-evidence-tap-hint {
+.testing-iteration-page .testing-evidence-tap-hint,
+.evaluation-page .ai-log-tap-hint {
   position: absolute;
-  right: calc((100% - var(--testing-evidence-card-width)) / 2 + clamp(12px, 1.8vw, 24px));
-  bottom: clamp(42px, 5.8vw, 70px);
   z-index: 8;
   width: clamp(92px, 9.8vw, 128px);
   aspect-ratio: 1;
@@ -7309,6 +7308,11 @@ body:is(
   animation: testingEvidenceTapHand 1550ms cubic-bezier(0.45, 0, 0.18, 1) infinite;
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.22));
   transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.testing-iteration-page .testing-evidence-tap-hint {
+  right: calc((100% - var(--testing-evidence-card-width)) / 2 + clamp(12px, 1.8vw, 24px));
+  bottom: clamp(42px, 5.8vw, 70px);
 }
 
 .testing-iteration-page .testing-evidence-gallery.has-interacted .testing-evidence-tap-hint {
@@ -7321,7 +7325,8 @@ body:is(
   animation: none;
 }
 
-.testing-iteration-page .testing-evidence-tap-ring {
+.testing-iteration-page .testing-evidence-tap-ring,
+.evaluation-page .ai-log-tap-hint .testing-evidence-tap-ring {
   position: absolute;
   top: 10%;
   left: 21%;
@@ -7334,7 +7339,8 @@ body:is(
   animation: testingEvidenceTapRing 1550ms cubic-bezier(0.45, 0, 0.18, 1) infinite;
 }
 
-.testing-iteration-page .testing-evidence-tap-hand {
+.testing-iteration-page .testing-evidence-tap-hand,
+.evaluation-page .ai-log-tap-hint .testing-evidence-tap-hand {
   position: absolute;
   inset: 15% 3% 0 12%;
   width: 84%;
@@ -7342,14 +7348,16 @@ body:is(
   overflow: visible;
 }
 
-.testing-iteration-page .testing-evidence-tap-hand path:first-child {
+.testing-iteration-page .testing-evidence-tap-hand path:first-child,
+.evaluation-page .ai-log-tap-hint .testing-evidence-tap-hand path:first-child {
   fill: var(--pure-white);
   stroke: #000;
   stroke-width: 7;
   stroke-linejoin: round;
 }
 
-.testing-iteration-page .testing-evidence-tap-hand path:last-child {
+.testing-iteration-page .testing-evidence-tap-hand path:last-child,
+.evaluation-page .ai-log-tap-hint .testing-evidence-tap-hand path:last-child {
   fill: none;
   stroke: #000;
   stroke-width: 6;
@@ -12937,52 +12945,10 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 }
 
 .evaluation-page .ai-log-tap-hint {
-  position: absolute;
   right: clamp(88px, 8vw, 124px);
   top: 6px;
-  z-index: 2;
-  width: clamp(148px, 14vw, 188px);
-  aspect-ratio: 1;
-  color: #000;
-  pointer-events: none;
-  transform-origin: 58% 18%;
-  animation: testingEvidenceTapHand 1550ms cubic-bezier(0.45, 0, 0.18, 1) infinite;
-  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.22));
-}
-
-.evaluation-page .ai-log-tap-hint .testing-evidence-tap-ring {
-  position: absolute;
-  top: 10%;
-  left: 21%;
-  width: 44%;
-  aspect-ratio: 1;
-  border: clamp(5px, 0.56vw, 7px) solid var(--hold-yellow);
-  border-radius: 50%;
-  background: rgba(255, 213, 74, 0.12);
-  box-shadow: 0 0 0 2px #000;
-  animation: testingEvidenceTapRing 1550ms cubic-bezier(0.45, 0, 0.18, 1) infinite;
-}
-
-.evaluation-page .ai-log-tap-hint .testing-evidence-tap-hand {
-  position: absolute;
-  inset: 15% 3% 0 12%;
-  width: 84%;
-  height: 84%;
-  overflow: visible;
-}
-
-.evaluation-page .ai-log-tap-hint .testing-evidence-tap-hand path:first-child {
-  fill: var(--pure-white);
-  stroke: #000;
-  stroke-width: 7;
-  stroke-linejoin: round;
-}
-
-.evaluation-page .ai-log-tap-hint .testing-evidence-tap-hand path:last-child {
-  fill: none;
-  stroke: #000;
-  stroke-width: 6;
-  stroke-linecap: round;
+  width: clamp(132px, 13vw, 168px);
+  z-index: 8;
 }
 
 .evaluation-page .ai-log-fallback {
