@@ -12947,7 +12947,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 .evaluation-page .ai-log-tap-hint {
   right: clamp(88px, 8vw, 124px);
   top: 6px;
-  width: clamp(132px, 13vw, 168px);
+  width: clamp(92px, 9.8vw, 128px);
   z-index: 8;
 }
 
@@ -13146,7 +13146,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   .evaluation-page .ai-log-tap-hint {
     top: 4px;
     right: 10px;
-    width: 132px;
+    width: clamp(92px, 9.8vw, 128px);
   }
 
   .evaluation-page .ethical-reflection-card {
