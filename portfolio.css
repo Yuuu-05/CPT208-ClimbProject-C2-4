@@ -2816,32 +2816,6 @@ body:is(
   opacity: 0.58;
 }
 
-.journey-emotion-points-layer {
-  position: absolute;
-  top: 4px;
-  bottom: -18px;
-  left: calc(var(--journey-label-width) + 18px);
-  width: calc(100% - var(--journey-label-width) - 18px);
-  height: calc(100% + 22px);
-  pointer-events: none;
-  z-index: 13;
-}
-
-.journey-emotion-points-layer span {
-  position: absolute;
-  display: block;
-  width: 14px;
-  height: 14px;
-  aspect-ratio: 1 / 1;
-  min-width: 14px;
-  min-height: 14px;
-  border-radius: 999px;
-  clip-path: circle(50%);
-  background: #ffd84a;
-  box-shadow: 0 0 4px rgba(255, 216, 74, 0.38);
-  transform: translate(-50%, -50%);
-}
-
 .journey-emotion-icon {
   position: absolute;
   right: -12px;
