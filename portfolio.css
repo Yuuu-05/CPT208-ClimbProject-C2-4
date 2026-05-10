@@ -2816,6 +2816,34 @@ body:is(
   opacity: 0.58;
 }
 
+.journey-emotion-turn-points {
+  position: absolute;
+  top: 4px;
+  bottom: -18px;
+  left: calc(var(--journey-label-width) + 18px);
+  width: calc(100% - var(--journey-label-width) - 18px);
+  height: calc(100% + 22px);
+  pointer-events: none;
+  z-index: 16;
+}
+
+.journey-emotion-turn-points > i {
+  position: absolute;
+  display: block;
+  left: var(--x);
+  top: var(--y);
+  width: 9px;
+  height: 9px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #ffd84a;
+  box-shadow: none;
+  filter: none;
+  transform: translate(-50%, -50%);
+}
+
 .journey-emotion-icon {
   position: absolute;
   right: -12px;
