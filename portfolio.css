@@ -12939,7 +12939,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 .evaluation-page .ai-log-tap-hint {
   position: absolute;
   right: clamp(104px, 10vw, 152px);
-  top: -30px;
+  top: -8px;
   z-index: 2;
   width: clamp(96px, 9.5vw, 126px);
   aspect-ratio: 1;
@@ -13178,7 +13178,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   }
 
   .evaluation-page .ai-log-tap-hint {
-    top: -24px;
+    top: -10px;
     right: 18px;
     width: 88px;
   }
