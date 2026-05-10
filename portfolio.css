@@ -2816,24 +2816,15 @@ body:is(
   opacity: 0.58;
 }
 
-.journey-emotion-turn-points {
-  position: absolute;
-  top: 4px;
-  bottom: -18px;
-  left: calc(var(--journey-label-width) + 18px);
-  width: calc(100% - var(--journey-label-width) - 18px);
-  height: calc(100% + 22px);
-  pointer-events: none;
-  z-index: 16;
-}
-
-.journey-emotion-turn-points > i {
+.journey-row--emotions .journey-cell::after {
+  content: "";
   position: absolute;
   display: block;
-  left: var(--x);
-  top: var(--y);
-  width: 9px;
-  height: 9px;
+  left: var(--emotion-dot-x, 50%);
+  top: var(--emotion-dot-y, 82%);
+  z-index: 30;
+  width: 13px;
+  height: 13px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -2842,6 +2833,32 @@ body:is(
   box-shadow: none;
   filter: none;
   transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.journey-row--emotions .stage-col-1 {
+  --emotion-dot-x: 56%;
+  --emotion-dot-y: 96%;
+}
+
+.journey-row--emotions .stage-col-2 {
+  --emotion-dot-x: 44%;
+  --emotion-dot-y: 92%;
+}
+
+.journey-row--emotions .stage-col-3 {
+  --emotion-dot-x: 50%;
+  --emotion-dot-y: 84%;
+}
+
+.journey-row--emotions .stage-col-4 {
+  --emotion-dot-x: 49%;
+  --emotion-dot-y: 94%;
+}
+
+.journey-row--emotions .stage-col-5 {
+  --emotion-dot-x: 49%;
+  --emotion-dot-y: 90%;
 }
 
 .journey-emotion-icon {
