@@ -2837,8 +2837,8 @@ body:is(
 }
 
 .journey-row--emotions .stage-col-1 {
-  --emotion-dot-x: 50%;
-  --emotion-dot-y: 95%;
+  --emotion-dot-x: 70%;
+  --emotion-dot-y: 99%;
 }
 
 .journey-row--emotions .stage-col-2 {
