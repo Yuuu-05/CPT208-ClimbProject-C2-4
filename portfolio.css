@@ -11493,6 +11493,26 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   background: #ffffff;
 }
 
+.iteration-page .sketch-evidence figcaption {
+  max-width: 980px;
+  margin: 22px auto 0;
+  padding: clamp(18px, 2.4vw, 26px);
+  color: var(--bg-black);
+  background: var(--pure-white);
+  border-left: 10px solid var(--hold-cyan);
+  box-shadow: 7px 7px 0 #000000;
+  font-family: Arial, sans-serif;
+  font-size: clamp(1.16rem, 1.45vw, 1.42rem);
+  line-height: 1.58;
+  font-weight: 600;
+}
+
+.iteration-page .sketch-evidence figcaption strong {
+  font-size: clamp(1.3rem, 1.75vw, 1.72rem);
+  line-height: 1.16;
+  font-weight: 800;
+}
+
 .asset-figure figcaption {
   display: grid;
   gap: 8px;
@@ -15027,7 +15047,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .evolution-card {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(320px, 0.78fr) minmax(440px, 1.22fr);
   gap: clamp(24px, 3.4vw, 38px);
   align-items: start;
   padding: clamp(22px, 3.2vw, 34px);
@@ -15061,7 +15081,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .evolution-lists {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 18px;
 }
 
@@ -15704,7 +15724,6 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .evolution-card,
   .brand-direction-card {
     grid-template-columns: 1fr;
   }
@@ -15771,6 +15790,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   }
 
   .evolution-lists,
+  .evolution-card,
   .asset-stack,
   .implementation-showcase {
     grid-template-columns: 1fr;
