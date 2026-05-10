@@ -7049,6 +7049,66 @@ body:is(
   border-radius: 6px;
 }
 
+.testing-iteration-page .testing-evidence-tap-hint {
+  position: absolute;
+  right: calc((100% - var(--testing-evidence-card-width)) / 2 + clamp(12px, 1.8vw, 24px));
+  bottom: clamp(42px, 5.8vw, 70px);
+  z-index: 8;
+  width: clamp(62px, 7vw, 86px);
+  aspect-ratio: 1;
+  color: #000;
+  pointer-events: none;
+  transform-origin: 58% 18%;
+  animation: testingEvidenceTapHand 1550ms cubic-bezier(0.45, 0, 0.18, 1) infinite;
+  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.22));
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.testing-iteration-page .testing-evidence-gallery.has-interacted .testing-evidence-tap-hint {
+  opacity: 0;
+  transform: translate(7px, 7px) scale(0.88);
+  animation: none;
+}
+
+.testing-iteration-page .testing-evidence-gallery.has-interacted .testing-evidence-tap-ring {
+  animation: none;
+}
+
+.testing-iteration-page .testing-evidence-tap-ring {
+  position: absolute;
+  top: 4%;
+  left: 38%;
+  width: 31%;
+  aspect-ratio: 1;
+  border: clamp(3px, 0.38vw, 5px) solid var(--hold-yellow);
+  border-radius: 50%;
+  background: rgba(255, 213, 74, 0.12);
+  box-shadow: 0 0 0 2px #000;
+  animation: testingEvidenceTapRing 1550ms cubic-bezier(0.45, 0, 0.18, 1) infinite;
+}
+
+.testing-iteration-page .testing-evidence-tap-hand {
+  position: absolute;
+  inset: 15% 3% 0 12%;
+  width: 84%;
+  height: 84%;
+  overflow: visible;
+}
+
+.testing-iteration-page .testing-evidence-tap-hand path:first-child {
+  fill: var(--pure-white);
+  stroke: #000;
+  stroke-width: 7;
+  stroke-linejoin: round;
+}
+
+.testing-iteration-page .testing-evidence-tap-hand path:last-child {
+  fill: none;
+  stroke: #000;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
 .testing-iteration-page .testing-evidence-slide:nth-child(1) img,
 .testing-iteration-page .testing-evidence-slide:nth-child(2) img,
 .testing-iteration-page .testing-evidence-slide:nth-child(3) img {
@@ -7204,6 +7264,43 @@ body:is(
   }
 }
 
+@keyframes testingEvidenceTapHand {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-7deg) scale(1);
+  }
+
+  30% {
+    transform: translate(-12%, -14%) rotate(-13deg) scale(1.02);
+  }
+
+  43% {
+    transform: translate(-7%, -8%) rotate(-10deg) scale(0.93);
+  }
+
+  62% {
+    transform: translate(-7%, -8%) rotate(-10deg) scale(0.93);
+  }
+}
+
+@keyframes testingEvidenceTapRing {
+  0%,
+  28% {
+    opacity: 0;
+    transform: scale(0.45);
+  }
+
+  42% {
+    opacity: 1;
+    transform: scale(0.55);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.35);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .testing-iteration-page .testing-evidence-gallery {
     --testing-evidence-panel-height: auto;
@@ -7259,6 +7356,10 @@ body:is(
     transform: none;
     pointer-events: auto;
     transition: none;
+  }
+
+  .testing-iteration-page .testing-evidence-tap-hint {
+    display: none;
   }
 }
 

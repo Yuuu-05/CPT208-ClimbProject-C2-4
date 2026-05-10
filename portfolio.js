@@ -492,6 +492,8 @@
       const showNext = () => {
         if (isAnimating || itemCount < 2) return;
 
+        gallery.classList.add("has-interacted");
+
         if (!supportsMotion) {
           activeIndex = (activeIndex + 1) % itemCount;
           setInitialState();
