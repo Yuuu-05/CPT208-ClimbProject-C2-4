@@ -2811,30 +2811,30 @@ body:is(
 
 .journey-emotion-line--base {
   stroke: #ffd84a;
-  stroke-width: 6;
-  filter: drop-shadow(0 0 8px rgba(255, 216, 74, 0.54));
+  stroke-width: 3.4;
+  filter: drop-shadow(0 0 3px rgba(255, 216, 74, 0.38));
   opacity: 1;
 }
 
-.journey-emotion-line--glow {
-  stroke: rgba(255, 248, 188, 0.88);
-  stroke-width: 11;
-  filter: drop-shadow(0 5px 0 rgba(0, 0, 0, 0.52));
-  opacity: 0.9;
+.journey-emotion-points-layer {
+  position: absolute;
+  top: 4px;
+  bottom: -18px;
+  left: calc(var(--journey-label-width) + 18px);
+  width: calc(100% - var(--journey-label-width) - 18px);
+  height: calc(100% + 22px);
+  pointer-events: none;
+  z-index: 13;
 }
 
-.journey-emotion-line--stripe {
-  stroke: #050505;
-  stroke-width: 2.6;
-  stroke-dasharray: 7 10;
-  opacity: 0.95;
-}
-
-.journey-emotion-points {
-  fill: none;
-  stroke: transparent;
-  stroke-width: 2.4;
-  vector-effect: non-scaling-stroke;
+.journey-emotion-points-layer span {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #ffd84a;
+  box-shadow: 0 0 5px rgba(255, 216, 74, 0.52);
+  transform: translate(-50%, -50%);
 }
 
 .journey-emotion-icon {
@@ -3123,11 +3123,6 @@ body:is(
 
   .journey-emotion-line--base {
     stroke-width: 2.6;
-  }
-
-  .journey-emotion-line--stripe {
-    stroke-width: 1.8;
-    stroke-dasharray: 7 7;
   }
 
 }
@@ -14953,11 +14948,11 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .swipe-up-lottie-hint {
   position: absolute;
-  right: -108px;
-  bottom: 84px;
+  right: -132px;
+  bottom: 86px;
   z-index: 10;
-  width: clamp(320px, 16vw, 380px);
-  height: clamp(320px, 16vw, 380px);
+  width: clamp(360px, 19vw, 430px);
+  height: clamp(360px, 19vw, 430px);
   opacity: 0.9;
   pointer-events: none;
   filter: drop-shadow(0 9px 14px rgba(0, 0, 0, 0.34));
@@ -15875,10 +15870,10 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   }
 
   .swipe-up-lottie-hint {
-    right: -8px;
+    right: -18px;
     bottom: 10px;
-    width: clamp(132px, 36vw, 172px);
-    height: clamp(132px, 36vw, 172px);
+    width: clamp(150px, 40vw, 196px);
+    height: clamp(150px, 40vw, 196px);
     opacity: 0.86;
   }
 

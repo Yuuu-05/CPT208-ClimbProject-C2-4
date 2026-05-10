@@ -73,17 +73,15 @@
             <div class="journey-row journey-row--emotions">
               <div class="journey-row-label">Emotion</div>
               <svg class="journey-emotion-curve" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                <defs>
-                  <marker id="emotion-turn-point" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto" markerUnits="strokeWidth">
-                    <circle cx="5" cy="5" r="4.4" fill="#050505"></circle>
-                    <circle cx="5" cy="5" r="2.7" fill="#ffd84a"></circle>
-                  </marker>
-                </defs>
-                <path class="journey-emotion-line journey-emotion-line--glow" d="M 10 82 C 16 80 22 77 30 76 C 38 75 43 66 50 64 C 58 66 63 78 70 78 C 78 78 84 73 90 72"></path>
-                <path class="journey-emotion-line journey-emotion-line--base" d="M 10 82 C 16 80 22 77 30 76 C 38 75 43 66 50 64 C 58 66 63 78 70 78 C 78 78 84 73 90 72"></path>
-                <path class="journey-emotion-line journey-emotion-line--stripe" d="M 10 82 C 16 80 22 77 30 76 C 38 75 43 66 50 64 C 58 66 63 78 70 78 C 78 78 84 73 90 72"></path>
-                <path class="journey-emotion-points" d="M 10 82 C 16 80 22 77 30 76 C 38 75 43 66 50 64 C 58 66 63 78 70 78 C 78 78 84 73 90 72" marker-start="url(#emotion-turn-point)" marker-mid="url(#emotion-turn-point)" marker-end="url(#emotion-turn-point)"></path>
+                <polyline class="journey-emotion-line journey-emotion-line--base" points="14,84 34.5,80 55,72 75.5,82 96,78"></polyline>
               </svg>
+              <div class="journey-emotion-points-layer" aria-hidden="true">
+                <span style="left: 14%; top: 84%;"></span>
+                <span style="left: 34.5%; top: 80%;"></span>
+                <span style="left: 55%; top: 72%;"></span>
+                <span style="left: 75.5%; top: 82%;"></span>
+                <span style="left: 96%; top: 78%;"></span>
+              </div>
               <div class="journey-cell stage-col-1"><article class="emotion-bubble"><div class="emotion-copy"><strong>Curious but cautious</strong><p>Could this help me climb more independently?</p></div><img class="journey-emotion-icon" src="assets/emotion_map/1.png" alt="Curious but cautious emotion icon" loading="eager" decoding="async"></article></div>
               <div class="journey-cell stage-col-2"><article class="emotion-bubble"><div class="emotion-copy"><strong>Hopeful but slightly anxious</strong><p>I want setup to be quick and reliable.</p></div><img class="journey-emotion-icon" src="assets/emotion_map/2.png" alt="Hopeful but slightly anxious emotion icon" loading="eager" decoding="async"></article></div>
               <div class="journey-cell stage-col-3"><article class="emotion-bubble"><div class="emotion-copy"><strong>More prepared</strong><p>Overview first, details later.</p></div><img class="journey-emotion-icon" src="assets/emotion_map/3.png" alt="More prepared emotion icon" loading="eager" decoding="async"></article></div>
