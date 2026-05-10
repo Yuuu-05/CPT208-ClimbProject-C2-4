@@ -15096,7 +15096,9 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .asset-stack {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+  grid-template-columns: minmax(0, 820px);
+  justify-content: center;
+  justify-items: stretch;
   gap: clamp(20px, 3vw, 32px);
   align-items: start;
 }
