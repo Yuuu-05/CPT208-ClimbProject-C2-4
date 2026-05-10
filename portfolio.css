@@ -2811,9 +2811,9 @@ body:is(
 
 .journey-emotion-line--base {
   stroke: #ffd84a;
-  stroke-width: 3.4;
-  filter: drop-shadow(0 0 3px rgba(255, 216, 74, 0.38));
-  opacity: 1;
+  stroke-width: 3;
+  filter: none;
+  opacity: 0.58;
 }
 
 .journey-emotion-points-layer {
@@ -2829,11 +2829,16 @@ body:is(
 
 .journey-emotion-points-layer span {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  aspect-ratio: 1 / 1;
+  min-width: 14px;
+  min-height: 14px;
   border-radius: 999px;
+  clip-path: circle(50%);
   background: #ffd84a;
-  box-shadow: 0 0 5px rgba(255, 216, 74, 0.52);
+  box-shadow: 0 0 4px rgba(255, 216, 74, 0.38);
   transform: translate(-50%, -50%);
 }
 
@@ -14948,7 +14953,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .swipe-up-lottie-hint {
   position: absolute;
-  right: -132px;
+  right: -172px;
   bottom: 86px;
   z-index: 10;
   width: clamp(360px, 19vw, 430px);
@@ -15870,7 +15875,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   }
 
   .swipe-up-lottie-hint {
-    right: -18px;
+    right: -34px;
     bottom: 10px;
     width: clamp(150px, 40vw, 196px);
     height: clamp(150px, 40vw, 196px);
