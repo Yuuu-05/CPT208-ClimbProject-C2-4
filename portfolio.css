@@ -2775,7 +2775,7 @@ body:is(
 
 .emotion-copy strong {
   position: relative;
-  z-index: 8;
+  z-index: 14;
   display: block;
   letter-spacing: 0.06em;
   font-style: italic;
@@ -2783,7 +2783,7 @@ body:is(
 
 .emotion-copy p {
   position: relative;
-  z-index: 8;
+  z-index: 14;
   margin: 6px 0 0;
   line-height: 1.45;
   font-style: italic;
@@ -2799,7 +2799,7 @@ body:is(
   height: calc(100% + 22px);
   overflow: visible;
   pointer-events: none;
-  z-index: 1;
+  z-index: 9;
 }
 
 .journey-emotion-line {
@@ -2811,23 +2811,37 @@ body:is(
 
 .journey-emotion-line--base {
   stroke: #ffd84a;
-  stroke-width: 3;
-  filter: drop-shadow(0 0 4px rgba(255, 216, 74, 0.28));
+  stroke-width: 6;
+  filter: drop-shadow(0 0 8px rgba(255, 216, 74, 0.54));
+  opacity: 1;
+}
+
+.journey-emotion-line--glow {
+  stroke: rgba(255, 248, 188, 0.88);
+  stroke-width: 11;
+  filter: drop-shadow(0 5px 0 rgba(0, 0, 0, 0.52));
   opacity: 0.9;
 }
 
 .journey-emotion-line--stripe {
   stroke: #050505;
-  stroke-width: 2;
-  stroke-dasharray: 8 8;
+  stroke-width: 2.6;
+  stroke-dasharray: 7 10;
   opacity: 0.95;
+}
+
+.journey-emotion-points {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 2.4;
+  vector-effect: non-scaling-stroke;
 }
 
 .journey-emotion-icon {
   position: absolute;
   right: -12px;
   bottom: -18px;
-  z-index: 12;
+  z-index: 15;
   width: clamp(72px, 5.4vw, 88px);
   height: clamp(72px, 5.4vw, 88px);
   padding: 2px;
@@ -14939,11 +14953,11 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 
 .swipe-up-lottie-hint {
   position: absolute;
-  right: -80px;
-  bottom: 80px;
+  right: -108px;
+  bottom: 84px;
   z-index: 10;
-  width: clamp(300px, 12vw, 204px);
-  height: clamp(300px, 12vw, 204px);
+  width: clamp(320px, 16vw, 380px);
+  height: clamp(320px, 16vw, 380px);
   opacity: 0.9;
   pointer-events: none;
   filter: drop-shadow(0 9px 14px rgba(0, 0, 0, 0.34));
@@ -15861,10 +15875,10 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   }
 
   .swipe-up-lottie-hint {
-    right: 6px;
-    bottom: 8px;
-    width: clamp(108px, 32vw, 144px);
-    height: clamp(108px, 32vw, 144px);
+    right: -8px;
+    bottom: 10px;
+    width: clamp(132px, 36vw, 172px);
+    height: clamp(132px, 36vw, 172px);
     opacity: 0.86;
   }
 
