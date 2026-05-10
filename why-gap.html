@@ -431,6 +431,29 @@
     }[char]));
 
     const panelTones = ["accent", "secondary", "white", "panel", "accent"];
+    const metricWidths = {
+      LOW: "25%",
+      MEDIUM: "55%",
+      "MEDIUM-HIGH": "72%",
+      HIGH: "88%"
+    };
+    const metricStars = Array.from({ length: 5 }, () => "<span>★</span>").join("");
+    const personaMetrics = {
+      "li-wen": [
+        { label: "Vision Detail Access", value: "LOW" },
+        { label: "Climbing Experience", value: "MEDIUM" },
+        { label: "Independence Preference", value: "MEDIUM-HIGH" },
+        { label: "Setup Support Need", value: "HIGH" },
+        { label: "Crowded Environment Sensitivity", value: "HIGH" }
+      ],
+      lance: [
+        { label: "Setup Responsibility", value: "HIGH" },
+        { label: "Safety Monitoring", value: "HIGH" },
+        { label: "Environmental Awareness", value: "HIGH" },
+        { label: "Intervention Frequency", value: "MEDIUM" },
+        { label: "Need for Quick System Feedback", value: "HIGH" }
+      ]
+    };
     const personaGroups = [
       { id: "low-vision", title: "Blind or Low-Vision Climber", kicker: "Primary User File", accent: "var(--hold-cyan)", secondary: "var(--punk-red)" },
       { id: "assistant", title: "Assistant Support", kicker: "Secondary User File", accent: "var(--helper-teal)", secondary: "var(--helper-orange)" }
@@ -450,8 +473,29 @@
       </div>
     `;
 
+    const renderPersonaMetrics = (persona) => {
+      const metrics = personaMetrics[persona.id] || [];
+      if (!metrics.length) return "";
+      return `
+        <div class="persona-index-block" aria-label="${escapeHTML(persona.name)} detailed persona indicators">
+          ${metrics.map((metric) => `
+            <div class="persona-index-row" style="--index-level: ${metricWidths[metric.value] || "55%"};">
+              <div class="persona-index-copy">
+                <span class="persona-index-label">${escapeHTML(metric.label)}</span>
+                <span class="persona-index-value">${escapeHTML(metric.value)}</span>
+              </div>
+              <div class="persona-index-track" aria-hidden="true">
+                <span class="persona-index-fill"></span>
+                <span class="persona-index-stars">${metricStars}</span>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    };
+
     const renderPersonaAvatar = (persona) => `
-      <article class="persona-avatar-card" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border}; --persona-avatar-position: ${escapeHTML(persona.avatarPosition || "center center")};">
+      <article class="persona-avatar-card" data-persona-id="${escapeHTML(persona.id)}" tabindex="0" role="button" aria-expanded="false" aria-controls="persona-expanded-panel" aria-label="Toggle ${escapeHTML(persona.name)} persona file" style="--persona-accent: ${persona.accent}; --persona-secondary: ${persona.secondary}; --persona-panel: ${persona.panel}; --persona-border: ${persona.border}; --persona-avatar-position: ${escapeHTML(persona.avatarPosition || "center center")};">
         <span class="persona-avatar-frame">
           <img src="${escapeHTML(persona.image)}" alt="${escapeHTML(persona.name)} portrait">
         </span>
@@ -459,7 +503,7 @@
           <span class="persona-avatar-name">${escapeHTML(persona.name)}</span>
           <span class="persona-avatar-role">${escapeHTML(persona.role)}</span>
         </span>
-        <button class="persona-avatar-cta" type="button" data-persona-id="${escapeHTML(persona.id)}" aria-pressed="false" aria-label="Open ${escapeHTML(persona.name)} persona file">Open File</button>
+        <button class="persona-avatar-cta" type="button" data-persona-id="${escapeHTML(persona.id)}" aria-pressed="false" aria-expanded="false" aria-controls="persona-expanded-panel" aria-label="Toggle ${escapeHTML(persona.name)} persona file">Open File</button>
       </article>
     `;
 
@@ -499,6 +543,7 @@
           <div class="persona-left">
             <img class="persona-photo" src="${escapeHTML(persona.image)}" alt="${escapeHTML(persona.name)}">
             <div class="quote-box">"${escapeHTML(persona.quote)}"</div>
+            ${renderPersonaMetrics(persona)}
           </div>
           <div class="persona-right">${persona.panels.map(renderPanel).join("")}</div>
         </div>
@@ -508,23 +553,43 @@
     const personaGroupMount = document.getElementById("persona-groups");
     personaGroupMount.innerHTML = `
       <div class="persona-entry-grid">${personaGroups.map(renderPersonaEntry).join("")}</div>
-      <div class="persona-cards persona-detail persona-expanded-panel" data-persona-detail="personas" aria-live="polite"></div>
+      <div id="persona-expanded-panel" class="persona-cards persona-detail persona-expanded-panel" data-persona-detail="personas" aria-live="polite"></div>
     `;
 
-    const showPersona = (personaId) => {
+    const updatePersonaTriggers = (personaId = "") => {
+      document.querySelectorAll(".persona-avatar-card[data-persona-id]").forEach((card) => {
+        const isActive = card.dataset.personaId === personaId;
+        card.classList.toggle("is-active", isActive);
+        card.setAttribute("aria-expanded", isActive ? "true" : "false");
+      });
+
+      document.querySelectorAll(".persona-avatar-cta[data-persona-id]").forEach((button) => {
+        const isActive = button.dataset.personaId === personaId;
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        button.setAttribute("aria-expanded", isActive ? "true" : "false");
+      });
+    };
+
+    const closePersona = () => {
+      document.querySelectorAll("[data-persona-detail]").forEach((detail) => {
+        if (detail.dataset.personaDetail === "personas") detail.innerHTML = "";
+      });
+      updatePersonaTriggers("");
+
+      if (window.location.hash.match(/^#persona-card-(.+)$/)) {
+        history.replaceState(null, "", "#personas");
+      }
+    };
+
+    const showPersona = (personaId, options = {}) => {
       const persona = personas.find((item) => item.id === personaId);
       if (!persona) return;
 
-      const activeButton = document.querySelector(`.persona-avatar-cta[data-persona-id="${personaId}"]`);
-      const activeCard = activeButton ? activeButton.closest(".persona-avatar-card") : null;
+      const activeCard = document.querySelector(`.persona-avatar-card[data-persona-id="${personaId}"]`);
       const isAlreadyOpen = activeCard && activeCard.classList.contains("is-active");
 
-      if (isAlreadyOpen) {
-        const activePersonaCard = document.getElementById(`persona-card-${personaId}`);
-        if (activePersonaCard) {
-          activePersonaCard.scrollIntoView({ behavior: "smooth", block: "start" });
-          history.replaceState(null, "", `#persona-card-${personaId}`);
-        }
+      if (isAlreadyOpen && options.toggle !== false) {
+        closePersona();
         return;
       }
 
@@ -532,12 +597,7 @@
         detail.innerHTML = detail.dataset.personaDetail === "personas" ? renderPersonaCard(persona) : "";
       });
 
-      document.querySelectorAll(".persona-avatar-cta[data-persona-id]").forEach((button) => {
-        const isActive = button.dataset.personaId === personaId;
-        const card = button.closest(".persona-avatar-card");
-        if (card) card.classList.toggle("is-active", isActive);
-        button.setAttribute("aria-pressed", isActive ? "true" : "false");
-      });
+      updatePersonaTriggers(personaId);
 
       const activePersonaCard = document.getElementById(`persona-card-${personaId}`);
       if (activePersonaCard) {
@@ -546,13 +606,27 @@
       }
     };
 
+    document.querySelectorAll(".persona-avatar-card[data-persona-id]").forEach((card) => {
+      card.addEventListener("click", () => showPersona(card.dataset.personaId));
+      card.addEventListener("keydown", (event) => {
+        if (event.target.closest(".persona-avatar-cta")) return;
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          showPersona(card.dataset.personaId);
+        }
+      });
+    });
+
     document.querySelectorAll(".persona-avatar-cta[data-persona-id]").forEach((button) => {
-      button.addEventListener("click", () => showPersona(button.dataset.personaId));
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        showPersona(button.dataset.personaId);
+      });
     });
 
     const initialPersonaMatch = window.location.hash.match(/^#persona-card-(.+)$/);
     if (initialPersonaMatch) {
-      showPersona(initialPersonaMatch[1]);
+      showPersona(initialPersonaMatch[1], { toggle: false });
     }
   </script>
 </body>

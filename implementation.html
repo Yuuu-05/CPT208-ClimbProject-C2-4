@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>04 Technical Implementation - HoldLight Process Portfolio</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="portfolio.css">
   <script src="portfolio.js" defer></script>
 </head>
@@ -534,17 +535,6 @@
                 <span>This overview shows the final mobile interface direction and the main HoldLight prototype screens.</span>
               </figcaption>
             </figure>
-
-            <figure class="asset-figure implementation-video">
-              <video controls preload="metadata" class="prototype-video prototype-video-large" aria-label="Final HoldLight system demo video">
-                <source src="assets/videos/hi.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <figcaption>
-                <strong>Final System Demo.</strong>
-                <span>This video demonstrates the final Hi-Fi prototype and the core user journey of HoldLight.</span>
-              </figcaption>
-            </figure>
           </div>
 
           <div class="info-grid three-col section-gap">
@@ -611,6 +601,62 @@
             </div>
             <figcaption>System architecture of HoldLight, showing the frontend, browser local capabilities, static hosting, Node/Express backend, MongoDB storage, Python vision runtime, and the wall scan / live guidance pipelines.</figcaption>
           </figure>
+
+          <section class="interaction-state-evidence" aria-labelledby="interaction-state-title">
+            <div class="section-kicker">Interaction State Evidence</div>
+            <h3 id="interaction-state-title">Input, State and Feedback Loop</h3>
+            <p class="body-font">HoldLight handles interaction as a loop between user input, temporary frontend state, backend session records, and feedback. Scan actions, accessibility preferences, route confirmation, and climb controls update the current interaction state. These states then drive visual feedback, speech cues, fallback messages, and post-climb evidence such as repeated cues, corrections, and guidance logs.</p>
+
+            <div class="state-loop-grid" aria-label="HoldLight input state and feedback loop">
+              <article class="state-loop-card state-loop-card--input">
+                <span class="card-label">01 Input Capture</span>
+                <h4>User actions enter the system</h4>
+                <p class="body-font">Input is collected through scan/upload actions, accessibility preference controls, route confirmation, and in-climb controls such as pause, repeat, and help.</p>
+                <ul class="state-evidence-list" aria-label="Input capture evidence examples">
+                  <li>Scan wall / upload image</li>
+                  <li>Select voice and accessibility preferences</li>
+                  <li>Confirm route and start session</li>
+                  <li>Pause, repeat, or ask for support</li>
+                </ul>
+              </article>
+
+              <article class="state-loop-card state-loop-card--frontend">
+                <span class="card-label">02 Frontend State</span>
+                <h4>The interface tracks the current interaction</h4>
+                <p class="body-font">The browser frontend keeps temporary states for camera permission, scan progress, selected route, cue detail level, pause state, and the current guidance step.</p>
+                <ul class="state-evidence-list" aria-label="Frontend state evidence examples">
+                  <li>Camera ready / scanning / scan complete</li>
+                  <li>Selected route candidate</li>
+                  <li>Brief or detailed cue mode</li>
+                  <li>Current next-hold guidance step</li>
+                </ul>
+              </article>
+
+              <article class="state-loop-card state-loop-card--records">
+                <span class="card-label">03 Session Records</span>
+                <h4>Confirmed actions become stored evidence</h4>
+                <p class="body-font">After confirmation, key states are sent through the Node/Express API and stored as climb scans, route candidates, climb sessions, guidance logs, and fallback events.</p>
+                <ul class="state-evidence-list" aria-label="Session record evidence examples">
+                  <li>Confirmed scan result</li>
+                  <li>Manual route correction</li>
+                  <li>Repeated cue event</li>
+                  <li>Fallback or low-confidence moment</li>
+                </ul>
+              </article>
+
+              <article class="state-loop-card state-loop-card--feedback">
+                <span class="card-label">04 Feedback Loop</span>
+                <h4>State changes guide the next response</h4>
+                <p class="body-font">Interaction states update the visual interface, trigger speech feedback, and support recovery when the system is uncertain or the climber needs help.</p>
+                <ul class="state-evidence-list" aria-label="Feedback loop evidence examples">
+                  <li>Visual preview update</li>
+                  <li>Speech cue playback</li>
+                  <li>Repeat / pause response</li>
+                  <li>Post-climb reflection summary</li>
+                </ul>
+              </article>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -624,19 +670,19 @@
               <ul class="body-font compact-list">
                 <li>Browser frontend for mobile interaction and accessibility controls.</li>
                 <li>Node / Express API for backend coordination.</li>
-                <li>MongoDB for persistent app data.</li>
-                <li>Python vision engine for camera-based recognition experiments.</li>
-                <li>Web Speech API / speech synthesis for audio cues.</li>
+                <li>MongoDB for persistent app and session data.</li>
+                <li>Python vision runtime for camera-based recognition experiments.</li>
+                <li>Web Speech API for speech feedback and audio cues.</li>
               </ul>
             </article>
             <article class="info-card accent-yellow">
               <span class="card-label">Verification + AI Logs</span>
               <h3>Setup and evidence trail</h3>
               <ul class="body-font compact-list">
-                <li>README / setup instructions should document how to run the app locally.</li>
-                <li>The repository includes <code>/ai-logs</code> with placeholder prompt documentation to be completed before final submission.</li>
-                <li>Verification methods include manual user-flow checks, responsive layout checks, and accessibility review.</li>
-                <li>AI-assisted code suggestions should be reviewed before adoption.</li>
+                <li>README / setup notes document how to run the prototype locally.</li>
+                <li>The repository includes <code>/ai-logs</code> for AI-assisted design and coding records.</li>
+                <li>Verification includes manual user-flow checks, responsive layout checks, and accessibility review.</li>
+                <li>AI-assisted suggestions were reviewed before adoption.</li>
               </ul>
             </article>
           </div>

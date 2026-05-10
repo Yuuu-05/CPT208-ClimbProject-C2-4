@@ -1098,36 +1098,46 @@
         <section class="ai-technical-reflection" aria-labelledby="ai-technical-reflection-title">
           <h2 id="ai-technical-reflection-title" class="section-title">Technical Reflection on AI-Assisted Development</h2>
           <div class="stage-board ai-technical-reflection-board">
-            <p class="ai-technical-reflection-intro body-font">During system development and portfolio front-end implementation, we used AI as a coding assistant, layout assistant, and debugging assistant. However, the core design logic, user research findings, requirement analysis, and human-centered justification came from our group’s own research, testing, and iterative refinement.</p>
+            <p class="ai-technical-reflection-intro body-font">During system and portfolio development, we used AI as a coding, layout, and debugging assistant. However, HoldLight’s core design logic, user research findings, requirement analysis, and human-centred justification came from our group’s own research, testing, and iterative refinement. AI outputs were treated as drafts, not final evidence.</p>
 
             <div class="ai-technical-reflection-grid">
-              <article class="ai-technical-reflection-card prompt-areas">
-                <span class="ai-technical-reflection-label">Prompt Areas</span>
-                <h3>Representative Prompt Areas</h3>
-                <ul>
-                  <li>We used prompt summaries to translate design requirements into front-end components, including route preview cards, requirement sections, and evaluation layouts.</li>
-                  <li>Prompts also supported responsive layout, spacing, and visual hierarchy improvements for the process portfolio.</li>
-                  <li>Debugging prompts focused on UI problems such as overlap, alignment, mobile readability, and inconsistent interaction states.</li>
-                  <li>Accessibility-related prompts helped refine clearer labels, larger touch targets, readable contrast, and simpler interaction flows.</li>
-                </ul>
+              <article class="ai-technical-reflection-card example-route">
+                <span class="ai-technical-reflection-label">Example 01</span>
+                <h3>Layered Route Preview UI</h3>
+                <p><strong>P — Prompt:</strong> We asked AI to help scaffold a mobile-first route preview interface for HoldLight, using an Overview → Segment → Drill-down structure and clear route information hierarchy.</p>
+                <p><strong>O — Outcome:</strong> The AI suggested a card-based preview structure. This helped us quickly explore layout directions, but the first output was too generic, too visually focused, and contained too much text for a pre-climb context.</p>
+                <p><strong>A — Action:</strong> We kept the layered structure, but manually reduced text, reorganised information into direction-first and segment-first cues, and adjusted spacing, button hierarchy, and mobile readability.</p>
+                <p><strong>V — Verification:</strong> We checked the revised UI against our requirement that route preview should help climbers understand the route before climbing. We also reviewed the flow through manual mobile walkthroughs and before/after refinement evidence.</p>
+                <p><strong>E — Ethics / Accessibility:</strong> Because HoldLight supports blind and low-vision climbers, we avoided presenting AI-generated route guidance as fully certain. We preserved fallback and help options when information may be unclear.</p>
               </article>
 
-              <article class="ai-technical-reflection-card verification">
-                <span class="ai-technical-reflection-label">Verification</span>
-                <h3>Verification Against User Requirements</h3>
-                <p>We did not directly accept AI-generated output. Each change was checked against HoldLight’s core requirements: Requirement 1, layered route preview should help users understand the route before climbing; Requirement 2, brief direction-first audio cues should reduce overload during climbing; and Requirement 3, explicit fallback should help users recover from uncertainty.</p>
-                <p>We verified changes through manual walkthroughs of the main user flow, BLV accessibility checks, comparison with testing feedback and before/after refinement cases, and review of mobile readability. We rejected or rewrote AI output when it became overly decorative, low-contrast, or confusing.</p>
+              <article class="ai-technical-reflection-card example-accessibility">
+                <span class="ai-technical-reflection-label">Example 02</span>
+                <h3>Accessibility Controls and Voice Guidance</h3>
+                <p><strong>P — Prompt:</strong> We asked AI to support the design of accessibility controls, including repeat, pause, more detail, help, high-contrast settings, and simplified voice-guidance interactions.</p>
+                <p><strong>O — Outcome:</strong> The AI provided a useful starting structure for control buttons and interaction states. However, the first version looked like a generic app panel and did not fully address BLV safety, touch target size, or unclear low-confidence situations.</p>
+                <p><strong>A — Action:</strong> We manually enlarged key controls, clarified button labels, reduced icon-only communication, improved contrast, and kept explicit fallback actions such as repeat cue, request more detail, pause guidance, and ask for human help.</p>
+                <p><strong>V — Verification:</strong> We checked these controls against our requirements for brief audio cues and recoverable interaction. We also reviewed whether users could access key actions without relying on dense visual information.</p>
+                <p><strong>E — Ethics / Accessibility:</strong> For BLV climbers, incorrect or overconfident guidance may create safety risks. Therefore, AI-generated code and wording were not accepted directly; they were revised to prioritise clarity, predictability, and recoverability.</p>
               </article>
 
-              <article class="ai-technical-reflection-card ethics">
-                <span class="ai-technical-reflection-label">Ethics</span>
-                <h3>Ethical and Accessibility Considerations</h3>
-                <p>AI-generated UI may look visually attractive, but it is not automatically accessible. We manually checked contrast, text clarity, label clarity, touch target size, and information overload before treating generated ideas as usable.</p>
-                <p>We also avoided allowing AI to invent user research data, participant quotes, or evaluation findings. Because HoldLight is for blind and low-vision climbers, we prioritized clarity, predictability, and recoverable interaction over decorative complexity.</p>
+              <article class="ai-technical-reflection-card ai-logs-card">
+                <span class="ai-technical-reflection-label">AI Logs</span>
+                <h3>Prompt Evidence and Traceability</h3>
+                <p>Representative AI-assisted prompts are documented in the project repository’s /ai-logs folder. These logs record the prompt, intended task, AI outcome, team modification, verification method, and accessibility / ethics notes for each major AI-assisted task.</p>
+                <nav class="ai-log-links" aria-label="AI log markdown files">
+                  <a class="ai-log-link" href="./ai-logs/README.md" target="_blank" rel="noopener noreferrer">AI Logs README</a>
+                  <a class="ai-log-link" href="./ai-logs/01-route-preview-ui-prompt.md" target="_blank" rel="noopener noreferrer">Route Preview UI Log</a>
+                  <a class="ai-log-link" href="./ai-logs/02-accessibility-controls-prompt.md" target="_blank" rel="noopener noreferrer">Accessibility Controls Log</a>
+                  <a class="ai-log-link" href="./ai-logs/03-evaluation-layout-prompt.md" target="_blank" rel="noopener noreferrer">Evaluation Layout Log</a>
+                  <a class="ai-log-link" href="./ai-logs/04-responsive-debugging-prompt.md" target="_blank" rel="noopener noreferrer">Responsive Debugging Log</a>
+                  <a class="ai-log-link" href="./ai-logs/05-portfolio-content-refinement-prompt.md" target="_blank" rel="noopener noreferrer">Portfolio Content Refinement Log</a>
+                </nav>
+                <p class="ai-log-fallback">If links do not open in the deployed site, the same files are available in the repository under /ai-logs.</p>
               </article>
             </div>
 
-            <p class="ai-technical-reflection-close body-font">Our final approach was human-led and AI-assisted: AI helped accelerate coding and layout exploration, but design decisions were judged against user needs, accessibility requirements, and the project’s evaluation findings.</p>
+            <p class="ai-technical-reflection-close body-font">Our final approach was human-led and AI-assisted: AI helped accelerate coding, layout exploration, and debugging, while final design decisions were judged against user needs, accessibility requirements, and HoldLight’s evaluation findings.</p>
           </div>
         </section>
 
@@ -1198,4 +1208,3 @@
   </div>
 </body>
 </html>
-

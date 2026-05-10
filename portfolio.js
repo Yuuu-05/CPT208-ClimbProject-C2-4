@@ -28,6 +28,135 @@
   const revealed = new WeakSet();
   let homeModuleTransitionRunning = false;
   const homeModuleTransitionStorageKey = "holdlight-home-module-transition";
+  const pagePositionStorageKey = "holdlight-page-position";
+  let activeModuleSubSectionId = "";
+  let pagePositionSaveFrame = 0;
+  let pagePositionRestorePending = false;
+
+  const pageStateKey = () => `${window.location.pathname}${window.location.search}`;
+
+  const getNavigationType = () => {
+    const navigationEntry = window.performance?.getEntriesByType?.("navigation")?.[0];
+    if (navigationEntry?.type) return navigationEntry.type;
+
+    const legacyType = window.performance?.navigation?.type;
+    if (legacyType === 1) return "reload";
+    if (legacyType === 2) return "back_forward";
+    return "navigate";
+  };
+
+  const shouldRestoreSavedPagePosition = () => {
+    const navigationType = getNavigationType();
+    return navigationType === "reload" || navigationType === "back_forward";
+  };
+
+  if (window.history && "scrollRestoration" in window.history && shouldRestoreSavedPagePosition()) {
+    window.history.scrollRestoration = "manual";
+  }
+
+  const readSavedPagePositions = () => {
+    try {
+      const value = window.sessionStorage?.getItem(pagePositionStorageKey);
+      if (!value) return {};
+
+      const parsedValue = JSON.parse(value);
+      return parsedValue && typeof parsedValue === "object" ? parsedValue : {};
+    } catch {
+      return {};
+    }
+  };
+
+  const getSavedPagePosition = () => {
+    if (!shouldRestoreSavedPagePosition()) return null;
+
+    const savedPosition = readSavedPagePositions()[pageStateKey()];
+    if (!savedPosition || savedPosition.pathname !== window.location.pathname) return null;
+    return savedPosition;
+  };
+
+  const writePagePositionSnapshot = () => {
+    window.cancelAnimationFrame(pagePositionSaveFrame);
+    pagePositionSaveFrame = 0;
+    if (pagePositionRestorePending) return;
+
+    try {
+      const savedPositions = readSavedPagePositions();
+      const key = pageStateKey();
+      savedPositions[key] = {
+        pathname: window.location.pathname,
+        scrollX: window.scrollX,
+        scrollY: window.scrollY,
+        sectionId: activeModuleSubSectionId,
+        updatedAt: Date.now()
+      };
+
+      Object.entries(savedPositions)
+        .sort(([, a], [, b]) => (b.updatedAt || 0) - (a.updatedAt || 0))
+        .slice(12)
+        .forEach(([staleKey]) => {
+          delete savedPositions[staleKey];
+        });
+
+      window.sessionStorage?.setItem(pagePositionStorageKey, JSON.stringify(savedPositions));
+    } catch {
+      // Some browser modes block sessionStorage; native refresh behavior can still run.
+    }
+  };
+
+  const schedulePagePositionSnapshot = () => {
+    if (pagePositionSaveFrame) return;
+    pagePositionSaveFrame = window.requestAnimationFrame(writePagePositionSnapshot);
+  };
+
+  const restoreSavedPagePosition = () => {
+    const savedPosition = getSavedPagePosition();
+    if (!savedPosition) return;
+
+    const scrollX = Number(savedPosition.scrollX);
+    const scrollY = Number(savedPosition.scrollY);
+    if (!Number.isFinite(scrollX) || !Number.isFinite(scrollY)) return;
+
+    const maxScrollY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const previousScrollBehavior = root.style.scrollBehavior;
+
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(Math.max(0, scrollX), clamp(scrollY, 0, maxScrollY));
+    root.style.scrollBehavior = previousScrollBehavior;
+  };
+
+  const restoreSavedPagePositionSoon = () => {
+    if (!getSavedPagePosition()) return;
+    pagePositionRestorePending = true;
+
+    const finishRestoreAfterAssets = () => {
+      restoreSavedPagePosition();
+      window.setTimeout(restoreSavedPagePosition, 80);
+      window.setTimeout(() => {
+        restoreSavedPagePosition();
+        pagePositionRestorePending = false;
+        writePagePositionSnapshot();
+      }, 360);
+    };
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(restoreSavedPagePosition);
+    });
+
+    if (document.readyState === "complete") {
+      finishRestoreAfterAssets();
+    } else {
+      window.addEventListener("load", finishRestoreAfterAssets, { once: true });
+    }
+  };
+
+  const bindPagePositionPersistence = () => {
+    window.addEventListener("scroll", schedulePagePositionSnapshot, { passive: true });
+    window.addEventListener("pagehide", writePagePositionSnapshot);
+    window.addEventListener("beforeunload", writePagePositionSnapshot);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") writePagePositionSnapshot();
+    });
+  };
 
   const parseCSSTime = (value, fallback) => {
     const trimmedValue = String(value || "").trim();
@@ -118,8 +247,8 @@
     ],
     "iteration-alternatives.html": [
       { id: "crazy-eights", label: "Crazy Eights", panelIds: ["crazy-eights-panel"] },
-      { id: "design-alternatives", label: "Design Alternatives", panelIds: ["design-alternatives-panel", "mid-hi-prototype-evolution", "why-changed", "final-design-direction"] },
-      { id: "low-fi-prototype", label: "Low-Fi Prototype", panelIds: ["low-fi-prototype-links", "low-fi-prototype-panel"] }
+      { id: "design-alternatives", label: "Design Alternatives", panelIds: ["design-alternatives-panel", "prototype-evolution", "why-changed", "final-design-direction"] },
+      { id: "low-fi-prototype", label: "Low-Fi Prototype", panelIds: ["low-fi-prototype-links"] }
     ],
     "implementation.html": [
       { id: "architecture", label: "System Architecture", panelIds: ["architecture", "technical-notes"] },
@@ -582,8 +711,30 @@
     let isPinned = false;
     let hasCompletedForward = false;
     let finishScrollDebt = 0;
-    const scrollSensitivity = 12000;
-    const finishReleaseThreshold = 950;
+    const introCompletionStorageKey = "vibeProcessIntroCompleted";
+    const introScrollSensitivity = 12000;
+    const localScrollSensitivity = 5600;
+    const finishReleaseThreshold = 600;
+
+    const readIntroCompletion = () => {
+      try {
+        return window.sessionStorage?.getItem(introCompletionStorageKey) === "true";
+      } catch {
+        return false;
+      }
+    };
+
+    let hasIntroCompleted = readIntroCompletion();
+
+    const markIntroCompleted = () => {
+      hasIntroCompleted = true;
+
+      try {
+        window.sessionStorage?.setItem(introCompletionStorageKey, "true");
+      } catch {
+        // Session storage can be unavailable in some private or embedded contexts.
+      }
+    };
 
     const getStageScale = () => clamp(timeline.clientWidth / baseTimelineWidth, 0.58, 1);
 
@@ -890,8 +1041,9 @@
         0,
         maxFocusPosition
       );
-      const index = getTouchedStepIndex(activeRouteProgress, progressStops);
-      const shotFocusPosition = index >= 0 ? index : 0;
+      const touchedIndex = getTouchedStepIndex(activeRouteProgress, progressStops);
+      const index = touchedIndex >= 0 ? touchedIndex : 0;
+      const shotFocusPosition = index;
 
       steps.forEach((step, stepIndex) => {
         const distance = Math.abs(stepIndex - focusPosition);
@@ -1073,6 +1225,25 @@
       const delta = event.deltaY;
       if (!delta) return;
 
+      if (hasIntroCompleted) {
+        const isInsideVibeBoard = event.target instanceof Node
+          && (board.contains(event.target) || layout.contains(event.target));
+
+        if (!isInsideVibeBoard) return;
+
+        const isAtStartAndLeaving = progress <= 0 && delta < 0;
+        const isAtEndAndLeaving = progress >= 1 && delta > 0;
+
+        if (isAtStartAndLeaving || isAtEndAndLeaving) return;
+
+        event.preventDefault();
+        progress = clamp(progress + (delta / localScrollSensitivity), 0, 1);
+        finishScrollDebt = 0;
+        syncPinMetrics();
+        render();
+        return;
+      }
+
       if (delta < 0) finishScrollDebt = 0;
 
       if (!isPinned) {
@@ -1098,6 +1269,7 @@
 
         if (finishScrollDebt >= finishReleaseThreshold) {
           hasCompletedForward = true;
+          markIntroCompleted();
           releasePin();
           scrollPastBoard();
         }
@@ -1105,7 +1277,7 @@
         return;
       }
 
-      const nextProgress = clamp(progress + (delta / scrollSensitivity), 0, 1);
+      const nextProgress = clamp(progress + (delta / introScrollSensitivity), 0, 1);
 
       event.preventDefault();
       progress = nextProgress;
@@ -1336,7 +1508,9 @@
       if (!hashId) return null;
       return sections.find((section) => section.id === hashId || section.panelIds.includes(hashId)) || null;
     };
-    let selectedSubSection = findSectionForHash()?.id || sections[0].id;
+    const savedSectionId = getSavedPagePosition()?.sectionId;
+    const savedSection = sections.find((section) => section.id === savedSectionId);
+    let selectedSubSection = findSectionForHash()?.id || savedSection?.id || sections[0].id;
 
     sections.forEach((section) => {
       section.panels.forEach((panel) => {
@@ -1350,6 +1524,7 @@
     const setActive = (sectionId) => {
       if (!sectionId || !sections.some((section) => section.id === sectionId)) return;
       selectedSubSection = sectionId;
+      activeModuleSubSectionId = selectedSubSection;
 
       tabs.forEach((tab) => {
         const isActive = tab.dataset.sectionTarget === selectedSubSection;
@@ -1368,6 +1543,8 @@
       });
 
       window.dispatchEvent(new Event("resize"));
+      window.dispatchEvent(new Event("holdlight:module-section-change"));
+      schedulePagePositionSnapshot();
     };
 
     tabs.forEach((tab) => {
@@ -1507,9 +1684,142 @@
     });
   };
 
+  let swipeHintPlayerPromise;
+  let swipeHintAnimationDataPromise;
+  const swipeHintAnimations = new Set();
+  let swipeHintResizeBound = false;
+
+  const loadSwipeHintPlayer = () => {
+    if (window.lottie && typeof window.lottie.loadAnimation === "function") {
+      return Promise.resolve(window.lottie);
+    }
+
+    if (swipeHintPlayerPromise) return swipeHintPlayerPromise;
+
+    swipeHintPlayerPromise = new Promise((resolve, reject) => {
+      const scriptPath = "assets/vendor/lottie-light.min.js";
+      const existingScript = document.querySelector(`script[src="${scriptPath}"]`);
+
+      const handleLoad = () => {
+        if (window.lottie && typeof window.lottie.loadAnimation === "function") {
+          resolve(window.lottie);
+        } else {
+          reject(new Error("Lottie player loaded without loadAnimation."));
+        }
+      };
+
+      if (existingScript) {
+        existingScript.addEventListener("load", handleLoad, { once: true });
+        existingScript.addEventListener("error", reject, { once: true });
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = scriptPath;
+      script.async = true;
+      script.addEventListener("load", handleLoad, { once: true });
+      script.addEventListener("error", reject, { once: true });
+      document.head.appendChild(script);
+    });
+
+    return swipeHintPlayerPromise;
+  };
+
+  const loadSwipeHintAnimationData = () => {
+    if (window.HoldLightSwipeUpLottie) {
+      return Promise.resolve(window.HoldLightSwipeUpLottie);
+    }
+
+    if (swipeHintAnimationDataPromise) return swipeHintAnimationDataPromise;
+
+    swipeHintAnimationDataPromise = new Promise((resolve, reject) => {
+      const scriptPath = "assets/animations/swipe-up-data.js";
+      const existingScript = document.querySelector(`script[src="${scriptPath}"]`);
+
+      const handleLoad = () => {
+        if (window.HoldLightSwipeUpLottie) {
+          resolve(window.HoldLightSwipeUpLottie);
+        } else {
+          reject(new Error("Swipe hint animation data was unavailable."));
+        }
+      };
+
+      if (existingScript) {
+        existingScript.addEventListener("load", handleLoad, { once: true });
+        existingScript.addEventListener("error", reject, { once: true });
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = scriptPath;
+      script.async = true;
+      script.addEventListener("load", handleLoad, { once: true });
+      script.addEventListener("error", reject, { once: true });
+      document.head.appendChild(script);
+    });
+
+    return swipeHintAnimationDataPromise;
+  };
+
+  const initSwipeUpHints = () => {
+    const hintShells = Array.from(document.querySelectorAll(".swipe-hint-shell"));
+    if (!hintShells.length) return;
+
+    const resizeSwipeHints = () => {
+      window.requestAnimationFrame(() => {
+        swipeHintAnimations.forEach((animation) => animation.resize?.());
+      });
+    };
+
+    if (!swipeHintResizeBound) {
+      swipeHintResizeBound = true;
+      window.addEventListener("resize", resizeSwipeHints, { passive: true });
+      window.addEventListener("holdlight:module-section-change", resizeSwipeHints);
+    }
+
+    Promise.all([loadSwipeHintPlayer(), loadSwipeHintAnimationData()])
+      .then(([lottie, animationData]) => {
+        hintShells.forEach((shell) => {
+          const hint = shell.querySelector("[data-swipe-up-hint]");
+          const scrollTarget = shell.querySelector("[data-swipe-hint-target]");
+          if (!hint || hint.dataset.swipeHintBound === "true") return;
+
+          hint.dataset.swipeHintBound = "true";
+          const hintAnimationData = typeof window.structuredClone === "function"
+            ? window.structuredClone(animationData)
+            : JSON.parse(JSON.stringify(animationData));
+
+          const animation = lottie.loadAnimation({
+            container: hint,
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            animationData: hintAnimationData,
+            rendererSettings: {
+              preserveAspectRatio: "xMidYMid meet",
+              progressiveLoad: true
+            }
+          });
+          swipeHintAnimations.add(animation);
+          animation.addEventListener?.("DOMLoaded", resizeSwipeHints);
+          resizeSwipeHints();
+
+          if (scrollTarget) {
+            scrollTarget.addEventListener("scroll", () => {
+              shell.classList.add("is-scroll-hint-dismissed");
+            }, { passive: true, once: true });
+          }
+        });
+      })
+      .catch(() => {
+        hintShells.forEach((shell) => shell.classList.add("is-scroll-hint-unavailable"));
+      });
+  };
+
   const init = () => {
     initSiteScaleWrapper();
     root.classList.add("ux-ready");
+    bindPagePositionPersistence();
     finishHomeModuleReveal();
     setCurrentNavigation();
     initReveal();
@@ -1521,6 +1831,8 @@
     initVibeProcessTimeline();
     initAiToolsSummary();
     bindOverviewLaunch();
+    initSwipeUpHints();
+    restoreSavedPagePositionSoon();
   };
 
   if (document.readyState === "loading") {
@@ -1559,4 +1871,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-

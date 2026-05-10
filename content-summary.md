@@ -262,7 +262,7 @@
 ### 3.1 Early Ideation
 - 团队用 rapid sketching 探索 route scanning、beginner learning、assistant support、voice interaction、mobile-first climbing guidance。
 - 视觉材料包括 Crazy 8 sketches。
-- Early Concept Prototype Links 包含 `Mascot Design` 和 `Early UI Design`。
+- Low-Fi Prototype Links 包含 `Monkey`、`Figma` 和 `Google AI`。
 
 ### 3.2 Prototype & Alternatives
 
