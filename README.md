@@ -2,7 +2,7 @@
 
 Project materials for HoldLight, a climbing assistance system for blind and low-vision climbers.
 
-[Project Website](https://yuuu-05.github.io/CPT208-ClimbProject-C2-4/) · [Source Code](https://github.com/Yuuu-05/HoldLight) · [Demo Video](https://github.com/Yuuu-05/HoldLight/releases/tag/project-demo) · [Poster](assets/documents/HoldLight-Poster.pdf)
+[Project Portfolio](https://yuuu-05.github.io/CPT208-ClimbProject-C2-4/) · [Source Code](https://github.com/Yuuu-05/HoldLight) · [Demo Video](https://github.com/Yuuu-05/HoldLight/releases/tag/project-demo) · [Poster](assets/documents/HoldLight-Poster.pdf)
 
 ## Contents
 

@@ -17528,6 +17528,9 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
 }
 
 /* Keep the portfolio entrance visible on smaller screens. */
-.overview-page { --overview-visual-scale: 1; overflow-y: auto; }
+.overview-page { overflow-y: auto; }
+@media (max-width: 1400px) {
+  .overview-page { --overview-visual-scale: 1; }
+}
 .overview-enter { display: block; margin-top: 24px; color: var(--overview-cyan); font: 600 16px/1.4 system-ui, sans-serif; }
 .holo-button:focus-visible { outline: 3px solid var(--overview-cyan); outline-offset: 6px; }
