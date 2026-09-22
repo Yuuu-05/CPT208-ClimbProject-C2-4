@@ -17527,10 +17527,7 @@ body:is(.why-gap-page, .user-requirements-page, .iteration-page, .implementation
   }
 }
 
-/* Public project resources. */
+/* Keep the portfolio entrance visible on smaller screens. */
 .overview-page { --overview-visual-scale: 1; overflow-y: auto; }
-.overview-page .button-container { flex-direction: column; gap: 32px; }
-.project-resource-links { position: relative; z-index: 20; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-.project-resource-links a { display: inline-block; padding: 12px 20px; border: 1px solid rgba(0, 229, 255, .65); border-radius: 8px; background: #101820; color: #fff; font: 600 15px/1.4 system-ui, sans-serif; text-decoration: none; }
-.project-resource-links a:hover { background: #193542; }
-.project-resource-links a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.overview-enter { display: block; margin-top: 24px; color: var(--overview-cyan); font: 600 16px/1.4 system-ui, sans-serif; }
+.holo-button:focus-visible { outline: 3px solid var(--overview-cyan); outline-offset: 6px; }
